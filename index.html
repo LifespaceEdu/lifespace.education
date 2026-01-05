@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lifespace Education | Research-Based Learning for Big Island Families</title>
+<meta name="description" content="Lifespace Education brings research-backed, student-centered learning to Hawaii Island. Launching Fall 2025 - serving students grades 1-12.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+```
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.6;
+color: #2d3436;
+background: #ffffff;
+font-weight: 300;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* Header */
+header {
+background: #000000;
+color: white;
+padding: 1.5rem 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 1.5rem;
+font-weight: 400;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 2rem;
+transition: opacity 0.3s;
+}
+
+nav a:hover {
+opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+background: #1a5555;
+color: white;
+padding: 5rem 0;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+font-weight: 400;
+}
+
+.hero p {
+font-size: 1.25rem;
+margin-bottom: 2rem;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.cta-button {
+display: inline-block;
+background: #1a5555;
+color: white;
+padding: 1rem 2rem;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 1.1rem;
+transition: transform 0.3s, box-shadow 0.3s;
+margin: 0.5rem;
+}
+
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cta-secondary {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
+
+/* Sections */
+section {
+padding: 4rem 0;
+}
+
+section:nth-child(even) {
+background: #f8f9fa;
+}
+
+h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a5555;
+font-weight: 400;
+}
+
+h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #2d3748;
+font-weight: 400;
+}
+
+.two-column {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+margin-top: 2rem;
+}
+
+.three-column {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.card {
+background: white;
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+color: #1a5555;
+margin-bottom: 1rem;
+}
+
+.highlight-box {
+background: #f8f9fa;
+border-left: 4px solid #1a5555;
+padding: 1.5rem;
+margin: 2rem 0;
+font-style: italic;
+}
+
+.pillar-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+margin-top: 2rem;
+}
+
+.pillar {
+padding: 1.5rem;
+background: white;
+border-radius: 8px;
+border: 2px solid #e2e8f0;
+}
+
+.pillar h4 {
+color: #2a7b7b;
+margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+background: #2d3748;
+color: white;
+padding: 2rem 0;
+text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 1.8rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.two-column,
+.three-column,
+.pillar-grid {
+grid-template-columns: 1fr;
+}
+
+nav {
+display: none; /* Simple mobile - add hamburger menu later if needed */
+}
+}
+</style>
+```
+
+</head>
+<body>
+<header style="background: #000000; color: white; padding: 1.5rem 0; position: sticky; top: 0; z-index: 100;">
+<div class="container">
+<div class="logo">Lifespace Education</div>
+<nav>
+<a href="#about">About</a>
+<a href="#approach">Our Approach</a>
+<a href="#engage">Get Involved</a>
+<a href="#team">Team</a>
+</nav>
+</div>
+</header>
+
+```
+<section class="hero" style="background: #1a5555; color: white; padding: 5rem 0; text-align: center;">
+<div class="container">
+<h1>What happens when we actually build schools from research-based best practices?</h1>
+<p>Lifespace Education implements what decades of research already validates - launching Fall 2025 to serve Big Island families seeking education that truly prepares students for unknowable futures.</p>
+<a href="#contact" class="cta-button">Join Our Interest List</a>
+<a href="Lifespace_Education_Framework_COMPLETE.pdf" class="cta-button cta-secondary">Download Full Framework</a>
+</div>
+</section>
+
+<section id="challenge" style="background: #ffffff; color: #2d3436;">
+<div class="container">
+<h2>The Challenge Big Island Families Face</h2>
+<p>You're not happy with your current option, but you don't see an alternative.</p>
+
+<div class="three-column">
+<div class="card">
+<h3>Expensive Private School</h3>
+<p>Children fall behind in core academics due to non-research-based methods. Rigid policies don't reflect current educational research. Eurocentric curriculum doesn't reflect our community's diversity. Cost is unsustainable for many families.</p>
+</div>
+
+<div class="card">
+<h3>Homeschooling Alone</h3>
+<p>Isolation and overwhelm. You're reinventing the wheel without educational expertise. Balancing work, life, and teaching feels impossible. No strong co-op support. You don't have time to research pedagogy or design curriculum - nor should you have to.</p>
+</div>
+
+<div class="card">
+<h3>Virtual Charter Programs</h3>
+<p>Online formats struggle to engage students. Occasional meetups can't replace daily learning community and genuine relationships. Parents still shoulder most educational responsibility. Concerns about oversight, accountability, and academic outcomes.</p>
+</div>
+</div>
+
+<div class="highlight-box">
+<p>"At a recent homeschool meet-up, one parent told us: '80% of the people here are not happy with what they're doing - they just don't see another option.'"</p>
+</div>
+
+<p style="font-size: 1.2rem; margin-top: 2rem; text-align: center;"><strong>Lifespace Education is that option.</strong></p>
+</div>
+</section>
+
+<section id="about" style="background: #f8f9fa; color: #2d3436;">
+<div class="container">
+<h2>We Know What Works in Education</h2>
+<p style="font-size: 1.1rem; max-width: 900px;">Decades of research validate project-based learning, student agency, social-emotional development, authentic assessment, and relationship-based approaches. Yet most schools struggle to implement them within industrial-era structures, high-stakes accountability systems, and tight budgets.</p>
+
+<p style="font-size: 1.1rem; max-width: 900px; margin-top: 1rem;"><strong>The question is no longer "what should education look like?"</strong> The question is: <strong>"What happens when we actually build from best practices as our foundation?"</strong></p>
+
+<div class="two-column" style="margin-top: 3rem;">
+<div>
+<h3>Lifespace Education implements what research already validates</h3>
+<p>Every component of our approach is grounded in rigorous studies published in scholarly journals demonstrating effectiveness. We're not testing whether these approaches work - we're demonstrating that this integrated, research-based model can operate as a viable, scalable school design.</p>
+<p style="margin-top: 1rem;">Our comprehensive framework synthesizes evidence-based practices into a coherent approach centered on six essential pillars, all working together to develop students as confident, capable, self-directed learners.</p>
+</div>
+
+<div>
+<h3>Solving Bloom's Two Sigma Problem</h3>
+<p>Research shows one-on-one tutoring produces dramatically better outcomes than classroom instruction - but it's impossibly expensive. Lifespace Education achieves near-tutorial effectiveness through intelligent design:</p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>Individualized Learning Maps</li>
+<li>Adaptive technology platforms</li>
+<li>Mixed-age peer learning</li>
+<li>Just-in-time instruction</li>
+<li>8:1 student-teacher ratio</li>
+<li>Project-based individualization</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" style="background: #ffffff; color: #2d3436;">
+<div class="container">
+<h2>The Lifespace Approach: Six Pillars</h2>
+<p style="max-width: 900px; margin-bottom: 2rem;">Students develop across six essential domains through authentic application in meaningful contexts - not isolated skill practice disconnected from purpose.</p>
+
+<div class="pillar-grid">
+<div class="pillar">
+<h4>Critical Thinking</h4>
+<p>Analysis, synthesis, inference, and evaluation. Students learn to question assumptions, evaluate sources, distinguish evidence from assertion, and form reasoned perspectives. Information literacy is core - essential for navigating our digital age.</p>
+</div>
+
+<div class="pillar">
+<h4>Problem Solving</h4>
+<p>Identifying challenges, generating solutions, testing approaches, learning from failures, and persisting through obstacles. Students tackle real problems without predetermined answers - developing the resourcefulness essential for uncertain futures.</p>
+</div>
+
+<div class="pillar">
+<h4>Core Competencies</h4>
+<p>Research-based instruction in language arts, mathematics, science, and social studies. Approximately two hours daily of focused, efficient skill-building - then immediate application in authentic contexts through project work.</p>
+</div>
+
+<div class="pillar">
+<h4>Expression</h4>
+<p>Taking powerful ideas from mind and making them real for others to perceive. Synthesis and transmission across modalities - written, spoken, visual, built, performed. Measured by clarity of thinking and effectiveness of communication.</p>
+</div>
+
+<div class="pillar">
+<h4>Social-Emotional Learning</h4>
+<p>The foundation enabling all other learning. Self-awareness, self-management, social awareness, relationship skills, and responsible decision-making. Developed through explicit instruction and embedded practice throughout the learning day.</p>
+</div>
+
+<div class="pillar">
+<h4>Project Work</h4>
+<p>Extended authentic investigations where all pillars come together. Students learn to plan, manage complexity, sustain inquiry, iterate through setbacks, and bring work to completion. Both a competency students develop and the primary vehicle for learning.</p>
+</div>
+</div>
+
+<div style="margin-top: 3rem; text-align: center;">
+<a href="Lifespace_Education_Framework_COMPLETE.pdf" class="cta-button">Read the Complete 71-Page Framework</a>
+</div>
+</div>
+</section>
+
+<section id="distinctives" style="background: #f8f9fa; color: #2d3436;">
+<div class="container">
+<h2>What Makes Lifespace Different</h2>
+
+<div class="two-column">
+<div class="card">
+<h3>Student Agency</h3>
+<p>Students make meaningful decisions about their learning through Learning Maps, project choice, and co-designed community agreements. Not complete autonomy, but genuine agency within supportive structure - building self-direction and ownership.</p>
+</div>
+
+<div class="card">
+<h3>Mixed-Age Learning</h3>
+<p>Serving grades 1-12 together creates natural mentorship. Younger students learn from older models. Older students develop leadership and teaching skills. More flexible for advanced or struggling learners. Research validates academic and social benefits for all.</p>
+</div>
+
+<div class="card">
+<h3>Relationship-Based Culture</h3>
+<p>No rewards, punishments, or coercive "classroom management." Learning happens in context of genuine relationships built on mutual respect, trust, and care. Restorative practices repair harm and maintain community when conflicts arise.</p>
+</div>
+
+<div class="card">
+<h3>Essential Free Play</h3>
+<p>1-2+ hours daily of non-negotiable unstructured time. Not "recess as reward" but essential for development, wellbeing, and building the internal locus of control research shows is critical for healthy development.</p>
+</div>
+
+<div class="card">
+<h3>Real-World Relevance</h3>
+<p>Learning connects to authentic contexts, real problems, and genuine communities. Students engage with local resources, community members, and actual challenges - not isolated content to possibly apply someday.</p>
+</div>
+
+<div class="card">
+<h3>Equity-Centered Education</h3>
+<p>Lifespace challenges traditional power structures in schooling. We use restorative practices instead of punishment, center student voices in decision-making, and actively examine whose perspectives are included and excluded in curriculum. We welcome families committed to equity and justice in education.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="engage" style="background: #ffffff; color: #2d3436;">
+<div class="container">
+<h2>How Families Can Engage</h2>
+
+<div class="three-column">
+<div class="card">
+<h3>Available Now</h3>
+<ul style="margin-left: 1.5rem;">
+<li>Educational evaluation and assessment</li>
+<li>Consultation and curriculum design</li>
+<li>Custom class design and instruction</li>
+<li>Individual learning plan development</li>
+</ul>
+<p style="margin-top: 1rem; font-style: italic;">Consultations available evenings and weekends. Contact us for pricing and scheduling.</p>
+</div>
+
+<div class="card">
+<h3>Fall 2025 Launch</h3>
+<p><strong>Co-op Learning Community & Hub Model</strong></p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>Collaborative homeschool support</li>
+<li>Pooled resources for specialists, experiences, and materials</li>
+<li>Educational expertise you shouldn't have to develop alone</li>
+<li>Serving students grades 1-12 across Big Island</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Our Vision (With Funding)</h3>
+<p><strong>Full Microschool Implementation</strong></p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>16 students, 2 teachers, dedicated space</li>
+<li>Complete Lifespace framework</li>
+<li>Tuition-free Year 1, then $0-$12,000 sliding scale</li>
+<li>Demonstration model for scaling research-based education</li>
+</ul>
+</div>
+</div>
+
+<div style="margin-top: 3rem; text-align: center; background: #edf2f7; padding: 2rem; border-radius: 8px;">
+<h3 style="color: #1a5555; margin-bottom: 1rem;">Join Our Interest List for Fall 2025</h3>
+<p style="margin-bottom: 1.5rem;">Whether you're interested in consultation now, joining our co-op community, or the future microschool - let us know. Limited spots available.</p>
+<a href="#contact" class="cta-button">Express Your Interest</a>
+</div>
+</div>
+</section>
+
+<section id="team" style="background: #f8f9fa; color: #2d3436;">
+<div class="container">
+<h2>Our Team</h2>
+
+<div class="two-column">
+<div class="card">
+<h3>Marcus Sigh</h3>
+<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Founder & Educational Designer</p>
+
+<p>Marcus brings 16 years of teaching experience across diverse settings - from elementary classrooms to locked facilities for adjudicated youth with severe mental health needs, including students everyone else had given up on.</p>
+
+<p style="margin-top: 1rem;">Certified in Special Education (B-12) and Elementary Education in Michigan, with provisional Special Education certification in Hawaii (advancing to standard certification 2025-26). His expertise spans Emotional Impairment, Specific Learning Disabilities, and Autism Spectrum.</p>
+
+<p style="margin-top: 1rem;">As supervisor of a pilot case planning unit at a residential treatment center, Marcus transformed institutional practices by implementing strength-based approaches, dramatically reducing reliance on seclusions and physical management - demonstrating that relationship-based methods work even in the most challenging educational contexts.</p>
+
+<p style="margin-top: 1rem;">Marcus has extensive training in anti-bias and decolonial education, bringing pedagogical approaches rooted in educational justice and solidarity with Indigenous sovereignty movements. He developed the Lifespace Education framework during the pandemic, synthesizing decades of research into a coherent, implementable model.</p>
+</div>
+
+<div class="card">
+<h3>Kate [Last Name]</h3>
+<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Collaborative Partner & Reading Specialist</p>
+<p style="font-style: italic;">Bio coming soon.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="background: #1a5555; color: white;">
+<div class="container" style="text-align: center;">
+<h2 style="color: white;">Get Started</h2>
+<p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Whether you're interested in consultation now, joining our Fall 2025 co-op community, or learning more about the future microschool - we want to hear from you.</p>
+
+<div style="background: white; color: #333; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+<h3 style="color: white; margin-bottom: 1rem;">Contact Information</h3>
+<p><strong>Email:</strong> lifespaceeducation@gmail.com</p>
+<p style="margin-top: 1.5rem;"><strong>Or complete our interest form:</strong></p>
+<p style="margin-top: 1rem; font-style: italic;">[Google Form Link to be Added]</p>
+</div>
+
+<p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">Serving families across Hawaii Island / Big Island</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>&copy; 2025 Lifespace Education. All rights reserved.</p>
+<p style="margin-top: 0.5rem; font-size: 0.9rem;">Launching Fall 2025 | Puna, Hawaii</p>
+</div>
+</footer>
+```
+
+</body>
+</html>
