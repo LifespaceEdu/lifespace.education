@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Lifespace Education</title>
+    <meta name="description" content="Lifespace Education portfolio - responsive curriculum design, web applications, and educational tools serving families schools won't.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: #ffffff;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #000000;
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: #1a5555;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a5555;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1a5555;
+            font-weight: 400;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #1a5555;
+        }
+
+        .project-card h3 {
+            color: #1a5555;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8f4f4;
+            color: #1a5555;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .link-button {
+            display: inline-block;
+            color: #1a5555;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .link-button:hover {
+            opacity: 0.7;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #1a5555;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #1a5555;
+            line-height: 1;
+        }
+
+        .stat-label {
+            margin-top: 0.5rem;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Lifespace Education</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="framework.html">Framework</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Responsive Educational Design</h1>
+            <p>From parent inquiry to working solution in hours, not months. Serving needs that traditional education won't.</p>
+        </div>
+    </section>
+
+    <section style="background: #ffffff;">
+        <div class="container">
+            <h2>The No-Gatekeepers Model</h2>
+            <p style="font-size: 1.1rem; max-width: 900px;">Traditional curriculum development takes 6-12 months minimum - committees, publishing cycles, approval processes. By the time resources reach families, needs have evolved. Lifespace Education responds to actual family needs with research-based solutions in days, sometimes hours.</p>
+
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Web Applications</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Curriculum Guides</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">~24hrs</div>
+                    <div class="stat-label">Avg Development Time</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Gatekeepers</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Example:</strong> Parent mentions wanting SEL curriculum that goes beyond naming emotions. 12 hours later, a fully functional web app with lesson plans, printable worksheets, and teacher notes is deployed and accessible on any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Web Applications</h2>
+            <p style="margin-bottom: 2rem;">Interactive learning tools serving families and educators. Mobile-responsive, accessible from any device, designed for real classroom and homeschool use.</p>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Seeds and Parts SEL Curriculum</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 12 hours</span>
+                        <span>📅 Jan 2026</span>
+                    </div>
+                    <p><strong>The Need:</strong> Parent wanted SEL curriculum teaching kids what to do with emotions they've named, not just identification.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh's seeds metaphor. Includes full lesson plans with timing, printable worksheets, teacher notes. Works for classroom and homeschool.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">SEL</span>
+                        <span class="tag">Ages 6-9</span>
+                        <span class="tag">Printables</span>
+                    </div>
+                    <a href="https://seeds-parts4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Lifespace Logic Band A</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 20 hours</span>
+                        <span>📅 Dec 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Foundation-level reasoning curriculum that builds critical thinking through everyday moments, not worksheets.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Five core reasoning moves (pattern hunting, sort & order, inference from clues, claims with reasons, compare & choose). Daily micro-games and weekly labs. Research-based (Philosophy for Children, effect size 0.65+).</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Ages 6-8</span>
+                        <span class="tag">Critical Thinking</span>
+                        <span class="tag">Research-Based</span>
+                    </div>
+                    <a href="https://band-a-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Lifespace Logic Band B</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 18 hours</span>
+                        <span>📅 Dec 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Advanced reasoning for older elementary students building on Band A foundations.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Same five moves, but structured and systematic. Pattern rules & exceptions, multi-category sorting, inference chains, Claim-Evidence-Reasoning (CER) framework, multi-criteria decision tables. Makes thinking visible.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Ages 8-11</span>
+                        <span class="tag">Structured Reasoning</span>
+                        <span class="tag">CER Framework</span>
+                    </div>
+                    <a href="https://band-b-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Barbie Freedom Dreaming</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 16 hours</span>
+                        <span>📅 Jan 2026</span>
+                    </div>
+                    <p><strong>The Need:</strong> Dr. Bettina Love's Freedom Dreaming framework adapted for young children through play.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> 6-stage guided activity where kids use Barbie (or any doll) to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration. Creates books kids can share. Ages 5-7.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Ages 5-7</span>
+                        <span class="tag">Social Justice</span>
+                        <span class="tag">Play-Based</span>
+                    </div>
+                    <a href="https://barbie-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Hot Wheels Freedom Dreaming</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 14 hours</span>
+                        <span>📅 Jan 2026</span>
+                    </div>
+                    <p><strong>The Need:</strong> Same Freedom Dreaming framework but for kids who play with cars/trucks instead of dolls.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Adapted version where Hot Wheels vehicles become freedom workers building liberated futures. Same 6-stage structure, same justice focus, different entry point. Gender-inclusive approach to social justice education.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Ages 5-7</span>
+                        <span class="tag">Social Justice</span>
+                        <span class="tag">Gender-Inclusive</span>
+                    </div>
+                    <a href="https://hotwheels-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Ancestral Futures (Middle School)</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 30 hours</span>
+                        <span>📅 Dec 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Decolonial education framework for middle schoolers connecting Indigenous knowledge with future visioning.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> 11-stage curriculum where students research specific cultural practices, study real resistance movements, create characters with "ancestral tech," and write Freedom Dream stories. Includes 12 resistance movement reading passages. Culturally responsive, justice-oriented.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Grades 5-9</span>
+                        <span class="tag">Decolonial</span>
+                        <span class="tag">Afrofuturism</span>
+                    </div>
+                    <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Ancestral Futures (High School)</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 25 hours</span>
+                        <span>📅 Dec 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Advanced version with less scaffolding, more independent research.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Same framework as MS version but expects deeper research, more sophisticated analysis, and independent source evaluation. Students conduct original research into resistance movements and cultural practices. Creates space for complex justice work.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">High School</span>
+                        <span class="tag">Research-Based</span>
+                        <span class="tag">Indigenous Futurism</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: #666; font-style: italic;">In development</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Ahupuaʻa Learning Journey</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 22 hours</span>
+                        <span>📅 Nov 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional land management to contemporary environmental justice.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Interactive journey through ahupuaʻa system (traditional Hawaiian land division). Students learn Indigenous ecological knowledge, examine colonial disruption, explore sovereignty movements. Culturally grounded, place-based education for Big Island families.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Hawaii-Specific</span>
+                        <span class="tag">Environmental Justice</span>
+                        <span class="tag">Indigenous Knowledge</span>
+                    </div>
+                    <a href="https://ahupuaa-learning-journey.vercel.app/" class="link-button" target="_blank">View App →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Non-Local Sensing for Kids</h3>
+                    <div class="project-meta">
+                        <span>⏱️ 18 hours</span>
+                        <span>📅 Nov 2025</span>
+                    </div>
+                    <p><strong>The Need:</strong> Families seeking alternative consciousness education. Chinese market interest in attention/intuition training.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Remote viewing protocol adapted from declassified CIA Stargate research for elementary students. Teaches visualization, attention control, and intuitive thinking. Serves alternative ed families and markets traditional publishers won't touch.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Alternative Ed</span>
+                        <span class="tag">Consciousness</span>
+                        <span class="tag">Controversial</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: #666; font-style: italic;">App URL redirecting - under revision</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <p><strong>Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. Teachers and parents can reference lessons on their phones during class or learning time. No software to buy, no downloads, no barriers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #ffffff;">
+        <div class="container">
+            <h2>What This Demonstrates</h2>
+            
+            <div class="highlight-box">
+                <h4>The No-Gatekeepers Advantage</h4>
+                <p>Traditional curriculum publishers won't touch:</p>
+                <ul style="margin-top: 1rem; margin-left: 2rem;">
+                    <li><strong>Remote viewing for kids</strong> (even with CIA research basis)</li>
+                    <li><strong>Decolonial education frameworks</strong> (too political)</li>
+                    <li><strong>Justice-oriented content for young children</strong> (too controversial)</li>
+                    <li><strong>Rapid-response curriculum</strong> (too fast for committees)</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Lifespace Education serves these families anyway.</strong> From parent conversation to working app in hours. No committees, no approval processes, no waiting. Just responsive educational design meeting actual needs.</p>
+            </div>
+
+            <div class="project-grid" style="margin-top: 3rem;">
+                <div class="project-card">
+                    <h3>Scalability Through Design</h3>
+                    <p>Each new app builds on previous work. Logic Band B used Band A's structure. Freedom Dreaming expanded from Barbie to Hot Wheels. Ancestral Futures has middle and high school versions. Development time decreases as the model matures.</p>
+                    <p style="margin-top: 1rem;"><strong>Result:</strong> Faster turnaround, higher quality, wider reach.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Meeting Controversial Needs</h3>
+                    <p>Some families want remote viewing curriculum. Others want explicit anti-racist education for 5-year-olds. Traditional systems say "no" to both. Lifespace says "yes" - with research backing, cultural respect, and educational rigor.</p>
+                    <p style="margin-top: 1rem;"><strong>Result:</strong> Families get resources they actually need.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Mobile-First Accessibility</h3>
+                    <p>Every app works perfectly on phones. Teachers reference lessons during class. Parents check worksheets while cooking dinner. No desktop required, no app store downloads, no technical barriers.</p>
+                    <p style="margin-top: 1rem;"><strong>Result:</strong> Education accessible where families actually are.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Research-Grounded Innovation</h3>
+                    <p>Logic curriculum cites Philosophy for Children meta-analyses. SEL draws from IFS therapy research. Freedom Dreaming implements Dr. Bettina Love's framework. Every "controversial" choice has scholarly backing.</p>
+                    <p style="margin-top: 1rem;"><strong>Result:</strong> Bold work that holds up to scrutiny.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem; max-width: 900px; margin-left: auto; margin-right: auto;">This portfolio demonstrates what becomes possible when educational design responds directly to family needs without institutional barriers. Every app, every curriculum, every resource exists because a real family needed it - and Lifespace Education delivered. Usually within 24 hours.</p>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa;">
+        <div class="container">
+            <h2>The Work Continues</h2>
+            <p style="margin-bottom: 2rem;">New apps in development. More families finding alternatives. Research-based education without gatekeepers.</p>
+
+            <div class="highlight-box">
+                <h4>Want to see this model in action?</h4>
+                <p>Lifespace Education launches Fall 2026 as a co-op learning community on Hawaii Island. We're building the school these apps were designed to support - where responsive curriculum development meets relationship-based learning, where student agency drives daily choices, where no family is told "we don't serve that need."</p>
+                <p style="margin-top: 1rem;"><a href="index.html#contact" style="color: #1a5555; font-weight: 600;">Join our interest list →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Portfolio Updated January 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
