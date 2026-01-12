@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,7 +8,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-```
 * {
 margin: 0;
 padding: 0;
@@ -53,6 +51,21 @@ nav a {
 color: white;
 text-decoration: none;
 margin-left: 2rem;
+}
+
+.mobile-nav {
+display: none;
+background: #1a5555;
+padding: 0.75rem 0;
+text-align: center;
+}
+
+.mobile-nav a {
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
 }
 
 main {
@@ -125,29 +138,34 @@ font-size: 2rem;
 nav {
 display: none;
 }
+
+.mobile-nav {
+display: block;
+}
 }
 </style>
-```
-
 </head>
 <body>
-<header style="background: #000000; color: white; padding: 1.5rem 0;">
+<header>
 <div class="container">
 <a href="index.html" class="logo">Lifespace Education</a>
 <nav>
 <a href="index.html">Home</a>
 <a href="framework.html">Framework</a>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="framework.html">Framework</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="index.html#contact">Contact</a>
 </nav>
 </div>
 </header>
 
-```
-<main style="background: #ffffff; color: #2d3436;">
+<div class="mobile-nav">
+<a href="index.html">Home</a>
+<a href="framework.html">Framework</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="index.html#contact">Contact</a>
+</div>
+
+<main>
 <div class="container">
 <h1>The Lifespace Education Framework</h1>
 <p style="font-size: 1.2rem; color: #d4743c;"><em>A Comprehensive Approach to Personalized Learning</em></p>
@@ -315,7 +333,6 @@ display: none;
 <p>&copy; 2026 Lifespace Education. All rights reserved.</p>
 </div>
 </footer>
-```
 
 </body>
 </html>
