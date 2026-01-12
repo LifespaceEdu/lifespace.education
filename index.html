@@ -1,532 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Lifespace Education</title>
-    <meta name="description" content="Lifespace Education portfolio - custom curriculum design, web applications, training, and educational tools.">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lifespace Education | Research-Based Learning for Big Island Families</title>
+<meta name="description" content="Lifespace Education brings research-backed, student-centered learning to Hawaii Island. Launching Fall 2026 - serving students grades 1-12.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2d3436;
-            background: #ffffff;
-            font-weight: 300;
-        }
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.6;
+color: #2d3436;
+background: #ffffff;
+font-weight: 300;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
 
-        header {
-            background: #000000;
-            color: white;
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+/* Header */
+header {
+background: #000000;
+color: white;
+padding: 1.5rem 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-decoration: none;
-            color: white;
-        }
+.logo {
+font-size: 1.5rem;
+font-weight: 400;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 2rem;
-            transition: opacity 0.3s;
-        }
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 2rem;
+transition: opacity 0.3s;
+}
 
-        nav a:hover {
-            opacity: 0.8;
-        }
+nav a:hover {
+opacity: 0.8;
+}
 
-        .hero {
-            background: #1a5555;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
+/* Mobile Navigation */
+.mobile-nav {
+display: none;
+background: #1a5555;
+padding: 0.75rem 0;
+text-align: center;
+}
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 400;
-            color: white;
-        }
+.mobile-nav a {
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
+}
 
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: white;
-        }
+/* Hero Section */
+.hero {
+background: #1a5555;
+color: white;
+padding: 5rem 0;
+text-align: center;
+}
 
-        .hero .subtitle {
-            font-size: 1rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 1.5rem auto 0;
-            color: white;
-        }
+.hero h1 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+font-weight: 400;
+}
 
-        section {
-            padding: 4rem 0;
-        }
+.hero p {
+font-size: 1.25rem;
+margin-bottom: 2rem;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
 
-        section:nth-child(even) {
-            background: #f8f9fa;
-        }
+.cta-button {
+display: inline-block;
+background: #1a5555;
+color: white;
+padding: 1rem 2rem;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 1.1rem;
+transition: transform 0.3s, box-shadow 0.3s;
+margin: 0.5rem;
+}
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #1a5555;
-            font-weight: 400;
-        }
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
-            font-weight: 400;
-        }
+.cta-secondary {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
 
-        h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #1a5555;
-            font-weight: 400;
-        }
+/* Sections */
+section {
+padding: 4rem 0;
+}
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+section:nth-child(even) {
+background: #f8f9fa;
+}
 
-        .project-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #1a5555;
-        }
+#contact {
+background: #1a5555 !important;
+color: white;
+}
 
-        .project-card h3 {
-            color: #1a5555;
-            margin-bottom: 0.5rem;
-        }
+h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a5555;
+font-weight: 400;
+}
 
-        .project-card ul {
-            list-style: none;
-        }
+#contact h2 {
+color: white;
+}
 
-        .project-card ul li {
-            padding: 0.25rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
+h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #2d3748;
+font-weight: 400;
+}
 
-        .project-card ul li:before {
-            content: "•";
-            color: #1a5555;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+.two-column {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+margin-top: 2rem;
+}
 
-        .project-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-            color: #666;
-        }
+.three-column {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 2rem;
+}
 
-        .tag {
-            display: inline-block;
-            background: #e8f4f4;
-            color: #1a5555;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
-        }
+.card {
+background: white;
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .link-button {
-            display: inline-block;
-            color: #1a5555;
-            text-decoration: none;
-            margin-top: 1rem;
-            font-weight: 600;
-            transition: opacity 0.3s;
-        }
+.card h3 {
+color: #1a5555;
+margin-bottom: 1rem;
+}
 
-        .link-button:hover {
-            opacity: 0.7;
-        }
+.highlight-box {
+background: #f8f9fa;
+border-left: 4px solid #1a5555;
+padding: 1.5rem;
+margin: 2rem 0;
+font-style: italic;
+}
 
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid #1a5555;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
+.pillar-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+margin-top: 2rem;
+}
 
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
+.pillar {
+padding: 1.5rem;
+background: white;
+border-radius: 8px;
+border: 2px solid #e2e8f0;
+}
 
-        .stat-box {
-            text-align: center;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+.pillar h4 {
+color: #2a7b7b;
+margin-bottom: 0.5rem;
+}
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 600;
-            color: #1a5555;
-            line-height: 1;
-        }
+/* Footer */
+footer {
+background: #2d3748;
+color: white;
+padding: 2rem 0;
+text-align: center;
+}
 
-        .stat-label {
-            margin-top: 0.5rem;
-            color: #666;
-            font-size: 0.95rem;
-        }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 1.8rem;
+}
 
-        .mobile-nav {
-            display: none;
-            background: #1a5555;
-            padding: 0.75rem 0;
-            text-align: center;
-        }
+.hero p {
+font-size: 1rem;
+}
 
-        .mobile-nav a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-        }
+.two-column,
+.three-column,
+.pillar-grid {
+grid-template-columns: 1fr;
+}
 
-        footer {
-            background: #2d3748;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
+nav {
+display: none;
+}
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .mobile-nav {
-                display: block;
-            }
-        }
-    </style>
+.mobile-nav {
+display: block;
+}
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Lifespace Education</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="framework.html">Framework</a>
-                <a href="portfolio.html">Design Services</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="container">
+<div class="logo">Lifespace Education</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="framework.html">Framework</a>
+<a href="portfolio.html">Design Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
 
-    <div class="mobile-nav">
-        <a href="index.html">Home</a>
-        <a href="framework.html">Framework</a>
-        <a href="portfolio.html">Design Services</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
+<div class="mobile-nav">
+<a href="index.html">Home</a>
+<a href="framework.html">Framework</a>
+<a href="portfolio.html">Design Services</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Educational design for homeschools, microschools, and small schools</h1>
-            <p>Custom learning plans, curriculum development, instruction, and training.</p>
-            <p class="subtitle">We help you shape learning directly with your students, without institutional gatekeepers in the way.</p>
-        </div>
-    </section>
+<section class="hero">
+<div class="container">
+<h1>What happens when we actually build schools from research-based best practices?</h1>
+<p>Lifespace Education implements what decades of research already validates - launching Fall 2026 to serve Big Island families seeking education that truly prepares students for unknowable futures.</p>
+<a href="#contact" class="cta-button">Join Our Interest List</a>
+<a href="web_small_lifespace framework document.pdf" class="cta-button cta-secondary">Download Full Framework</a>
+</div>
+</section>
 
-    <!-- Services Overview Section -->
-    <section style="background: #ffffff;">
-        <div class="container">
-            <h2>What We Design</h2>
-            <p style="max-width: 900px; margin-bottom: 2rem;">Educational design services that put learners at the center. We work with homeschooling families, microschool founders, and small school teams to create learning experiences tailored to real students in real contexts.</p>
+<section id="challenge">
+<div class="container">
+<h2>The Challenge Big Island Families Face</h2>
+<p>You're not happy with your current option, but you don't see an alternative.</p>
 
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Custom Learning Plans</h3>
-                    <p>Individual instructional profiles and curriculum recommendations for students learning at home, in microschools, or in small schools.</p>
-                    <ul style="margin-top: 0.5rem;">
-                        <li>Individual instructional profiles that coordinate goals, daily rhythms, subjects, and resources</li>
-                        <li>Plans that grow with the learner across months or years</li>
-                        <li>Tailored for all learners across diverse learning contexts</li>
-                    </ul>
-                </div>
+<div class="three-column">
+<div class="card">
+<h3>Expensive Private School</h3>
+<p>Children fall behind in core academics due to non-research-based methods. Rigid policies don't reflect current educational research. Eurocentric curriculum doesn't reflect our community's diversity. Cost is unsustainable for many families.</p>
+</div>
 
-                <div class="project-card">
-                    <h3>Custom Curriculum & Materials</h3>
-                    <p>Custom curriculum built for your specific learners, groups, or schools.</p>
-                    <ul style="margin-top: 0.5rem;">
-                        <li>Full curriculum design for specific contexts or learning communities</li>
-                        <li>Workbooks and practice materials designed around your needs</li>
-                        <li>Leveled, differentiated reading materials that support a wide range of readers</li>
-                        <li>Lesson sequences and unit plans</li>
-                    </ul>
-                </div>
+<div class="card">
+<h3>Homeschooling Alone</h3>
+<p>Isolation and overwhelm. You're reinventing the wheel without educational expertise. Balancing work, life, and teaching feels impossible. No strong co-op support. You don't have time to research pedagogy or design curriculum - nor should you have to.</p>
+</div>
 
-                <div class="project-card">
-                    <h3>Custom Classes & Instruction</h3>
-                    <p>Direct teaching and facilitation for children, teens, and adults.</p>
-                    <ul style="margin-top: 0.5rem;">
-                        <li>Custom class design for children and teens</li>
-                        <li>Direct instruction and facilitation with students</li>
-                        <li>Adult learning experiences for founders, educators, and small teams</li>
-                        <li>Workshops and training sessions</li>
-                    </ul>
-                </div>
+<div class="card">
+<h3>Virtual Charter Programs</h3>
+<p>Online formats struggle to engage students. Occasional meetups can't replace daily learning community and genuine relationships. Parents still shoulder most educational responsibility. Concerns about oversight, accountability, and academic outcomes.</p>
+</div>
+</div>
 
-                <div class="project-card">
-                    <h3>Custom Tools & Training</h3>
-                    <p>Simple tools and support that make educational work manageable.</p>
-                    <ul style="margin-top: 0.5rem;">
-                        <li>Lightweight web apps for planning, tracking progress, or organizing learning stories</li>
-                        <li>Training and workshops for founders and educators implementing new approaches</li>
-                        <li>Guidance on using plans, curriculum, and materials in daily practice</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="highlight-box">
+<p>"At a recent homeschool meet-up, one parent told us: '80% of the people here are not happy with what they're doing - they just don't see another option.'"</p>
+</div>
 
-    <section style="background: #f8f9fa;">
-        <div class="container">
-            <h2>Web Applications</h2>
-            <p style="margin-bottom: 1rem;">Complete lesson plans and curriculum materials formatted for mobile access. These represent responsive curriculum development—taking sophisticated pedagogy and making it something anyone can facilitate, typically delivered in under 24 hours.</p>
-            
-            <p style="margin-bottom: 2rem;">Traditional publishers won't touch remote viewing curricula, explicit anti-racist education for young children, or decolonial frameworks. Families seeking these resources are told their needs don't exist. These apps serve those families anyway—research-based, mobile-accessible, no gatekeepers.</p>
+<p style="font-size: 1.2rem; margin-top: 2rem; text-align: center;"><strong>Lifespace Education is that option.</strong></p>
+</div>
+</section>
 
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Seeds and Parts SEL Curriculum</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 12 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Parent wanted SEL curriculum teaching kids what to do with emotions they've named, not just identification.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh's seeds metaphor. Includes full lesson plans with timing, printable worksheets, teacher notes. Works for classroom and homeschool.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">SEL</span>
-                        <span class="tag">Ages 6-9</span>
-                        <span class="tag">Printables</span>
-                    </div>
-                    <a href="https://seeds-parts4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<section id="about">
+<div class="container">
+<h2>We Know What Works in Education</h2>
+<p style="font-size: 1.1rem; max-width: 900px;">Decades of research validate project-based learning, student agency, social-emotional development, authentic assessment, and relationship-based approaches. Yet most schools struggle to implement them within industrial-era structures, high-stakes accountability systems, and tight budgets.</p>
 
-                <div class="project-card">
-                    <h3>Lifespace Logic Band A</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 20 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Foundation-level reasoning curriculum that builds critical thinking through everyday moments, not worksheets.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Five core reasoning moves (pattern hunting, sort & order, inference from clues, claims with reasons, compare & choose). Daily micro-games and weekly labs. Research-based (Philosophy for Children, effect size 0.65+).</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 6-8</span>
-                        <span class="tag">Critical Thinking</span>
-                        <span class="tag">Research-Based</span>
-                    </div>
-                    <a href="https://band-a-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<p style="font-size: 1.1rem; max-width: 900px; margin-top: 1rem;">The question is no longer <strong>"what should education look like?"</strong> The question is: <strong>"What happens when we actually build from best practices as our foundation?"</strong></p>
 
-                <div class="project-card">
-                    <h3>Lifespace Logic Band B</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 18 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Advanced reasoning for older elementary students building on Band A foundations.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Same five moves, but structured and systematic. Pattern rules & exceptions, multi-category sorting, inference chains, Claim-Evidence-Reasoning (CER) framework, multi-criteria decision tables. Makes thinking visible.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 8-11</span>
-                        <span class="tag">Structured Reasoning</span>
-                        <span class="tag">CER Framework</span>
-                    </div>
-                    <a href="https://band-b-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<div class="two-column" style="margin-top: 3rem;">
+<div>
+<h3>Lifespace Education implements what research already validates</h3>
+<p>Every component of our approach is grounded in rigorous studies published in scholarly journals demonstrating effectiveness. We're not testing whether these approaches work - we're demonstrating that this integrated, research-based model can operate as a viable, scalable school design.</p>
+<p style="margin-top: 1rem;">Our comprehensive framework synthesizes evidence-based practices into a coherent approach centered on six essential pillars, all working together to develop students as confident, capable, self-directed learners.</p>
+</div>
 
-                <div class="project-card">
-                    <h3>Barbie Freedom Dreaming</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 16 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Dr. Bettina Love's Freedom Dreaming framework adapted for young children through play.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> 6-stage guided activity where kids use Barbie (or any doll) to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration. Creates books kids can share. Ages 5-7.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 5-7</span>
-                        <span class="tag">Social Justice</span>
-                        <span class="tag">Play-Based</span>
-                    </div>
-                    <a href="https://barbie-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<div>
+<h3>Solving Bloom's Two Sigma Problem</h3>
+<p>Research shows one-on-one tutoring produces dramatically better outcomes than classroom instruction - but it's impossibly expensive. Lifespace Education achieves near-tutorial effectiveness through intelligent design:</p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>Individualized Learning Maps</li>
+<li>Adaptive technology platforms</li>
+<li>Mixed-age peer learning</li>
+<li>Just-in-time instruction</li>
+<li>8:1 student-teacher ratio</li>
+<li>Project-based individualization</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 
-                <div class="project-card">
-                    <h3>Hot Wheels Freedom Dreaming</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 14 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Same Freedom Dreaming framework but for kids who play with cars/trucks instead of dolls.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Adapted version where Hot Wheels vehicles become freedom workers building liberated futures. Same 6-stage structure, same justice focus, different entry point. Gender-inclusive approach to social justice education.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 5-7</span>
-                        <span class="tag">Social Justice</span>
-                        <span class="tag">Gender-Inclusive</span>
-                    </div>
-                    <a href="https://hot-wheels-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<section id="approach">
+<div class="container">
+<h2>The Lifespace Approach: Six Pillars</h2>
+<p style="max-width: 900px; margin-bottom: 2rem;">Students develop across six essential domains through authentic application in meaningful contexts - not isolated skill practice disconnected from purpose.</p>
 
-                <div class="project-card">
-                    <h3>Ancestral Futures (Middle School)</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 30 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Decolonial education framework for middle schoolers connecting Indigenous knowledge with future visioning.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> 11-stage curriculum where students research specific cultural practices, study real resistance movements, create characters with "ancestral tech," and write Freedom Dream stories. Includes 12 resistance movement reading passages. Culturally responsive, justice-oriented.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Grades 5-9</span>
-                        <span class="tag">Decolonial</span>
-                        <span class="tag">Afrofuturism</span>
-                    </div>
-                    <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
+<div class="pillar-grid">
+<div class="pillar">
+<h4>Critical Thinking</h4>
+<p>Analysis, synthesis, inference, and evaluation. Students learn to question assumptions, evaluate sources, distinguish evidence from assertion, and form reasoned perspectives. Information literacy is core - essential for navigating our digital age.</p>
+</div>
 
-                <div class="project-card">
-                    <h3>Ancestral Futures (High School)</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 25 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Advanced version with less scaffolding, more independent research.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Same framework as MS version but expects deeper research, more sophisticated analysis, and independent source evaluation. Students conduct original research into resistance movements and cultural practices. Creates space for complex justice work.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">High School</span>
-                        <span class="tag">Research-Based</span>
-                        <span class="tag">Indigenous Futurism</span>
-                    </div>
-                    <p style="margin-top: 1rem; color: #666; font-style: italic;">In development</p>
-                </div>
+<div class="pillar">
+<h4>Problem Solving</h4>
+<p>Identifying challenges, generating solutions, testing approaches, learning from failures, and persisting through obstacles. Students tackle real problems without predetermined answers - developing the resourcefulness essential for uncertain futures.</p>
+</div>
 
-                <div class="project-card">
-                    <h3>Ahupuaʻa Learning Journey</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 22 hours</span>
-                        <span>📅 Nov 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional land management to contemporary environmental justice.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Interactive journey through ahupuaʻa system (traditional Hawaiian land division). Students learn Indigenous ecological knowledge, examine colonial disruption, explore sovereignty movements. Culturally grounded, place-based education for Big Island families.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Hawaii-Specific</span>
-                        <span class="tag">Environmental Justice</span>
-                        <span class="tag">Indigenous Knowledge</span>
-                    </div>
-                    <a href="https://ahupuaa-learning-journey.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
-            </div>
+<div class="pillar">
+<h4>Core Competencies</h4>
+<p>Research-based instruction in language arts, mathematics, science, and social studies. Approximately two hours daily of focused, efficient skill-building - then immediate application in authentic contexts through project work.</p>
+</div>
 
-            <div class="highlight-box" style="margin-top: 3rem;">
-                <p><strong>Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. Teachers and parents can reference lessons on their phones during class or learning time. No software to buy, no downloads, no barriers.</p>
-            </div>
-        </div>
-    </section>
+<div class="pillar">
+<h4>Expression</h4>
+<p>Taking powerful ideas from mind and making them real for others to perceive. Synthesis and transmission across modalities - written, spoken, visual, built, performed. Measured by clarity of thinking and effectiveness of communication.</p>
+</div>
 
-    <section style="background: #ffffff;">
-        <div class="container">
-            <h2>About Lifespace Education</h2>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <p>Lifespace Education is a small educational design practice working with homeschools, microschools, and early-stage schools. We start from the actual learners in front of you—not generic templates or off-the-shelf solutions.</p>
-                <p style="margin-top: 1rem;">We design for real schedules, families, and constraints. Our work blends print materials, conversation, and digital tools as needed to support learning that feels human-scale and manageable.</p>
-                <p style="margin-top: 1.5rem; font-size: 1rem; opacity: 0.9;">We work with families, founders, and educators who are oriented toward equity and humane learning environments, and who want their educational design to reflect those values in practice.</p>
-            </div>
-        </div>
-    </section>
+<div class="pillar">
+<h4>Social-Emotional Learning</h4>
+<p>The foundation enabling all other learning. Self-awareness, self-management, social awareness, relationship skills, and responsible decision-making. Developed through explicit instruction and embedded practice throughout the learning day.</p>
+</div>
 
-    <section id="contact" style="background: #1a5555; color: white;">
-        <div class="container">
-            <h2 style="color: white; text-align: center;">Start a Conversation</h2>
-            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 1rem; color: white;">Get in touch about potential projects. Good fits include families, microschool founders, and small schools who want custom learning plans, curriculum, or training designed around their real learners.</p>
+<div class="pillar">
+<h4>Project Work</h4>
+<p>Extended authentic investigations where all pillars come together. Students learn to plan, manage complexity, sustain inquiry, iterate through setbacks, and bring work to completion. Both a competency students develop and the primary vehicle for learning.</p>
+</div>
+</div>
 
-            <div style="background: white; color: #2d3436; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 2rem auto 0; text-align: center;">
-                <h3 style="color: #1a5555; margin-bottom: 1rem;">Contact</h3>
-                <p><strong>Email:</strong> <a href="mailto:hello@lifespace.education" style="color: #1a5555; text-decoration: none; font-weight: 600;">hello@lifespace.education</a></p>
-            </div>
-        </div>
-    </section>
+<div style="margin-top: 3rem; text-align: center;">
+<a href="web_small_lifespace framework document.pdf" class="cta-button">Read the Complete 71-Page Framework</a>
+</div>
+</div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Lifespace Education. All rights reserved.</p>
-        </div>
-    </footer>
+<section id="distinctives">
+<div class="container">
+<h2>What Makes Lifespace Different</h2>
+
+<div class="two-column">
+<div class="card">
+<h3>Student Agency</h3>
+<p>Students make meaningful decisions about their learning through Learning Maps, project choice, and co-designed community agreements. Not complete autonomy, but genuine agency within supportive structure - building self-direction and ownership.</p>
+</div>
+
+<div class="card">
+<h3>Mixed-Age Learning</h3>
+<p>Serving grades 1-12 together creates natural mentorship. Younger students learn from older students. Older students develop leadership and teaching skills. More flexible for advanced or struggling learners. Research validates academic and social benefits for all.</p>
+</div>
+
+<div class="card">
+<h3>Relationship-Based Culture</h3>
+<p>No rewards, punishments, or coercive "classroom management." Learning happens in context of genuine relationships built on mutual respect, trust, and care. Restorative practices repair harm and maintain community when conflicts arise.</p>
+</div>
+
+<div class="card">
+<h3>Essential Free Play</h3>
+<p>1-2+ hours daily of non-negotiable unstructured time. Not "recess as reward" but essential for development, wellbeing, and building the internal locus of control research shows is critical for healthy development.</p>
+</div>
+
+<div class="card">
+<h3>Real-World Relevance</h3>
+<p>Learning connects to authentic contexts, real problems, and genuine communities. Students engage with local resources, community members, and actual challenges - not isolated content to possibly apply someday.</p>
+</div>
+
+<div class="card">
+<h3>Equity-Centered Education</h3>
+<p>Lifespace challenges traditional power structures in schooling. We use restorative practices instead of punishment, center student voices in decision-making, and actively examine whose perspectives are included and excluded in curriculum. We welcome families committed to equity and justice in education.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="engage">
+<div class="container">
+<h2>How Families Can Engage</h2>
+
+<div class="three-column">
+<div class="card">
+<h3>Available Now</h3>
+<ul style="margin-left: 1.5rem;">
+<li>Educational evaluation and assessment</li>
+<li>Consultation and curriculum design</li>
+<li>Custom class design and instruction</li>
+<li>Individual learning plan development</li>
+</ul>
+<p style="margin-top: 1rem; font-style: italic;">Consultations available evenings and weekends. Contact us for pricing and scheduling.</p>
+</div>
+
+<div class="card">
+<h3>Fall 2026 Launch</h3>
+<p><strong>Co-op Learning Community & Hub Model</strong></p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>Collaborative homeschool support</li>
+<li>Pooled resources for specialists, experiences, and materials</li>
+<li>Educational expertise you shouldn't have to develop alone</li>
+<li>Serving students grades 1-12 across Big Island</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Our Vision (With Funding)</h3>
+<p><strong>Full Microschool Implementation</strong></p>
+<ul style="margin-left: 1.5rem; margin-top: 1rem;">
+<li>16 students, 2 teachers, dedicated space</li>
+<li>Complete Lifespace framework</li>
+<li>Tuition-free Year 1, then $0-$12,000 sliding scale</li>
+<li>Demonstration model for scaling research-based education</li>
+</ul>
+</div>
+</div>
+
+<div style="margin-top: 3rem; text-align: center; background: #edf2f7; padding: 2rem; border-radius: 8px;">
+<h3 style="color: #1a5555; margin-bottom: 1rem;">Join Our Interest List for Fall 2026</h3>
+<p style="margin-bottom: 1.5rem;">Whether you're interested in consultation now, joining our co-op community, or the future microschool - let us know. Limited spots available.</p>
+<a href="#contact" class="cta-button">Express Your Interest</a>
+</div>
+</div>
+</section>
+
+<section id="team">
+<div class="container">
+<h2>Our Team</h2>
+
+<div class="two-column">
+<div class="card">
+<h3>Marcus Sigh</h3>
+<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Founder & Educational Designer</p>
+
+<p>Marcus brings 16 years of teaching experience across diverse settings - from elementary classrooms to locked facilities for adjudicated youth with severe mental health needs, including students everyone else had given up on.</p>
+
+<p style="margin-top: 1rem;">Certified in Special Education (B-12) and Elementary Education in Michigan, with provisional Special Education certification in Hawaii (advancing to standard certification 2026-27). His expertise spans Emotional Impairment, Specific Learning Disabilities, and Autism Spectrum.</p>
+
+<p style="margin-top: 1rem;">As supervisor of a pilot case planning unit at a residential treatment center, Marcus transformed institutional practices by implementing strength-based approaches, dramatically reducing reliance on seclusions and physical management - demonstrating that relationship-based methods work even in the most challenging educational contexts.</p>
+
+<p style="margin-top: 1rem;">Marcus has extensive training in anti-bias and decolonial education, bringing pedagogical approaches rooted in educational justice and solidarity with Indigenous sovereignty movements. He developed the Lifespace Education framework during the pandemic, synthesizing decades of research into a coherent, implementable model.</p>
+</div>
+
+<div class="card">
+<h3>Kate Werner</h3>
+<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Collaborative Partner & Reading Specialist</p>
+<p style="font-style: italic;">Bio coming soon.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container" style="text-align: center;">
+<h2>Get Started</h2>
+<p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: white;">Whether you're interested in consultation now, joining our Fall 2026 co-op community, or learning more about the future microschool - we want to hear from you.</p>
+
+<div style="background: white; color: #333; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+<h3 style="color: #1a5555; margin-bottom: 1rem;">Contact Information</h3>
+<p><strong>Email:</strong> <a href="mailto:hello@lifespace.education">hello@lifespace.education</a></p>
+<p style="margin-top: 1.5rem;"><strong>Or complete our interest form:</strong></p>
+<p style="margin-top: 1rem; font-style: italic;">[Google Form Link to be Added]</p>
+</div>
+
+<p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9; color: white;">Serving families across Hawaii Island / Big Island</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+</div>
+</footer>
+
 </body>
 </html>
