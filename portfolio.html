@@ -174,7 +174,7 @@
 
         .stat-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin: 3rem 0;
         }
@@ -200,6 +200,21 @@
             font-size: 0.95rem;
         }
 
+        .mobile-nav {
+            display: none;
+            background: #1a5555;
+            padding: 0.75rem 0;
+            text-align: center;
+        }
+
+        .mobile-nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
         footer {
             background: #2d3748;
             color: white;
@@ -221,11 +236,15 @@
             }
 
             .stat-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr !important;
             }
 
             nav {
                 display: none;
+            }
+
+            .mobile-nav {
+                display: block;
             }
         }
     </style>
@@ -242,6 +261,13 @@
             </nav>
         </div>
     </header>
+
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="framework.html">Framework</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
 
     <section class="hero">
         <div class="container">
@@ -330,7 +356,7 @@
                         <span class="tag">Critical Thinking</span>
                         <span class="tag">Research-Based</span>
                     </div>
-                    <a href="https://lifespace-logic4-kids.vercel.app//" class="link-button" target="_blank">View App →</a>
+                    <a href="https://band-a-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
                 </div>
 
                 <div class="project-card">
@@ -346,7 +372,7 @@
                         <span class="tag">Structured Reasoning</span>
                         <span class="tag">CER Framework</span>
                     </div>
-                    <a href="https://lifespace-logic4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                    <a href="https://band-b-logic.vercel.app/" class="link-button" target="_blank">View App →</a>
                 </div>
 
                 <div class="project-card">
