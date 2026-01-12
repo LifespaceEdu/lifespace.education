@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,7 +8,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-```
 * {
 margin: 0;
 padding: 0;
@@ -61,6 +59,22 @@ transition: opacity 0.3s;
 
 nav a:hover {
 opacity: 0.8;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+display: none;
+background: #1a5555;
+padding: 0.75rem 0;
+text-align: center;
+}
+
+.mobile-nav a {
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
 }
 
 /* Hero Section */
@@ -211,29 +225,36 @@ grid-template-columns: 1fr;
 }
 
 nav {
-display: none; /* Simple mobile - add hamburger menu later if needed */
+display: none;
+}
+
+.mobile-nav {
+display: block;
 }
 }
 </style>
-```
-
 </head>
 <body>
-<header style="background: #000000; color: white; padding: 1.5rem 0; position: sticky; top: 0; z-index: 100;">
+<header>
 <div class="container">
 <div class="logo">Lifespace Education</div>
 <nav>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="framework.html">Framework</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="framework.html">Framework</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
-```
-<section class="hero" style="background: #1a5555; color: white; padding: 5rem 0; text-align: center;">
+<div class="mobile-nav">
+<a href="index.html">Home</a>
+<a href="framework.html">Framework</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+<section class="hero">
 <div class="container">
 <h1>What happens when we actually build schools from research-based best practices?</h1>
 <p>Lifespace Education implements what decades of research already validates - launching Fall 2026 to serve Big Island families seeking education that truly prepares students for unknowable futures.</p>
@@ -242,7 +263,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="challenge" style="background: #ffffff; color: #2d3436;">
+<section id="challenge">
 <div class="container">
 <h2>The Challenge Big Island Families Face</h2>
 <p>You're not happy with your current option, but you don't see an alternative.</p>
@@ -272,7 +293,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="about" style="background: #f8f9fa; color: #2d3436;">
+<section id="about">
 <div class="container">
 <h2>We Know What Works in Education</h2>
 <p style="font-size: 1.1rem; max-width: 900px;">Decades of research validate project-based learning, student agency, social-emotional development, authentic assessment, and relationship-based approaches. Yet most schools struggle to implement them within industrial-era structures, high-stakes accountability systems, and tight budgets.</p>
@@ -302,7 +323,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="approach" style="background: #ffffff; color: #2d3436;">
+<section id="approach">
 <div class="container">
 <h2>The Lifespace Approach: Six Pillars</h2>
 <p style="max-width: 900px; margin-bottom: 2rem;">Students develop across six essential domains through authentic application in meaningful contexts - not isolated skill practice disconnected from purpose.</p>
@@ -345,7 +366,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="distinctives" style="background: #f8f9fa; color: #2d3436;">
+<section id="distinctives">
 <div class="container">
 <h2>What Makes Lifespace Different</h2>
 
@@ -383,7 +404,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="engage" style="background: #ffffff; color: #2d3436;">
+<section id="engage">
 <div class="container">
 <h2>How Families Can Engage</h2>
 
@@ -430,7 +451,7 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="team" style="background: #f8f9fa; color: #2d3436;">
+<section id="team">
 <div class="container">
 <h2>Our Team</h2>
 
@@ -457,14 +478,14 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 </div>
 </section>
 
-<section id="contact" style="background: #1a5555; color: white;">
+<section id="contact">
 <div class="container" style="text-align: center;">
 <h2 style="color: white;">Get Started</h2>
 <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Whether you're interested in consultation now, joining our Fall 2026 co-op community, or learning more about the future microschool - we want to hear from you.</p>
 
 <div style="background: white; color: #333; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
-<h3 style="color: white; margin-bottom: 1rem;">Contact Information</h3>
-<p><strong>Email:</strong> lifespaceeducation@gmail.com</p>
+<h3 style="color: #1a5555; margin-bottom: 1rem;">Contact Information</h3>
+<p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e985808f8c9a99888a8c8c8d9c8a889d808687a98e84888085c78a8684">[email&#160;protected]</a></p>
 <p style="margin-top: 1.5rem;"><strong>Or complete our interest form:</strong></p>
 <p style="margin-top: 1rem; font-style: italic;">[Google Form Link to be Added]</p>
 </div>
@@ -475,11 +496,4 @@ display: none; /* Simple mobile - add hamburger menu later if needed */
 
 <footer>
 <div class="container">
-<p>&copy; 2026 Lifespace Education. All rights reserved.</p>
-<p style="margin-top: 0.5rem; font-size: 0.9rem;">Launching Fall 2026 | Puna, Hawaii</p>
-</div>
-</footer>
-```
-
-</body>
-</html>
+<p>&copy; 2026 Lifespace Education. All rights reser
