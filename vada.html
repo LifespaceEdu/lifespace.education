@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opening Vada...</title>
+    <title>Vada AI Tutor</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <p>Opening Vada AI Tutor...</p>
-    <p>If the window doesn't open, <a href="https://vada-ai-tutor.vercel.app" target="_blank">click here</a>.</p>
-    
-    <script>
-        // Open Vada in a popup window
-        window.open(
-            'https://vada-ai-tutor.vercel.app',
-            'VadaTutor',
-            'width=400,height=600,resizable=yes,scrollbars=yes'
-        );
-    </script>
-    <noscript>
-        <p>JavaScript is required. <a href="https://vada-ai-tutor.vercel.app" target="_blank">Click here to open Vada</a>.</p>
-    </noscript>
+    <iframe src="https://vada-ai-tutor.vercel.app" allow="clipboard-write"></iframe>
 </body>
 </html>
