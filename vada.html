@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Vada...</title>
+</head>
+<body>
+    <script>
+        // Open Vada in a popup window
+        window.open(
+            'https://vada-ai-tutor.vercel.app',
+            'VadaTutor',
+            'width=400,height=600,resizable=yes,scrollbars=yes'
+        );
+        
+        // Show message in case popup is blocked
+        document.body.innerHTML = '<p>Vada should open in a new window. If it doesn\'t, <a href="https://vada-ai-tutor.vercel.app" target="_blank">click here</a>.</p>';
+        
+        // Optional: redirect back to main site after a moment
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 2000);
+    </script>
+    <noscript>
+        <p>JavaScript is required. <a href="https://vada-ai-tutor.vercel.app" target="_blank">Click here to open Vada</a>.</p>
+    </noscript>
+</body>
+</html>
