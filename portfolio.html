@@ -219,6 +219,19 @@
             text-align: center;
         }
 
+        details summary span {
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        details[open] summary span {
+            transform: rotate(90deg);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -326,123 +339,126 @@
 
     <section style="background: #ffffff;">
         <div class="container">
-            <h2>Web Applications</h2>
-            <p style="margin-bottom: 1rem;">Complete lesson plans and curriculum materials formatted for mobile access. These represent responsive curriculum development—taking sophisticated pedagogy and making it something anyone can facilitate, typically delivered in under 24 hours.</p>
-            
-            <p style="margin-bottom: 2rem;">Traditional publishers won't touch remote viewing curricula, explicit anti-racist education for young children, or decolonial frameworks. Families seeking these resources are told their needs don't exist. These apps serve those families anyway—research-based, mobile-accessible, no gatekeepers.</p>
+            <h2>AI-Powered Learning Tools</h2>
+            <p style="margin-bottom: 1rem;">Interactive learning platforms featuring Socratic AI tutors that guide students to discover answers themselves through questions. These tools make sophisticated pedagogy accessible—research-based curriculum combined with 24/7 AI support that never gives direct answers.</p>
+
+            <p style="margin-bottom: 2rem;">Traditional publishers avoid controversial topics and won't build AI tutors for small markets. These tools serve families and educators who need justice-oriented, culturally responsive curriculum with built-in Socratic guidance—no gatekeepers, just learning.</p>
 
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Seeds and Parts SEL Curriculum</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 12 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Parent wanted SEL curriculum teaching kids what to do with emotions they've named, not just identification.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide with three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh's seeds metaphor. Includes full lesson plans with timing, printable worksheets, teacher notes. Works for classroom and homeschool.</p>
+                    <h3>Vada Socratic AI Tutor System</h3>
+                    <p><strong>The Need:</strong> Students need help understanding their assignments, but teachers can't be available 24/7. Direct answers don't build learning.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Vada is a Socratic AI tutor that guides students to discover answers themselves through questions. Teachers upload any assignment (PDF or text), and Vada becomes an expert in that content—asking questions, pointing to relevant sections, helping students think critically without giving direct answers. Teacher dashboard includes AI workbook generator that creates formatted lessons with comprehension and reflection questions at specified content and reading levels.</p>
                     <div style="margin-top: 1rem;">
-                        <span class="tag">SEL</span>
-                        <span class="tag">Ages 6-9</span>
-                        <span class="tag">Printables</span>
+                        <span class="tag">Socratic AI</span>
+                        <span class="tag">Teacher & Student Tools</span>
+                        <span class="tag">Adaptive Learning</span>
                     </div>
-                    <a href="https://seeds-parts4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://vada-ai-tutor.vercel.app" class="link-button" target="_blank">Student App →</a>
+                        <a href="https://vada-dashboard-vert.vercel.app" class="link-button" target="_blank">Teacher Dashboard →</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Lifespace Logic (All Bands)</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 60+ hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Complete reasoning curriculum spanning ages 6-14, building critical thinking through everyday moments instead of worksheets.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide covering four developmental bands (A-D) teaching five core reasoning moves: pattern hunting, sort & order, inference from clues, claims with reasons, compare & choose. Daily micro-games and weekly labs. Research-based (Philosophy for Children, effect size 0.65+). Band A starts playful, Band D reaches formal logic.</p>
+                    <h3>US History Interactive Textbook - Enslaved Africans in America</h3>
+                    <p><strong>The Need:</strong> History textbooks often center white perspectives. Students need content that centers marginalized experiences with built-in Socratic support.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Interactive web textbook with embedded Vada AI tutor. Students read chapter content centered on enslaved Africans' agency and resistance, then engage with Vada for Socratic dialogue about the material. AI guides students to deeper understanding through questions, never giving direct answers. Mobile-accessible, saves progress.</p>
                     <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 6-14</span>
-                        <span class="tag">Critical Thinking</span>
-                        <span class="tag">Research-Based</span>
+                        <span class="tag">US History</span>
+                        <span class="tag">Socratic AI</span>
+                        <span class="tag">Justice-Oriented</span>
                     </div>
-                    <a href="https://lifespace-logic4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                    <a href="https://ushist-textbook-lifespace.vercel.app/" class="link-button" target="_blank">View Textbook →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Barbie Freedom Dreaming</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 16 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Dr. Bettina Love's Freedom Dreaming framework adapted for young children through play.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide with 6-stage guided activity where kids use Barbie (or any doll) to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration. Creates books kids can share. Ages 5-7.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 5-7</span>
-                        <span class="tag">Social Justice</span>
-                        <span class="tag">Play-Based</span>
-                    </div>
-                    <a href="https://barbie-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Hot Wheels Freedom Dreaming</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 14 hours</span>
-                        <span>📅 Jan 2026</span>
-                    </div>
-                    <p><strong>The Need:</strong> Same Freedom Dreaming framework but for kids who play with cars/trucks instead of dolls.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide where Hot Wheels vehicles become freedom workers building liberated futures. Same 6-stage structure, same justice focus, different entry point. Gender-inclusive approach to social justice education.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Ages 5-7</span>
-                        <span class="tag">Social Justice</span>
-                        <span class="tag">Gender-Inclusive</span>
-                    </div>
-                    <a href="https://hot-wheels-freedom-dream.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Ancestral Futures (Middle School)</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 30 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Decolonial education framework for middle schoolers connecting Indigenous knowledge with future visioning.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide with 11-stage curriculum where students research specific cultural practices, study real resistance movements, create characters with "ancestral tech," and write Freedom Dream stories. Includes 12 resistance movement reading passages. Culturally responsive, justice-oriented.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">Grades 5-9</span>
-                        <span class="tag">Decolonial</span>
-                        <span class="tag">Afrofuturism</span>
-                    </div>
-                    <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Ancestral Futures (High School)</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 25 hours</span>
-                        <span>📅 Dec 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Advanced version with less scaffolding, more independent research.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Student companion app where teacher leads but students submit work directly in the app. Same framework as MS version but expects deeper research, more sophisticated analysis, and independent source evaluation. Students conduct original research into resistance movements and cultural practices. Creates space for complex justice work.</p>
-                    <div style="margin-top: 1rem;">
-                        <span class="tag">High School</span>
-                        <span class="tag">Research-Based</span>
-                        <span class="tag">Indigenous Futurism</span>
-                    </div>
-                    <a href="https://hs-ancestral-futures-student.vercel.app/" class="link-button" target="_blank">View App →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Ahupuaʻa Learning Journey</h3>
-                    <div class="project-meta">
-                        <span>⏱️ 22 hours</span>
-                        <span>📅 Nov 2025</span>
-                    </div>
-                    <p><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional land management to contemporary environmental justice.</p>
-                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Student companion webquest where students work through the app with separate reading materials. Interactive journey through ahupuaʻa system (traditional Hawaiian land division). Students learn Indigenous ecological knowledge, examine colonial disruption, explore sovereignty movements. Culturally grounded, place-based education for Big Island families.</p>
+                    <h3>Ahupuaʻa Learning Journey (AI-Enhanced)</h3>
+                    <p><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional Indigenous land management to environmental justice, with guided learning support.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Interactive webquest with embedded Socratic AI tutor. Students explore ahupuaʻa systems (traditional Hawaiian land divisions), Indigenous ecological knowledge, colonial disruption, and sovereignty movements. Vada AI provides real-time guidance, asking questions that deepen understanding of place-based and culturally grounded content.</p>
                     <div style="margin-top: 1rem;">
                         <span class="tag">Hawaii-Specific</span>
-                        <span class="tag">Environmental Justice</span>
                         <span class="tag">Indigenous Knowledge</span>
+                        <span class="tag">Socratic AI</span>
                     </div>
-                    <a href="https://ahupuaa-learning-journey.vercel.app/" class="link-button" target="_blank">View App →</a>
+                    <a href="https://ai-ahupua-a-learning-app.vercel.app" class="link-button" target="_blank">View App →</a>
                 </div>
+
+                <div class="project-card">
+                    <h3>Lifespace Framework AI Training</h3>
+                    <p><strong>The Need:</strong> Educators want to understand and implement the Lifespace Framework but need expert guidance.</p>
+                    <p style="margin-top: 1rem;"><strong>The Solution:</strong> Interactive training platform with AI expert in the Lifespace Framework. Teachers and homeschool parents explore the framework through Socratic dialogue—the AI asks questions, provides examples, and guides implementation planning. Accessible 24/7 for professional development on your schedule.</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">Teacher Training</span>
+                        <span class="tag">Framework Expert</span>
+                        <span class="tag">Professional Development</span>
+                    </div>
+                    <a href="https://lifespace-framework-training.vercel.app" class="link-button" target="_blank">View Training →</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 2px solid #edf2f7;">
+                <details style="cursor: pointer;">
+                    <summary style="font-size: 1.3rem; font-weight: 400; color: #1a5555; margin-bottom: 2rem; list-style: none; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">▶</span> Additional Curriculum Resources
+                    </summary>
+
+                    <div class="project-grid" style="margin-top: 2rem;">
+                        <div class="project-card">
+                            <h3>Lifespace Logic (All Bands)</h3>
+                            <p><strong>The Need:</strong> Complete reasoning curriculum spanning ages 6-14, building critical thinking through everyday moments instead of worksheets.</p>
+                            <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide covering four developmental bands (A-D) teaching five core reasoning moves. Research-based (Philosophy for Children, effect size 0.65+). Daily micro-games and weekly labs.</p>
+                            <div style="margin-top: 1rem;">
+                                <span class="tag">Ages 6-14</span>
+                                <span class="tag">Critical Thinking</span>
+                                <span class="tag">Research-Based</span>
+                            </div>
+                            <a href="https://lifespace-logic4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Ancestral Futures</h3>
+                            <p><strong>The Need:</strong> Decolonial education framework connecting Indigenous knowledge with future visioning.</p>
+                            <p style="margin-top: 1rem;"><strong>The Solution:</strong> Curriculum where students research cultural practices, study resistance movements, create characters with "ancestral tech," and write Freedom Dream stories. Available in middle school and high school versions.</p>
+                            <div style="margin-top: 1rem;">
+                                <span class="tag">Grades 5-12</span>
+                                <span class="tag">Decolonial</span>
+                                <span class="tag">Afrofuturism</span>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">Middle School →</a>
+                                <a href="https://hs-ancestral-futures-student.vercel.app/" class="link-button" target="_blank">High School →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Freedom Dreaming (Ages 5-7)</h3>
+                            <p><strong>The Need:</strong> Dr. Bettina Love's Freedom Dreaming framework adapted for young children through play.</p>
+                            <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guides where kids use toys (dolls or vehicles) to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration. Gender-inclusive approaches.</p>
+                            <div style="margin-top: 1rem;">
+                                <span class="tag">Ages 5-7</span>
+                                <span class="tag">Social Justice</span>
+                                <span class="tag">Play-Based</span>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://barbie-freedom-dream.vercel.app/" class="link-button" target="_blank">Barbie Version →</a>
+                                <a href="https://hot-wheels-freedom-dream.vercel.app/" class="link-button" target="_blank">Hot Wheels Version →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Seeds and Parts SEL Curriculum</h3>
+                            <p><strong>The Need:</strong> SEL curriculum teaching kids what to do with emotions they've named, not just identification.</p>
+                            <p style="margin-top: 1rem;"><strong>The Solution:</strong> Teacher guide with three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh's seeds metaphor. Includes lesson plans, printable worksheets, teacher notes.</p>
+                            <div style="margin-top: 1rem;">
+                                <span class="tag">SEL</span>
+                                <span class="tag">Ages 6-9</span>
+                                <span class="tag">Printables</span>
+                            </div>
+                            <a href="https://seeds-parts4-kids.vercel.app/" class="link-button" target="_blank">View App →</a>
+                        </div>
+                    </div>
+                </details>
             </div>
 
             <div class="highlight-box" style="margin-top: 3rem;">
