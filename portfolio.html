@@ -161,6 +161,13 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             border-top: 4px solid #1a5555;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card > *:last-child {
+            margin-top: auto;
         }
 
         .project-card h3 {
@@ -192,17 +199,16 @@
             display: inline-block;
             background: #1a5555;
             color: white;
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
 
         .link-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background: #2d6b6b;
         }
 
         .highlight-box {
@@ -302,7 +308,7 @@
 
                 <div style="background: #edf2f7; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
                     <h4 style="color: #1a5555; margin-bottom: 0.5rem;">Pricing & Scheduling:</h4>
-                    <p>Consultations and custom projects available evenings and weekends. Contact us for rates and availability: <a href="mailto:hello@lifespace.education" style="color: #1a5555; font-weight: 600; text-decoration: none;">info@lifespace.education</a></p>
+                    <p>Consultations and custom projects available evenings and weekends. Contact us for rates and availability: <a href="mailto:info@lifespace.education" style="color: #1a5555; font-weight: 600; text-decoration: none;">info@lifespace.education</a></p>
                 </div>
             </div>
         </div>
@@ -420,8 +426,8 @@
                         <span class="tag">Afrofuturism</span>
                     </div>
                     <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">Middle School →</a>
-                        <a href="https://hs-ancestral-futures-student.vercel.app/" class="link-button" target="_blank">High School →</a>
+                        <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" class="link-button" target="_blank">MS (Teacher Guide) →</a>
+                        <a href="https://hs-ancestral-futures-student.vercel.app/" class="link-button" target="_blank">HS (Student App) →</a>
                     </div>
                 </div>
 
@@ -461,7 +467,7 @@
 
     <section style="background: #f8f9fa;">
         <div class="container">
-            <h2>About Lifespace Education</h2>
+            <h2>About Our Design Practice</h2>
             <div style="max-width: 900px; margin: 0 auto;">
                 <p>Lifespace Education is a small educational design practice working with homeschools, microschools, and early-stage schools. We start from the actual learners in front of you—not generic templates or off-the-shelf solutions.</p>
                 <p style="margin-top: 1rem;">We design for real schedules, families, and constraints. Our work blends print materials, conversation, and digital tools as needed to support learning that feels human-scale and manageable.</p>
@@ -477,7 +483,7 @@
 
             <div style="background: white; color: #2d3436; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 2rem auto 0; text-align: center;">
                 <h3 style="color: #1a5555; margin-bottom: 1rem;">Contact</h3>
-                <p><strong>Email:</strong> <a href="mailto:info@lifespace.education" style="color: #1a5555; text-decoration: none; font-weight: 600;">hello@lifespace.education</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@lifespace.education" style="color: #1a5555; text-decoration: none; font-weight: 600;">info@lifespace.education</a></p>
             </div>
         </div>
     </section>
