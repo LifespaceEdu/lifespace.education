@@ -779,7 +779,7 @@ function renderProviders(filter = 'all') {
         <div class="provider-actions">
           ${provider.website ? `<a href="${provider.website}" target="_blank" rel="noopener" class="action-btn website">Website</a>` : ''}
           ${provider.phone ? `<a href="tel:${provider.phone}" class="action-btn phone">Call</a>` : ''}
-          ${!provider.website && !provider.phone ? `<a href="mailto:info@lifespace.education?subject=Introduction Request: ${encodeURIComponent(provider.name)}&body=Hi,%0D%0A%0D%0AI'd like to be connected with ${encodeURIComponent(provider.name)}.%0D%0A%0D%0AMy name:%0D%0APreferred contact method:%0D%0A%0D%0AThank you!" class="action-btn website" style="flex: 1;">Request Introduction</a>` : ''}
+          ${!provider.website && !provider.phone ? `<a href="mailto:info@lifespace.education?subject=Introduction Request: ${encodeURIComponent(provider.name)}&body=Hi,%0D%0A%0D%0AI'd like to be connected with ${encodeURIComponent(provider.name)}.%0D%0A%0D%0AMy name:%0D%0APreferred contact method:%0D%0A%0D%0AThank you!" class="action-btn website" style="flex: 1;">Get Connected</a>` : ''}
         </div>
       </div>
     </div>
