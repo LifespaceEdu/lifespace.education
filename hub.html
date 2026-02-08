@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hub | Lifespace Education</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #2d3436;
+  background: #f8f9fa;
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Password Gate */
+.password-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a5555 0%, #2d7070 100%);
+}
+
+.password-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.password-box h1 {
+  font-size: 1.75rem;
+  color: #1a5555;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.password-box p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.password-box input:focus {
+  outline: none;
+  border-color: #1a5555;
+}
+
+.password-box button {
+  width: 100%;
+  padding: 1rem;
+  background: #1a5555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.password-box button:hover {
+  background: #2d7070;
+}
+
+.error-msg {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-hint {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.contact-hint a {
+  color: #1a5555;
+}
+
+/* Main Content (hidden until authenticated) */
+.hub-content {
+  display: none;
+}
+
+.hub-content.visible {
+  display: block;
+}
+
+/* Header */
+header {
+  background: #000000;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Hero */
+.hub-hero {
+  background: #1a5555;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hub-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.hub-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* About Box */
+.about-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}
+
+.about-box h2 {
+  color: #1a5555;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.about-box p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Filter Pills */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  color: #555;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: #1a5555;
+}
+
+.filter-btn.active {
+  background: #1a5555;
+  color: white;
+  border-color: #1a5555;
+}
+
+/* Provider Grid */
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Provider Card */
+.provider-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.provider-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.provider-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.provider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.provider-image .placeholder {
+  width: 80px;
+  height: 80px;
+  background: #cbd5e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #718096;
+}
+
+.trained-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1a5555;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+}
+
+.provider-content {
+  padding: 1.5rem;
+}
+
+.provider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.provider-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.provider-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.provider-type.tutor {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.provider-type.instructor {
+  background: #f3e8ff;
+  color: #6b46c1;
+}
+
+.provider-type.program {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.provider-blurb {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.payment-types {
+  margin-bottom: 1.25rem;
+}
+
+.payment-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.payment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.payment-tag {
+  font-size: 0.8rem;
+  background: #f7fafc;
+  color: #555;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.provider-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.action-btn.website {
+  background: #e6f2f2;
+  color: #1a5555;
+}
+
+.action-btn.website:hover {
+  background: #d4e8e8;
+}
+
+.action-btn.phone {
+  background: #f7fafc;
+  color: #555;
+}
+
+.action-btn.phone:hover {
+  background: #edf2f7;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: #999;
+}
+
+.empty-state h3 {
+  color: #555;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.empty-state p {
+  color: #888;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background: #2d3748;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #90cdf4;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .password-box {
+    padding: 2rem;
+  }
+
+  .hub-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .provider-actions {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Password Gate -->
+<div class="password-gate" id="passwordGate">
+  <div class="password-box">
+    <h1>Lifespace Hub</h1>
+    <p>Community provider directory</p>
+
+    <form id="passwordForm">
+      <input type="password" id="passwordInput" placeholder="Enter access password" autocomplete="off">
+      <div class="error-msg" id="errorMsg" style="display: none;">Incorrect password</div>
+      <button type="submit">Enter Hub</button>
+    </form>
+
+    <p class="contact-hint">
+      Need access? <a href="mailto:info@lifespace.education">Contact us</a>
+    </p>
+  </div>
+</div>
+
+<!-- Main Hub Content -->
+<div class="hub-content" id="hubContent">
+
+  <header>
+    <div class="container">
+      <div class="logo"><a href="index.html">Lifespace Education</a></div>
+      <button class="logout-btn" onclick="logout()">Log out</button>
+    </div>
+  </header>
+
+  <section class="hub-hero">
+    <div class="container">
+      <h1>Community Hub</h1>
+      <p>Curated educators, tutors, and programs serving Big Island families. All providers work independently with pass-through pricing.</p>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+
+      <div class="about-box">
+        <h2>About This Directory</h2>
+        <p>This is a curated community bulletin board featuring private instructors, tutors, and educational programs. All providers work independently - you pay them directly at their rates. We don't guarantee LifeSpace training for all providers, but it can be requested. Contact providers directly using the information on their cards.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tutor">Tutors</button>
+        <button class="filter-btn" data-filter="instructor">Instructors</button>
+        <button class="filter-btn" data-filter="program">Programs</button>
+      </div>
+
+      <div class="provider-grid" id="providerGrid">
+        <!-- Providers will be rendered here by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Want to be listed? Email <a href="mailto:info@lifespace.education">info@lifespace.education</a></p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// Simple password - change this to your preferred password
+const HUB_PASSWORD = 'mutualaid!';
+
+// Provider data - edit this array to add/remove providers
+const providers = [
+  // Example provider (uncomment and duplicate to add more):
+  // {
+  //   name: 'Jane Smith',
+  //   type: 'tutor',  // 'tutor', 'instructor', or 'program'
+  //   image: '',  // URL to image, or leave empty for placeholder
+  //   blurb: 'Specializing in reading intervention and phonics instruction for K-5 students.',
+  //   paymentTypes: ['Venmo', 'Check', 'Cash'],
+  //   website: 'https://example.com',  // optional
+  //   phone: '808-555-1234',  // optional
+  //   lifespaceTrainer: true  // shows "LifeSpace Trained" badge
+  // },
+];
+
+// Check auth on load
+document.addEventListener('DOMContentLoaded', function() {
+  if (localStorage.getItem('hub-auth') === 'true') {
+    showHub();
+  }
+  renderProviders();
+  setupFilters();
+});
+
+// Password form handler
+document.getElementById('passwordForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const input = document.getElementById('passwordInput').value;
+
+  if (input === HUB_PASSWORD) {
+    localStorage.setItem('hub-auth', 'true');
+    showHub();
+  } else {
+    document.getElementById('errorMsg').style.display = 'block';
+    document.getElementById('passwordInput').value = '';
+  }
+});
+
+function showHub() {
+  document.getElementById('passwordGate').style.display = 'none';
+  document.getElementById('hubContent').classList.add('visible');
+}
+
+function logout() {
+  localStorage.removeItem('hub-auth');
+  location.reload();
+}
+
+// Render providers
+function renderProviders(filter = 'all') {
+  const grid = document.getElementById('providerGrid');
+
+  const filtered = filter === 'all'
+    ? providers
+    : providers.filter(p => p.type === filter);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <div class="empty-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3>Coming Soon</h3>
+        <p>We're building our community of educators and tutors. Check back soon or contact us if you'd like to be listed.</p>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(provider => `
+    <div class="provider-card" data-type="${provider.type}">
+      <div class="provider-image">
+        ${provider.image
+          ? `<img src="${provider.image}" alt="${provider.name}">`
+          : `<div class="placeholder">${provider.name.charAt(0)}</div>`
+        }
+        ${provider.lifespaceTrainer ? '<div class="trained-badge">LifeSpace Trained</div>' : ''}
+      </div>
+      <div class="provider-content">
+        <div class="provider-header">
+          <div class="provider-name">${provider.name}</div>
+          <div class="provider-type ${provider.type}">${provider.type.charAt(0).toUpperCase() + provider.type.slice(1)}</div>
+        </div>
+        <p class="provider-blurb">${provider.blurb}</p>
+        <div class="payment-types">
+          <div class="payment-label">Accepts</div>
+          <div class="payment-tags">
+            ${provider.paymentTypes.map(t => `<span class="payment-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+        <div class="provider-actions">
+          ${provider.website ? `<a href="${provider.website}" target="_blank" rel="noopener" class="action-btn website">Website</a>` : ''}
+          ${provider.phone ? `<a href="tel:${provider.phone}" class="action-btn phone">Call</a>` : ''}
+          ${!provider.website && !provider.phone ? '<span class="action-btn phone" style="opacity: 0.5; cursor: default;">Contact via email</span>' : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Filter buttons
+function setupFilters() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      renderProviders(this.dataset.filter);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
