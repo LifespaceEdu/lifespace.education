@@ -457,6 +457,90 @@ footer a {
   color: #90cdf4;
 }
 
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-overlay.visible {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-image {
+  width: 100%;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.modal-offerings {
+  color: #1a5555;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.modal-bio {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.provider-image {
+  cursor: pointer;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   .password-box {
@@ -545,6 +629,19 @@ footer a {
 
 </div>
 
+<!-- Bio Modal -->
+<div class="modal-overlay" id="bioModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <img class="modal-image" id="modalImage" src="" alt="">
+    <div class="modal-body">
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-offerings" id="modalOfferings"></div>
+      <div class="modal-bio" id="modalBio"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 // Simple password - change this to your preferred password
 const HUB_PASSWORD = 'mutualaid!';
@@ -555,7 +652,9 @@ const providers = [
     name: 'Julia Wilson',
     type: 'instructor',
     image: 'julia-wilson.jpg',
-    blurb: 'Children\'s, adult, and mixed yoga classes. Children\'s, adult, and mixed art classes. Individual and custom group sessions available.',
+    offerings: 'Yoga & Art Classes — Children, Adults, Mixed Groups — Individual & Custom Sessions',
+    blurb: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity.',
+    bio: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga and art classes help children and adults discover self-expression, self-love, and their unique inner beauty.\n\nJulia attended Idyllwild Arts Academy, an internationally renowned performing arts boarding school, before joining professional dance companies in New York City. She later transitioned to healing arts—massage therapy, yoga instruction, and the visual arts.\n\nNow in Hawaii, she offers yoga and art classes for children, adults, and mixed-age groups. Individual sessions and custom group classes are available. Julia\'s mission is to help every child feel worthy, unique, lovable, and full of self-esteem through their artistic and yogic journey.',
     paymentTypes: ['Contact Julia for details'],
     website: '',
     phone: '',
@@ -619,9 +718,9 @@ function renderProviders(filter = 'all') {
     return;
   }
 
-  grid.innerHTML = filtered.map(provider => `
+  grid.innerHTML = filtered.map((provider, index) => `
     <div class="provider-card" data-type="${provider.type}">
-      <div class="provider-image">
+      <div class="provider-image" onclick="openModal(${index})">
         ${provider.image
           ? `<img src="${provider.image}" alt="${provider.name}">`
           : `<div class="placeholder">${provider.name.charAt(0)}</div>`
@@ -660,6 +759,33 @@ function setupFilters() {
     });
   });
 }
+
+// Modal functions
+function openModal(index) {
+  const provider = providers[index];
+  document.getElementById('modalImage').src = provider.image || '';
+  document.getElementById('modalImage').style.display = provider.image ? 'block' : 'none';
+  document.getElementById('modalName').textContent = provider.name;
+  document.getElementById('modalOfferings').textContent = provider.offerings || '';
+  document.getElementById('modalBio').innerHTML = (provider.bio || provider.blurb).replace(/\n/g, '<br><br>');
+  document.getElementById('bioModal').classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('bioModal').classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+// Close modal on overlay click
+document.getElementById('bioModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
 </script>
 
 </body>
