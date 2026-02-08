@@ -14,6 +14,8 @@
 .modal-overlay.visible { display: flex; }
 .tag::before { content: '#'; }
 .hero-gradient { background: linear-gradient(135deg, #1a5555 0%, #1e3a5f 25%, #4a3f55 50%, #5f4a1e 75%, #5f3a4a 100%); }
+a.link-primary { color: #60a5fa; }
+a.link-primary:hover { color: #93c5fd; }
 </style>
 </head>
 <body class="min-h-screen">
@@ -151,7 +153,7 @@ const providers = [
     offerings: 'Reading',
     blurb: 'Certified teacher and reading specialist. Amazing reading teacher. Bio coming soon.',
     bio: '',
-    sessionTypes: ['Tele', 'In Person', 'Custom Classes'],
+    sessionTypes: ['Tele', 'In Person', 'Individual', 'Custom Classes'],
     paymentTypes: [],
     website: '',
     phone: '',
@@ -175,8 +177,8 @@ const providers = [
     type: 'instructor',
     image: 'julia-wilson.jpg',
     offerings: 'Yoga, Art & Massage',
-    blurb: 'Former professional dancer and NYC licensed massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty.',
-    bio: 'Former professional dancer and NYC licensed massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty.',
+    blurb: 'Former professional dancer and NYC licensed massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia offers yoga and art sessions for all ages, helping students discover self-expression, self-love, and their unique inner beauty.',
+    bio: 'Former professional dancer and NYC licensed massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia offers yoga and art sessions for all ages, helping students discover self-expression, self-love, and their unique inner beauty.',
     sessionTypes: ['In Person', 'Individual', 'Custom Classes', 'Kids', 'Adults', 'Mixed Ages'],
     paymentTypes: ['Venmo', 'PayPal', 'Apple Pay', 'Cash'],
     website: '',
@@ -246,9 +248,9 @@ function renderProviders(filter = 'all') {
   }
 
   const typeColors = {
-    tutor: 'badge-info',
-    instructor: 'badge-secondary',
-    program: 'badge-warning'
+    tutor: 'badge-outline',
+    instructor: 'badge-outline',
+    program: 'badge-outline'
   };
 
   grid.innerHTML = filtered.map((provider, index) => `
