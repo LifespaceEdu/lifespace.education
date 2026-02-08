@@ -551,17 +551,16 @@ const HUB_PASSWORD = 'mutualaid!';
 
 // Provider data - edit this array to add/remove providers
 const providers = [
-  // Example provider (uncomment and duplicate to add more):
-  // {
-  //   name: 'Jane Smith',
-  //   type: 'tutor',  // 'tutor', 'instructor', or 'program'
-  //   image: '',  // URL to image, or leave empty for placeholder
-  //   blurb: 'Specializing in reading intervention and phonics instruction for K-5 students.',
-  //   paymentTypes: ['Venmo', 'Check', 'Cash'],
-  //   website: 'https://example.com',  // optional
-  //   phone: '808-555-1234',  // optional
-  //   lifespaceTrainer: true  // shows "LifeSpace Trained" badge
-  // },
+  {
+    name: 'Julia Wilson',
+    type: 'instructor',
+    image: '',  // Add image URL when available
+    blurb: 'Children\'s, adult, and mixed yoga classes. Children\'s, adult, and mixed art classes. Individual and custom group sessions available.',
+    paymentTypes: ['Contact Julia for details'],
+    website: '',
+    phone: '',
+    lifespaceTrainer: false
+  },
 ];
 
 // Check auth on load
@@ -644,7 +643,7 @@ function renderProviders(filter = 'all') {
         <div class="provider-actions">
           ${provider.website ? `<a href="${provider.website}" target="_blank" rel="noopener" class="action-btn website">Website</a>` : ''}
           ${provider.phone ? `<a href="tel:${provider.phone}" class="action-btn phone">Call</a>` : ''}
-          ${!provider.website && !provider.phone ? '<span class="action-btn phone" style="opacity: 0.5; cursor: default;">Contact via email</span>' : ''}
+          ${!provider.website && !provider.phone ? `<a href="mailto:info@lifespace.education?subject=Introduction Request: ${encodeURIComponent(provider.name)}&body=Hi,%0D%0A%0D%0AI'd like to be connected with ${encodeURIComponent(provider.name)}.%0D%0A%0D%0AMy name:%0D%0APreferred contact method:%0D%0A%0D%0AThank you!" class="action-btn website" style="flex: 1;">Request Introduction</a>` : ''}
         </div>
       </div>
     </div>
