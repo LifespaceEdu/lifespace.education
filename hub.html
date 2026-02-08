@@ -338,6 +338,32 @@ header .container {
   line-height: 1.5;
 }
 
+.session-types {
+  margin-bottom: 1rem;
+}
+
+.session-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.session-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.session-tag {
+  font-size: 0.75rem;
+  background: #e6f2f2;
+  color: #1a5555;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
 .payment-types {
   margin-bottom: 1.25rem;
 }
@@ -638,6 +664,8 @@ footer a {
       <div class="modal-name" id="modalName"></div>
       <div class="modal-offerings" id="modalOfferings"></div>
       <div class="modal-bio" id="modalBio"></div>
+      <div class="session-types" id="modalSessions" style="margin-top: 1rem;"></div>
+      <div class="payment-types" id="modalPayments" style="margin-top: 0.75rem;"></div>
     </div>
   </div>
 </div>
@@ -652,10 +680,11 @@ const providers = [
     name: 'Julia Wilson',
     type: 'instructor',
     image: 'julia-wilson.jpg',
-    offerings: 'Yoga, Art & Massage — Kids, Adults, Mixed Groups — Individual & Custom Sessions',
-    blurb: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty. Individual lessons, custom classes, kids classes, adult classes, and mixed group classes available.',
-    bio: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty. Individual lessons, custom classes, kids classes, adult classes, and mixed group classes available.',
-    paymentTypes: ['Contact Julia for details'],
+    offerings: 'Yoga, Art & Massage',
+    blurb: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty.',
+    bio: 'Former professional dancer and NYC massage therapist, now a Hawaii homeschool mom sharing her love of movement and creativity. Julia\'s yoga, art, and massage sessions help children and adults discover self-expression, self-love, and their unique inner beauty.',
+    sessionTypes: ['Individual', 'Custom Groups', 'Kids', 'Adults', 'Mixed Ages'],
+    paymentTypes: ['Venmo', 'PayPal', 'Apple Pay', 'Cash'],
     website: '',
     phone: '',
     lifespaceTrainer: false
@@ -733,6 +762,14 @@ function renderProviders(filter = 'all') {
           <div class="provider-type ${provider.type}">${provider.type.charAt(0).toUpperCase() + provider.type.slice(1)}</div>
         </div>
         <p class="provider-blurb">${provider.blurb}</p>
+        ${provider.sessionTypes ? `
+        <div class="session-types">
+          <div class="session-label">Sessions</div>
+          <div class="session-tags">
+            ${provider.sessionTypes.map(t => `<span class="session-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+        ` : ''}
         <div class="payment-types">
           <div class="payment-label">Accepts</div>
           <div class="payment-tags">
@@ -768,6 +805,25 @@ function openModal(index) {
   document.getElementById('modalName').textContent = provider.name;
   document.getElementById('modalOfferings').textContent = provider.offerings || '';
   document.getElementById('modalBio').innerHTML = (provider.bio || provider.blurb).replace(/\n/g, '<br><br>');
+
+  // Session types
+  const sessionsEl = document.getElementById('modalSessions');
+  if (provider.sessionTypes && provider.sessionTypes.length) {
+    sessionsEl.innerHTML = `<div class="session-label">Sessions</div><div class="session-tags">${provider.sessionTypes.map(t => `<span class="session-tag">${t}</span>`).join('')}</div>`;
+    sessionsEl.style.display = 'block';
+  } else {
+    sessionsEl.style.display = 'none';
+  }
+
+  // Payment types
+  const paymentsEl = document.getElementById('modalPayments');
+  if (provider.paymentTypes && provider.paymentTypes.length) {
+    paymentsEl.innerHTML = `<div class="payment-label">Accepts</div><div class="payment-tags">${provider.paymentTypes.map(t => `<span class="payment-tag">${t}</span>`).join('')}</div>`;
+    paymentsEl.style.display = 'block';
+  } else {
+    paymentsEl.style.display = 'none';
+  }
+
   document.getElementById('bioModal').classList.add('visible');
   document.body.style.overflow = 'hidden';
 }
