@@ -1,389 +1,187 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" data-theme="coffee">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lifespace Education | Research-Based Learning for Big Island Families</title>
 <meta name="description" content="Educational design services available now. Learning community launching Fall 2026. Implementing research-based education for Hawaii Island families.">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-- {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-body {
-font-family: ‘Inter’, -apple-system, BlinkMacSystemFont, ‘Segoe UI’, ‘Helvetica Neue’, Arial, sans-serif;
-line-height: 1.6;
-color: #2d3436;
-background: #ffffff;
-font-weight: 300;
-}
-
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-}
-
-/* Header */
-header {
-background: #000000;
-color: white;
-padding: 1.5rem 0;
-position: sticky;
-top: 0;
-z-index: 100;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-font-size: 1.5rem;
-font-weight: 400;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-margin-left: 2rem;
-transition: opacity 0.3s;
-}
-
-nav a:hover {
-opacity: 0.8;
-}
-
-/* Mobile Navigation */
-.mobile-nav {
-display: none;
-background: #1a5555;
-padding: 0.75rem 0;
-text-align: center;
-}
-
-.mobile-nav a {
-display: inline-block;
-color: white;
-text-decoration: none;
-padding: 0.5rem 1rem;
-font-size: 0.9rem;
-}
-
-/* Hero Section */
-.hero {
-background: #1a5555;
-color: white;
-padding: 5rem 0;
-text-align: center;
-}
-
-.hero h1 {
-font-size: 2.5rem;
-margin-bottom: 1.5rem;
-line-height: 1.2;
-font-weight: 400;
-}
-
-.hero p {
-font-size: 1.25rem;
-margin-bottom: 2rem;
-max-width: 900px;
-margin-left: auto;
-margin-right: auto;
-}
-
-.cta-button {
-display: inline-block;
-background: white;
-color: #1a5555;
-padding: 1rem 2rem;
-text-decoration: none;
-border-radius: 5px;
-font-weight: 600;
-font-size: 1.1rem;
-transition: transform 0.3s, box-shadow 0.3s;
-margin: 0.5rem;
-}
-
-.cta-button:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.cta-secondary {
-background: transparent;
-color: white;
-border: 2px solid white;
-}
-
-.cta-secondary:hover {
-background: rgba(255,255,255,0.1);
-}
-
-/* Sections */
-section {
-padding: 4rem 0;
-}
-
-section:nth-child(even) {
-background: #f8f9fa;
-}
-
-#contact {
-background: #1a5555 !important;
-color: white;
-}
-
-h2 {
-font-size: 2rem;
-margin-bottom: 1.5rem;
-color: #1a5555;
-font-weight: 400;
-}
-
-#contact h2 {
-color: white;
-}
-
-h3 {
-font-size: 1.5rem;
-margin-bottom: 1rem;
-color: #2d3748;
-font-weight: 400;
-}
-
-.two-column {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3rem;
-margin-top: 2rem;
-}
-
-.card {
-background: white;
-padding: 2rem;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-color: #1a5555;
-margin-bottom: 1rem;
-}
-
-.card ul {
-margin-left: 1.5rem;
-margin-top: 1rem;
-}
-
-.card a {
-color: #1a5555;
-text-decoration: none;
-font-weight: 600;
-}
-
-.card a:hover {
-text-decoration: underline;
-}
-
-.highlight-box {
-background: #edf2f7;
-padding: 2rem;
-border-radius: 8px;
-margin: 2rem 0;
-text-align: center;
-}
-
-.highlight-box h3 {
-color: #1a5555;
-margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-background: #2d3748;
-color: white;
-padding: 2rem 0;
-text-align: center;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-.hero h1 {
-font-size: 1.8rem;
-}
-
-.hero p {
-font-size: 1rem;
-}
-
-.two-column {
-grid-template-columns: 1fr;
-}
-
-nav {
-display: none;
-}
-
-.mobile-nav {
-display: block;
-}
+.hero-gradient {
+  background: linear-gradient(135deg, #1a5555 0%, #1e3a5f 25%, #4a3f55 50%, #5f4a1e 75%, #5f3a4a 100%);
 }
 </style>
-
 </head>
-<body>
-<header>
-<div class="container">
-<div class="logo">Lifespace Education</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+<body class="min-h-screen">
 
-<div class="mobile-nav">
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<section class="hero">
-<div class="container">
-<h1>What happens when we actually build schools from research-based best practices?</h1>
-<p>Lifespace Education implements what decades of research already validates. Available now: consultation and custom curriculum design for homeschooling families. Launching Fall 2026: research-based schooling for Big Island families seeking education that truly prepares students for unknowable futures.</p>
-<a href="contact.html" class="cta-button">Join Our Interest List</a>
-<a href="web_small_lifespace framework document.pdf" class="cta-button cta-secondary">Download Full Framework</a>
-</div>
-</section>
-
-<section id="engage">
-<div class="container">
-<h2>How Families Can Engage</h2>
-
-<div class="two-column">
-<div class="card">
-<h3>Available Now: Design Services</h3>
-<ul>
-<li>Educational evaluation and assessment</li>
-<li>Consultation and curriculum design for homeschoolers</li>
-<li>Custom class design and instruction</li>
-<li>Individual learning plan development</li>
-</ul>
-<p style="margin-top: 1.5rem; font-style: italic;">Consultations available evenings and weekends.</p>
-<p style="margin-top: 1rem;"><a href="portfolio.html">Learn More →</a></p>
+<!-- Navbar -->
+<div class="navbar bg-base-300 sticky top-0 z-50 px-4">
+  <div class="flex-1">
+    <a href="index.html" class="text-xl font-normal text-base-content">Lifespace Education</a>
+  </div>
+  <div class="flex-none hidden md:block">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="portfolio.html">Design Services</a></li>
+      <li><a href="school-options.html">School Options</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="flex-none md:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="portfolio.html">Design Services</a></li>
+        <li><a href="school-options.html">School Options</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>Fall 2026 Launch: School Options</h3>
-<p>We're launching one of two models depending on seed funding secured by summer 2026:</p>
-
-<p style="margin-top: 1rem;"><strong>Option 1: Tuition-Sliding Microschool</strong> (with funding)</p>
-<ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-<li>16 students, 2 lead educators, dedicated Puna space</li>
-<li>Full six-pillar Lifespace framework</li>
-<li>$0–$12,000 sliding-scale tuition</li>
-<li>Demonstration model documenting research-based outcomes</li>
-</ul>
-
-<p style="margin-top: 1rem;"><strong>Option 2: Co-op Hub Model</strong> (without full funding)</p>
-<ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-<li>Collaborative homeschool community</li>
-<li>Pooled educational expertise and resources</li>
-<li>You shouldn't have to build this alone</li>
-<li>Serving grades 1-12 across Big Island</li>
-</ul>
-
-<p style="margin-top: 1.5rem; font-size: 0.9rem; font-style: italic;">Interest forms are open now. We'll confirm the model and begin enrollment by July 2026.</p>
-<p style="margin-top: 1rem;"><a href="school-options.html">Explore School Options →</a> | <a href="contact.html">Join Interest List</a></p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="about">
-<div class="container">
-<h2>We Know What Works in Education</h2>
-<p style="font-size: 1.1rem; max-width: 900px;">Decades of research validate project-based learning, student agency, social-emotional development, authentic assessment, and relationship-based approaches. Yet most schools struggle to implement them within industrial-era structures, high-stakes accountability systems, and tight budgets.</p>
-
-<p style="font-size: 1.1rem; max-width: 900px; margin-top: 1rem;">The question is no longer <strong>"what should education look like?"</strong> The question is: <strong>"What happens when we actually build from best practices as our foundation?"</strong></p>
-
-<div style="margin-top: 3rem; text-align: center;">
-<a href="framework.html" class="cta-button" style="background: #1a5555; color: white;">Explore the Lifespace Framework</a>
-</div>
-</div>
-</section>
-
-<section id="team">
-<div class="container">
-<h2>Our Team</h2>
-
-<div class="two-column">
-<div class="card">
-<h3>Marcus Sigh</h3>
-<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Founder & Educational Designer</p>
-
-<p>Marcus brings 16 years of teaching experience across diverse settings - from elementary classrooms to locked facilities for adjudicated youth with severe mental health needs, including students everyone else had given up on.</p>
-
-<p style="margin-top: 1rem;">Certified in Special Education (B-12) and Elementary Education in Michigan, with provisional Special Education certification in Hawaii (advancing to standard certification 2026-27). His expertise spans Emotional Impairment, Specific Learning Disabilities, and Autism Spectrum.</p>
-
-<p style="margin-top: 1rem;">Marcus has extensive training in anti-bias and decolonial education, bringing pedagogical approaches rooted in educational justice and solidarity with Indigenous sovereignty movements. He developed the Lifespace Education framework during the pandemic, synthesizing decades of research into a coherent, implementable model.</p>
+<!-- Hero -->
+<div class="hero hero-gradient text-white py-16">
+  <div class="hero-content text-center">
+    <div class="max-w-3xl">
+      <h1 class="text-3xl md:text-4xl font-normal mb-6">What happens when we actually build schools from research-based best practices?</h1>
+      <p class="text-lg opacity-90 mb-8">Lifespace Education implements what decades of research already validates. Available now: consultation and custom curriculum design for homeschooling families. Launching Fall 2026: research-based schooling for Big Island families seeking education that truly prepares students for unknowable futures.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-base-content">Join Our Interest List</a>
+        <a href="web_small_lifespace framework document.pdf" class="btn btn-ghost btn-lg border border-white/30 text-white">Download Full Framework</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>Kate Werner</h3>
-<p style="font-style: italic; color: #1a5555; margin-bottom: 1rem;">Collaborative Partner & Reading Specialist</p>
-<p style="font-style: italic;">Bio coming soon.</p>
-</div>
-</div>
-</div>
-</section>
+<!-- How Families Can Engage -->
+<div class="container mx-auto px-4 py-16 max-w-6xl">
+  <h2 class="text-2xl font-normal text-primary mb-8">How Families Can Engage</h2>
 
-<section id="contact">
-<div class="container" style="text-align: center;">
-<h2>Get Started</h2>
-<p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: white;">Whether you're interested in design services now or joining our Fall 2026 launch - we want to hear from you.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Available Now: Design Services</h3>
+        <ul class="list-disc list-inside text-base-content/80 space-y-1 mt-2">
+          <li>Educational evaluation and assessment</li>
+          <li>Consultation and curriculum design for homeschoolers</li>
+          <li>Custom class design and instruction</li>
+          <li>Individual learning plan development</li>
+        </ul>
+        <p class="text-sm italic text-base-content/60 mt-4">Consultations available evenings and weekends.</p>
+        <div class="card-actions mt-4">
+          <a href="portfolio.html" class="link link-primary">Learn More →</a>
+        </div>
+      </div>
+    </div>
 
-<div style="background: white; color: #333; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
-<h3 style="color: #1a5555; margin-bottom: 1rem;">Contact Information</h3>
-<p><strong>Email:</strong> <a href="mailto:info@lifespace.education" style="color: #1a5555; text-decoration: none; font-weight: 600;">info@lifespace.education</a></p>
-<p style="margin-top: 1.5rem;"><strong>Or complete our interest form:</strong></p>
-<p style="margin-top: 1rem;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" style="color: #1a5555; font-weight: 600; text-decoration: underline;">Fall 2026 Interest Form →</a></p>
-</div>
-</div>
-</section>
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Fall 2026 Launch: School Options</h3>
+        <p class="text-base-content/80">We're launching one of two models depending on seed funding secured by summer 2026:</p>
 
-<!-- Site Color Palette -->
-<section style="padding: 2rem 0; background: #f8f9fa;">
-<div class="container" style="text-align: center;">
-<p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Site Colors</p>
-<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-<div style="width: 60px; height: 60px; background: #1a5555; border-radius: 8px;" title="Teal"></div>
-<div style="width: 60px; height: 60px; background: #1e3a5f; border-radius: 8px;" title="Deep Blue"></div>
-<div style="width: 60px; height: 60px; background: #4a3f55; border-radius: 8px;" title="Muted Purple"></div>
-<div style="width: 60px; height: 60px; background: #5f4a1e; border-radius: 8px;" title="Deep Amber"></div>
-<div style="width: 60px; height: 60px; background: #5f3a4a; border-radius: 8px;" title="Rose"></div>
-</div>
-</div>
-</section>
+        <p class="font-semibold mt-4">Option 1: Tuition-Sliding Microschool <span class="text-sm font-normal">(with funding)</span></p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>16 students, 2 lead educators, dedicated Puna space</li>
+          <li>Full six-pillar Lifespace framework</li>
+          <li>$0–$12,000 sliding-scale tuition</li>
+          <li>Demonstration model documenting research-based outcomes</li>
+        </ul>
 
-<footer>
-<p>© 2025 Lifespace Education. All rights reserved.</p>
+        <p class="font-semibold mt-4">Option 2: Co-op Hub Model <span class="text-sm font-normal">(without full funding)</span></p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>Collaborative homeschool community</li>
+          <li>Pooled educational expertise and resources</li>
+          <li>You shouldn't have to build this alone</li>
+          <li>Serving grades 1-12 across Big Island</li>
+        </ul>
+
+        <p class="text-sm italic text-base-content/60 mt-4">Interest forms are open now. We'll confirm the model and begin enrollment by July 2026.</p>
+        <div class="card-actions mt-4 flex-wrap gap-2">
+          <a href="school-options.html" class="link link-primary">Explore School Options →</a>
+          <a href="contact.html" class="link link-primary">Join Interest List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- What Works -->
+<div class="bg-base-200 py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-2xl font-normal text-primary mb-6">We Know What Works in Education</h2>
+    <p class="text-base-content/80 text-lg">Decades of research validate project-based learning, student agency, social-emotional development, authentic assessment, and relationship-based approaches. Yet most schools struggle to implement them within industrial-era structures, high-stakes accountability systems, and tight budgets.</p>
+    <p class="text-base-content/80 text-lg mt-4">The question is no longer <strong>"what should education look like?"</strong> The question is: <strong>"What happens when we actually build from best practices as our foundation?"</strong></p>
+    <div class="text-center mt-8">
+      <a href="framework.html" class="btn btn-primary">Explore the Lifespace Framework</a>
+    </div>
+  </div>
+</div>
+
+<!-- Team -->
+<div class="container mx-auto px-4 py-16 max-w-6xl">
+  <h2 class="text-2xl font-normal text-primary mb-8">Our Team</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Marcus Sigh</h3>
+        <p class="text-primary/80 italic mb-2">Founder & Educational Designer</p>
+        <p class="text-base-content/80">Marcus brings 16 years of teaching experience across diverse settings - from elementary classrooms to locked facilities for adjudicated youth with severe mental health needs, including students everyone else had given up on.</p>
+        <p class="text-base-content/80 mt-3">Certified in Special Education (B-12) and Elementary Education in Michigan, with provisional Special Education certification in Hawaii (advancing to standard certification 2026-27). His expertise spans Emotional Impairment, Specific Learning Disabilities, and Autism Spectrum.</p>
+        <p class="text-base-content/80 mt-3">Marcus has extensive training in anti-bias and decolonial education, bringing pedagogical approaches rooted in educational justice and solidarity with Indigenous sovereignty movements. He developed the Lifespace Education framework during the pandemic, synthesizing decades of research into a coherent, implementable model.</p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Kate Werner</h3>
+        <p class="text-primary/80 italic mb-2">Collaborative Partner & Reading Specialist</p>
+        <p class="text-base-content/60 italic">Bio coming soon.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="bg-primary text-primary-content py-16">
+  <div class="container mx-auto px-4 max-w-4xl text-center">
+    <h2 class="text-2xl font-normal mb-6">Get Started</h2>
+    <p class="text-lg opacity-90 mb-8">Whether you're interested in design services now or joining our Fall 2026 launch - we want to hear from you.</p>
+
+    <div class="card bg-base-200 text-base-content max-w-lg mx-auto">
+      <div class="card-body items-center text-center">
+        <h3 class="card-title text-primary font-normal">Contact Information</h3>
+        <p><strong>Email:</strong> <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a></p>
+        <p class="mt-4"><strong>Or complete our interest form:</strong></p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="link link-primary">Fall 2026 Interest Form →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Color Palette -->
+<div class="py-8 bg-base-200">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-sm text-base-content/50 mb-4">Site Colors</p>
+    <div class="flex justify-center gap-3 flex-wrap">
+      <div class="w-12 h-12 rounded-lg" style="background: #1a5555;" title="Teal"></div>
+      <div class="w-12 h-12 rounded-lg" style="background: #1e3a5f;" title="Deep Blue"></div>
+      <div class="w-12 h-12 rounded-lg" style="background: #4a3f55;" title="Muted Purple"></div>
+      <div class="w-12 h-12 rounded-lg" style="background: #5f4a1e;" title="Deep Amber"></div>
+      <div class="w-12 h-12 rounded-lg" style="background: #5f3a4a;" title="Rose"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer footer-center p-6 bg-base-300 text-base-content">
+  <p>© 2025 Lifespace Education. All rights reserved.</p>
 </footer>
 
 </body>

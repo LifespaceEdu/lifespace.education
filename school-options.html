@@ -1,549 +1,312 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" data-theme="coffee">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Options: Fall 2026 Launch | Lifespace Education</title>
 <meta name="description" content="Tuition-sliding microschool or co-op hub launching Fall 2026 on Hawaii Island. Research-based education for grades 1-12.">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-- {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-body {
-font-family: ‘Inter’, -apple-system, BlinkMacSystemFont, ‘Segoe UI’, ‘Helvetica Neue’, Arial, sans-serif;
-line-height: 1.6;
-color: #2d3436;
-background: #ffffff;
-font-weight: 300;
-}
-
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-}
-
-header {
-background: #000000;
-color: white;
-padding: 1.5rem 0;
-position: sticky;
-top: 0;
-z-index: 100;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-font-size: 1.5rem;
-font-weight: 400;
-text-decoration: none;
-color: white;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-margin-left: 2rem;
-transition: opacity 0.3s;
-}
-
-nav a:hover {
-opacity: 0.8;
-}
-
-.mobile-nav {
-display: none;
-background: #1a5555;
-padding: 0.75rem 0;
-text-align: center;
-}
-
-.mobile-nav a {
-display: inline-block;
-color: white;
-text-decoration: none;
-padding: 0.5rem 1rem;
-font-size: 0.9rem;
-}
-
-.hero {
-background: #1a5555;
-color: white;
-padding: 5rem 0;
-text-align: center;
-}
-
-.hero h1 {
-font-size: 2.5rem;
-margin-bottom: 1.5rem;
-line-height: 1.2;
-font-weight: 400;
-}
-
-.hero p {
-font-size: 1.25rem;
-margin-bottom: 2rem;
-max-width: 900px;
-margin-left: auto;
-margin-right: auto;
-}
-
-.cta-button {
-display: inline-block;
-background: white;
-color: #1a5555;
-padding: 1rem 2rem;
-text-decoration: none;
-border-radius: 5px;
-font-weight: 600;
-font-size: 1.1rem;
-transition: transform 0.3s, box-shadow 0.3s;
-margin: 0.5rem;
-}
-
-.cta-button:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-section {
-padding: 4rem 0;
-}
-
-section:nth-child(even) {
-background: #f8f9fa;
-}
-
-#contact {
-background: #1a5555 !important;
-color: white;
-}
-
-h2 {
-font-size: 2rem;
-margin-bottom: 1.5rem;
-color: #1a5555;
-font-weight: 400;
-}
-
-#contact h2 {
-color: white;
-}
-
-h3 {
-font-size: 1.5rem;
-margin-bottom: 1rem;
-color: #2d3748;
-font-weight: 400;
-}
-
-.two-column {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3rem;
-margin-top: 2rem;
-}
-
-.card {
-background: white;
-padding: 2rem;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-color: #1a5555;
-margin-bottom: 1rem;
-}
-
-.card ul {
-margin-left: 1.5rem;
-margin-top: 1rem;
-}
-
-.highlight-box {
-background: #edf2f7;
-padding: 2rem;
-border-radius: 8px;
-margin: 2rem 0;
-text-align: center;
-}
-
-.highlight-box h3 {
-color: #1a5555;
-margin-bottom: 1rem;
-}
-
-table {
-width: 100%;
-border-collapse: collapse;
-margin: 2rem 0;
-background: white;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-th, td {
-padding: 1rem;
-text-align: left;
-border-bottom: 1px solid #e2e8f0;
-}
-
-th {
-background: #1a5555;
-color: white;
-font-weight: 600;
-}
-
-tr:last-child td {
-border-bottom: none;
-}
-
-.pillar-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1.5rem;
-margin-top: 2rem;
-}
-
-.pillar {
-padding: 1.5rem;
-background: white;
-border-radius: 8px;
-border: 2px solid #e2e8f0;
-}
-
-.pillar h4 {
-color: #2a7b7b;
-margin-bottom: 0.5rem;
-font-weight: 400;
-}
-
-footer {
-background: #2d3748;
-color: white;
-padding: 2rem 0;
-text-align: center;
-}
-
-@media (max-width: 768px) {
-.hero h1 {
-font-size: 1.8rem;
-}
-
-.hero p {
-font-size: 1rem;
-}
-
-.two-column,
-.pillar-grid {
-grid-template-columns: 1fr;
-}
-
-nav {
-display: none;
-}
-
-.mobile-nav {
-display: block;
-}
-
-table {
-font-size: 0.9rem;
-}
-
-th, td {
-padding: 0.75rem 0.5rem;
-}
-}
+.hero-amber { background: #5f4a1e; }
 </style>
-
 </head>
-<body>
-<header>
-<div class="container">
-<a href="index.html" class="logo">Lifespace Education</a>
-<nav>
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+<body class="min-h-screen">
 
-<div class="mobile-nav">
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<section class="hero">
-<div class="container">
-<h1>School Options: Fall 2026 Launch</h1>
-<p>Lifespace Education is launching research-based schooling for Big Island families in Fall 2026. We're building one of two models depending on seed funding secured by summer 2026.</p>
-<a href="contact.html" class="cta-button">Join Our Interest List</a>
-</div>
-</section>
-
-<section>
-<div class="container">
-<h2>The Two Pathways</h2>
-<p style="max-width: 900px; margin-bottom: 3rem;">We're committed to launching Fall 2026. The specific model depends on whether we secure seed funding by summer 2026. Either way, you get research-based education implementing the full Lifespace framework.</p>
-
-<div class="two-column">
-<div class="card">
-<h3>Option 1: Tuition-Sliding Microschool</h3>
-<p style="font-style: italic; color: #666; margin-bottom: 1rem;">(Launching with seed funding)</p>
-
-<p style="margin-bottom: 1rem;">A demonstration school proving research-based education can operate sustainably at scale.</p>
-
-<p style="margin-top: 1.5rem;"><strong>The Model:</strong></p>
-<ul style="font-size: 0.95rem;">
-<li>16 students, grades 1–12 (mixed-age learning)</li>
-<li>2 lead educators (8:1 student ratio)</li>
-<li>Dedicated space in Puna, Hawaii</li>
-<li>Full six-pillar Lifespace framework</li>
-<li>$0–$12,000 sliding-scale tuition based on household income</li>
-</ul>
-
-<p style="margin-top: 1.5rem;"><strong>What This Funds:</strong></p>
-<ul style="font-size: 0.95rem;">
-<li>Competitive educator compensation (recruiting qualified teachers from public schools)</li>
-<li>Quality materials, curriculum, and authentic learning experiences</li>
-<li>Space lease and operational costs</li>
-<li>Independent outcomes study documenting effectiveness</li>
-</ul>
-
-<p style="margin-top: 1.5rem;"><strong>Why This Matters:</strong></p>
-<p style="font-size: 0.95rem;">We're not testing whether research-based approaches work—we're proving this model can scale beyond privileged settings. Year 1 establishes proof of concept. By Year 5, enrollment grows to 24 students at sub-public per-pupil costs with full tuition sustainability.</p>
+<!-- Navbar -->
+<div class="navbar bg-base-300 sticky top-0 z-50 px-4">
+  <div class="flex-1">
+    <a href="index.html" class="text-xl font-normal text-base-content">Lifespace Education</a>
+  </div>
+  <div class="flex-none hidden md:block">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="portfolio.html">Design Services</a></li>
+      <li><a href="school-options.html">School Options</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="flex-none md:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="portfolio.html">Design Services</a></li>
+        <li><a href="school-options.html">School Options</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>Option 2: Co-op Hub Model</h3>
-<p style="font-style: italic; color: #666; margin-bottom: 1rem;">(Launching without full seed funding)</p>
-
-<p style="margin-bottom: 1rem;">A collaborative homeschool community with pooled expertise and shared resources.</p>
-
-<p style="margin-top: 1.5rem;"><strong>The Model:</strong></p>
-<ul style="font-size: 0.95rem;">
-<li>Homeschooling families working together</li>
-<li>Shared educational leadership and curriculum design</li>
-<li>Pooled resources for specialists, materials, and group experiences</li>
-<li>Lifespace framework guides learning structure</li>
-<li>Serving grades 1–12 across Big Island</li>
-</ul>
-
-<p style="margin-top: 1.5rem;"><strong>What Families Gain:</strong></p>
-<ul style="font-size: 0.95rem;">
-<li>Educational expertise you shouldn't have to develop alone</li>
-<li>Collaborative planning and resource sharing</li>
-<li>Access to specialist instruction (art, science, movement, etc.)</li>
-<li>Community of families committed to research-based, equity-centered education</li>
-<li>Structured learning framework without isolation</li>
-</ul>
-
-<p style="margin-top: 1.5rem;"><strong>Cost Structure:</strong></p>
-<p style="font-size: 0.95rem;">Co-op model runs on shared family contributions for materials, space rental, and specialist fees. Significantly lower cost than private school or individual homeschooling with tutors.</p>
-
-<p style="margin-top: 1.5rem;"><strong>Why This Matters:</strong></p>
-<p style="font-size: 0.95rem;">Even without full funding, Big Island families deserve access to research-based education. The co-op model removes the isolation and overwhelm of solo homeschooling while maintaining the flexibility and agency families value.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section style="background: #f8f9fa;">
-<div class="container">
-<h2>Tuition Structure (Microschool Model)</h2>
-<p style="max-width: 900px; margin-bottom: 1rem;">True $0 tuition available for families who need it. Sliding scale calculated using detailed income worksheet—no family turned away for inability to pay.</p>
-<p style="max-width: 900px; margin-bottom: 2rem; font-style: italic; color: #666;">(Subject to change based on final funding and operational costs)</p>
-
-<table>
-<thead>
-<tr>
-<th>Household Income</th>
-<th>Approx. % of Income</th>
-<th>Tuition Range (per child)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Under $60K</td>
-<td>0–2%</td>
-<td>$0–$1,000</td>
-</tr>
-<tr>
-<td>$60K–$100K</td>
-<td>2–4%</td>
-<td>$1,000–$4,000</td>
-</tr>
-<tr>
-<td>$100K–$160K</td>
-<td>4–6%</td>
-<td>$4,000–$8,000</td>
-</tr>
-<tr>
-<td>$160K–$220K</td>
-<td>6–8%</td>
-<td>$8,000–$12,000</td>
-</tr>
-<tr>
-<td>$220K+</td>
-<td>8% (capped)</td>
-<td>$12,000 (maximum)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section>
-<div class="container">
-<h2>Timeline</h2>
-
-<div style="max-width: 900px; margin: 0 auto;">
-<div style="margin-bottom: 2rem;">
-<p><strong>Now through July 2026:</strong> Interest forms open; seed funding outreach continues</p>
+<!-- Hero -->
+<div class="hero hero-amber text-white py-16">
+  <div class="hero-content text-center">
+    <div class="max-w-3xl">
+      <h1 class="text-3xl md:text-4xl font-normal mb-6">School Options: Fall 2026 Launch</h1>
+      <p class="text-lg opacity-90 mb-8">Lifespace Education is launching research-based schooling for Big Island families in Fall 2026. We're building one of two models depending on seed funding secured by summer 2026.</p>
+      <a href="contact.html" class="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-base-content">Join Our Interest List</a>
+    </div>
+  </div>
 </div>
 
-<div style="margin-bottom: 2rem;">
-<p><strong>July 2026:</strong> Model confirmed and enrollment begins</p>
+<!-- The Two Pathways -->
+<div class="container mx-auto px-4 py-16 max-w-6xl">
+  <h2 class="text-2xl font-normal text-primary mb-4">The Two Pathways</h2>
+  <p class="text-base-content/80 mb-8 max-w-4xl">We're committed to launching Fall 2026. The specific model depends on whether we secure seed funding by summer 2026. Either way, you get research-based education implementing the full Lifespace framework.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Option 1: Tuition-Sliding Microschool</h3>
+        <p class="text-base-content/60 italic mb-4">(Launching with seed funding)</p>
+        <p class="text-base-content/80 mb-4">A demonstration school proving research-based education can operate sustainably at scale.</p>
+
+        <p class="font-semibold mt-4">The Model:</p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>16 students, grades 1–12 (mixed-age learning)</li>
+          <li>2 lead educators (8:1 student ratio)</li>
+          <li>Dedicated space in Puna, Hawaii</li>
+          <li>Full six-pillar Lifespace framework</li>
+          <li>$0–$12,000 sliding-scale tuition based on household income</li>
+        </ul>
+
+        <p class="font-semibold mt-4">What This Funds:</p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>Competitive educator compensation</li>
+          <li>Quality materials, curriculum, and authentic learning experiences</li>
+          <li>Space lease and operational costs</li>
+          <li>Independent outcomes study documenting effectiveness</li>
+        </ul>
+
+        <p class="font-semibold mt-4">Why This Matters:</p>
+        <p class="text-base-content/80 text-sm">We're not testing whether research-based approaches work—we're proving this model can scale beyond privileged settings.</p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Option 2: Co-op Hub Model</h3>
+        <p class="text-base-content/60 italic mb-4">(Launching without full seed funding)</p>
+        <p class="text-base-content/80 mb-4">A collaborative homeschool community with pooled expertise and shared resources.</p>
+
+        <p class="font-semibold mt-4">The Model:</p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>Homeschooling families working together</li>
+          <li>Shared educational leadership and curriculum design</li>
+          <li>Pooled resources for specialists, materials, and group experiences</li>
+          <li>Lifespace framework guides learning structure</li>
+          <li>Serving grades 1–12 across Big Island</li>
+        </ul>
+
+        <p class="font-semibold mt-4">What Families Gain:</p>
+        <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2">
+          <li>Educational expertise you shouldn't have to develop alone</li>
+          <li>Collaborative planning and resource sharing</li>
+          <li>Access to specialist instruction</li>
+          <li>Community of families committed to research-based education</li>
+          <li>Structured learning framework without isolation</li>
+        </ul>
+
+        <p class="font-semibold mt-4">Why This Matters:</p>
+        <p class="text-base-content/80 text-sm">Even without full funding, Big Island families deserve access to research-based education. The co-op model removes isolation and overwhelm.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div style="margin-bottom: 2rem;">
-<p><strong>August 2026:</strong> Orientation and community-building</p>
+<!-- Tuition Structure -->
+<div class="bg-base-200 py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-2xl font-normal text-primary mb-4">Tuition Structure (Microschool Model)</h2>
+    <p class="text-base-content/80 mb-2">True $0 tuition available for families who need it. Sliding scale calculated using detailed income worksheet—no family turned away for inability to pay.</p>
+    <p class="text-base-content/60 text-sm italic mb-6">(Subject to change based on final funding and operational costs)</p>
+
+    <div class="overflow-x-auto">
+      <table class="table table-zebra bg-base-100">
+        <thead>
+          <tr class="bg-primary text-primary-content">
+            <th>Household Income</th>
+            <th>Approx. % of Income</th>
+            <th>Tuition Range (per child)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Under $60K</td><td>0–2%</td><td>$0–$1,000</td></tr>
+          <tr><td>$60K–$100K</td><td>2–4%</td><td>$1,000–$4,000</td></tr>
+          <tr><td>$100K–$160K</td><td>4–6%</td><td>$4,000–$8,000</td></tr>
+          <tr><td>$160K–$220K</td><td>6–8%</td><td>$8,000–$12,000</td></tr>
+          <tr><td>$220K+</td><td>8% (capped)</td><td>$12,000 (maximum)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
-<div style="margin-bottom: 2rem;">
-<p><strong>September 2026:</strong> Fall launch (either microschool or co-op hub)</p>
-</div>
+<!-- Timeline -->
+<div class="container mx-auto px-4 py-16 max-w-4xl">
+  <h2 class="text-2xl font-normal text-primary mb-8">Timeline</h2>
+
+  <ul class="timeline timeline-vertical">
+    <li>
+      <div class="timeline-start timeline-box bg-base-200">Now through July 2026</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
+      </div>
+      <div class="timeline-end">Interest forms open; seed funding outreach continues</div>
+      <hr class="bg-primary"/>
+    </li>
+    <li>
+      <hr class="bg-primary"/>
+      <div class="timeline-start timeline-box bg-base-200">July 2026</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
+      </div>
+      <div class="timeline-end">Model confirmed and enrollment begins</div>
+      <hr class="bg-primary"/>
+    </li>
+    <li>
+      <hr class="bg-primary"/>
+      <div class="timeline-start timeline-box bg-base-200">August 2026</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
+      </div>
+      <div class="timeline-end">Orientation and community-building</div>
+      <hr class="bg-primary"/>
+    </li>
+    <li>
+      <hr class="bg-primary"/>
+      <div class="timeline-start timeline-box bg-base-200">September 2026</div>
+      <div class="timeline-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
+      </div>
+      <div class="timeline-end">Fall launch (either microschool or co-op hub)</div>
+    </li>
+  </ul>
+
+  <div class="card bg-base-200 mt-12 text-center">
+    <div class="card-body">
+      <h3 class="text-xl font-normal text-primary mb-2">Interest forms are open now</h3>
+      <p class="text-base-content/80 mb-4">We'll confirm the model (microschool or co-op) and begin formal enrollment by July 2026.</p>
+      <a href="contact.html" class="btn btn-primary">Join the Interest List</a>
+    </div>
+  </div>
 </div>
 
-<div class="highlight-box" style="margin-top: 3rem;">
-<h3>Interest forms are open now</h3>
-<p>We'll confirm the model (microschool or co-op) and begin formal enrollment by July 2026.</p>
-<p style="margin-top: 1rem;"><a href="contact.html" style="background: #1a5555; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: 600; display: inline-block;">Join the Interest List</a></p>
-</div>
-</div>
-</section>
+<!-- The Lifespace Framework -->
+<div class="bg-base-200 py-16">
+  <div class="container mx-auto px-4 max-w-5xl">
+    <h2 class="text-2xl font-normal text-primary mb-4">The Lifespace Framework (Both Models)</h2>
+    <p class="text-base-content/80 mb-8">Whichever model launches, students develop across six research-validated pillars:</p>
 
-<section style="background: #f8f9fa;">
-<div class="container">
-<h2>The Lifespace Framework (Both Models)</h2>
-<p style="max-width: 900px; margin-bottom: 2rem;">Whichever model launches, students develop across six research-validated pillars:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Critical Thinking</h4>
+          <p class="text-base-content/80 text-sm">Analysis, information literacy, questioning assumptions</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Problem Solving</h4>
+          <p class="text-base-content/80 text-sm">Iterative approaches to novel challenges without predetermined answers</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Core Competencies</h4>
+          <p class="text-base-content/80 text-sm">Efficient, focused instruction in language arts, math, science, social studies (~2 hours daily)</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Expression</h4>
+          <p class="text-base-content/80 text-sm">Clear communication across modalities (written, spoken, visual, built, performed)</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Social-Emotional Learning</h4>
+          <p class="text-base-content/80 text-sm">Self-awareness, resilience, collaboration, ethical decision-making</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border-2 border-base-300">
+        <div class="card-body">
+          <h4 class="text-primary font-normal">Project Work</h4>
+          <p class="text-base-content/80 text-sm">Extended authentic investigations where all pillars integrate</p>
+        </div>
+      </div>
+    </div>
 
-<div class="pillar-grid">
-<div class="pillar">
-<h4>Critical Thinking</h4>
-<p>Analysis, information literacy, questioning assumptions</p>
-</div>
-
-<div class="pillar">
-<h4>Problem Solving</h4>
-<p>Iterative approaches to novel challenges without predetermined answers</p>
-</div>
-
-<div class="pillar">
-<h4>Core Competencies</h4>
-<p>Efficient, focused instruction in language arts, math, science, social studies (~2 hours daily, then immediate application in projects)</p>
-</div>
-
-<div class="pillar">
-<h4>Expression</h4>
-<p>Clear communication across modalities (written, spoken, visual, built, performed)</p>
-</div>
-
-<div class="pillar">
-<h4>Social-Emotional Learning</h4>
-<p>Self-awareness, resilience, collaboration, ethical decision-making</p>
-</div>
-
-<div class="pillar">
-<h4>Project Work</h4>
-<p>Extended authentic investigations where all pillars integrate</p>
-</div>
-</div>
-
-<div style="margin-top: 3rem; text-align: center;">
-<a href="framework.html" class="cta-button" style="background: #1a5555; color: white;">Download the Full 71-Page Framework</a>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<h2>Who This Serves</h2>
-<p style="max-width: 900px; margin-bottom: 2rem;">Lifespace Education is for families seeking:</p>
-
-<div style="max-width: 900px;">
-<ul style="margin-left: 1.5rem; line-height: 2;">
-<li><strong>Research-based education</strong> that implements what decades of studies already validate</li>
-<li><strong>Student agency</strong> within supportive structure—not complete autonomy, but genuine decision-making</li>
-<li><strong>Mixed-age learning</strong> where younger students learn from older, and older develop leadership</li>
-<li><strong>Relationship-based culture</strong> without rewards, punishments, or coercive classroom management</li>
-<li><strong>Equity-centered practices</strong> that challenge traditional power structures and center diverse perspectives</li>
-<li><strong>Real-world relevance</strong> connecting learning to authentic contexts and community</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container" style="text-align: center;">
-<h2>Join the Interest List</h2>
-<p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; color: white;">Interest forms are open now for Fall 2026. We'll confirm the model (microschool or co-op) and begin formal enrollment by July 2026.</p>
-
-<div style="background: white; color: #333; padding: 2rem; border-radius: 8px; max-width: 700px; margin: 0 auto;">
-<h3 style="color: #1a5555; margin-bottom: 1rem;">Express Your Interest</h3>
-<p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:info@lifespace.education" style="color: #1a5555; text-decoration: none; font-weight: 600;">info@lifespace.education</a></p>
-<p style="margin-top: 1.5rem;"><strong>Or complete our interest form:</strong></p>
-<p style="margin-top: 1rem;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" style="color: #1a5555; font-weight: 600; text-decoration: underline;">Fall 2026 Interest Form →</a></p>
-
-<div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; text-align: left;">
-<p style="font-size: 0.95rem; margin-bottom: 0.5rem;"><strong>Questions we'll ask:</strong></p>
-<ul style="font-size: 0.9rem; margin-left: 1.5rem; color: #666;">
-<li>Student age(s) and current learning situation</li>
-<li>Which model interests you (microschool, co-op, or either)</li>
-<li>Your family's commitment to equity-centered education</li>
-<li>Scheduling needs and location (we serve all of Hawaii Island)</li>
-</ul>
-<p style="font-size: 0.85rem; margin-top: 1rem; font-style: italic; color: #666;">Limited spots available in either model. Interest form does not guarantee enrollment but ensures you're contacted first when enrollment opens.</p>
-</div>
+    <div class="text-center mt-8">
+      <a href="framework.html" class="btn btn-primary">Download the Full 71-Page Framework</a>
+    </div>
+  </div>
 </div>
 
-<p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9; color: white;">Serving families across Hawaii Island / Big Island</p>
-</div>
-</section>
+<!-- Who This Serves -->
+<div class="container mx-auto px-4 py-16 max-w-4xl">
+  <h2 class="text-2xl font-normal text-primary mb-4">Who This Serves</h2>
+  <p class="text-base-content/80 mb-6">Lifespace Education is for families seeking:</p>
 
-<section style="background: #f8f9fa;">
-<div class="container">
-<h2>For Potential Funders</h2>
-<div style="max-width: 900px; margin: 0 auto;">
-<p>If you're interested in funding the microschool demonstration model, we have a detailed funding proposal outlining Year 1 budget, 5-year growth plan, outcomes measurement, and scalability framework.</p>
-<p style="margin-top: 1rem;">Contact us at <a href="mailto:info@lifespace.education" style="color: #1a5555; font-weight: 600; text-decoration: none;">info@lifespace.education</a> for more information.</p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-3 ml-4">
+    <li><strong>Research-based education</strong> that implements what decades of studies already validate</li>
+    <li><strong>Student agency</strong> within supportive structure—not complete autonomy, but genuine decision-making</li>
+    <li><strong>Mixed-age learning</strong> where younger students learn from older, and older develop leadership</li>
+    <li><strong>Relationship-based culture</strong> without rewards, punishments, or coercive classroom management</li>
+    <li><strong>Equity-centered practices</strong> that challenge traditional power structures and center diverse perspectives</li>
+    <li><strong>Real-world relevance</strong> connecting learning to authentic contexts and community</li>
+  </ul>
 </div>
-</div>
-</section>
 
-<footer>
-<div class="container">
-<p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+<!-- Contact Section -->
+<div class="bg-primary text-primary-content py-16">
+  <div class="container mx-auto px-4 max-w-4xl text-center">
+    <h2 class="text-2xl font-normal mb-6">Join the Interest List</h2>
+    <p class="text-lg opacity-90 mb-8">Interest forms are open now for Fall 2026. We'll confirm the model (microschool or co-op) and begin formal enrollment by July 2026.</p>
+
+    <div class="card bg-base-200 text-base-content max-w-xl mx-auto">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal justify-center">Express Your Interest</h3>
+        <p><strong>Email:</strong> <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a></p>
+        <p class="mt-4"><strong>Or complete our interest form:</strong></p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="link link-primary">Fall 2026 Interest Form →</a>
+
+        <div class="divider"></div>
+
+        <div class="text-left">
+          <p class="text-sm font-semibold mb-2">Questions we'll ask:</p>
+          <ul class="list-disc list-inside text-base-content/60 text-sm space-y-1 ml-2">
+            <li>Student age(s) and current learning situation</li>
+            <li>Which model interests you (microschool, co-op, or either)</li>
+            <li>Your family's commitment to equity-centered education</li>
+            <li>Scheduling needs and location (we serve all of Hawaii Island)</li>
+          </ul>
+          <p class="text-xs text-base-content/50 mt-4 italic">Limited spots available in either model. Interest form does not guarantee enrollment but ensures you're contacted first when enrollment opens.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm opacity-80">Serving families across Hawaii Island / Big Island</p>
+  </div>
 </div>
+
+<!-- For Potential Funders -->
+<div class="bg-base-200 py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-2xl font-normal text-primary mb-6">For Potential Funders</h2>
+    <p class="text-base-content/80 mb-4">If you're interested in funding the microschool demonstration model, we have a detailed funding proposal outlining Year 1 budget, 5-year growth plan, outcomes measurement, and scalability framework.</p>
+    <p class="text-base-content/80">Contact us at <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a> for more information.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer footer-center p-6 bg-base-300 text-base-content">
+  <p>© 2026 Lifespace Education. All rights reserved.</p>
 </footer>
 
 </body>

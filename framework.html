@@ -1,339 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="coffee">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About the Framework | Lifespace Education</title>
 <meta name="description" content="Detailed overview of the Lifespace Education framework - research-based approach to personalized learning.">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-line-height: 1.6;
-color: #2d3436;
-background: #ffffff;
-font-weight: 300;
-}
-
-.container {
-max-width: 1000px;
-margin: 0 auto;
-padding: 0 20px;
-}
-
-header {
-background: #000000;
-color: white;
-padding: 1.5rem 0;
-}
-
-header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-font-size: 1.5rem;
-font-weight: 400;
-color: white;
-text-decoration: none;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-margin-left: 2rem;
-}
-
-.mobile-nav {
-display: none;
-background: #1a5555;
-padding: 0.75rem 0;
-text-align: center;
-}
-
-.mobile-nav a {
-display: inline-block;
-color: white;
-text-decoration: none;
-padding: 0.5rem 1rem;
-font-size: 0.9rem;
-}
-
-main {
-padding: 3rem 0;
-}
-
-h1 {
-font-size: 2.5rem;
-color: #1a5555;
-margin-bottom: 1.5rem;
-font-weight: 400;
-}
-
-h2 {
-font-size: 2rem;
-color: #d4743c;
-margin-top: 3rem;
-margin-bottom: 1rem;
-font-weight: 400;
-}
-
-h3 {
-font-size: 1.5rem;
-color: #2d3748;
-margin-top: 2rem;
-margin-bottom: 0.75rem;
-font-weight: 400;
-}
-
-p, li {
-margin-bottom: 1rem;
-font-size: 1.05rem;
-}
-
-ul {
-margin-left: 2rem;
-}
-
-.highlight-box {
-background: #f5f1eb;
-border-left: 4px solid #d4743c;
-padding: 1.5rem;
-margin: 2rem 0;
-}
-
-.cta-button {
-display: inline-block;
-background: #d4743c;
-color: white;
-padding: 1rem 2rem;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-margin-top: 1rem;
-}
-
-footer {
-background: #2d3748;
-color: white;
-padding: 2rem 0;
-text-align: center;
-margin-top: 4rem;
-}
-
-@media (max-width: 768px) {
-h1 {
-font-size: 2rem;
-}
-
-nav {
-display: none;
-}
-
-.mobile-nav {
-display: block;
-}
-}
+.hero-blue { background: #1e3a5f; }
 </style>
 </head>
-<body>
-<header>
-<div class="container">
-<a href="index.html" class="logo">Lifespace Education</a>
-<nav>
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
+<body class="min-h-screen">
 
-<div class="mobile-nav">
-<a href="index.html">Home</a>
-<a href="framework.html">Framework</a>
-<a href="portfolio.html">Design Services</a>
-<a href="school-options.html">School Options</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<main>
-<div class="container">
-<h1>The Lifespace Education Framework</h1>
-<p style="font-size: 1.2rem; color: #d4743c;"><em>A Comprehensive Approach to Personalized Learning</em></p>
-
-<h2>What is Lifespace Education?</h2>
-<p>Lifespace Education is a personalized learning approach designed to prepare students for thriving in an uncertain future. It can be implemented in homeschools, micro-schools, and traditional classroom settings, adapting to the constraints and opportunities of each context.</p>
-
-<p>In a world characterized by constant change and innovation, equipping children with adaptable skills matters more than transmitting fixed knowledge. Lifespace prioritizes the development of critical thinking, problem-solving, information literacy, and the capacity for self-directed, lifelong learning.</p>
-
-<div class="highlight-box">
-<p><strong>The Lifespace Concept:</strong> The term "lifespace" refers to the entirety of an individual's lived experience - all the environments, activities, and interactions that shape learning. This encompasses formal education, but also everyday activities, hobbies, social interactions, community engagement, play, chores, and exploration.</p>
-<p style="margin-top: 1rem;"><strong>Key insight:</strong> Learning doesn't happen solely within classrooms or textbooks but rather occurs throughout all aspects of a student's life. Every experience offers opportunities for growth and understanding.</p>
+<!-- Navbar -->
+<div class="navbar bg-base-300 sticky top-0 z-50 px-4">
+  <div class="flex-1">
+    <a href="index.html" class="text-xl font-normal text-base-content">Lifespace Education</a>
+  </div>
+  <div class="flex-none hidden md:block">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="portfolio.html">Design Services</a></li>
+      <li><a href="school-options.html">School Options</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="flex-none md:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="portfolio.html">Design Services</a></li>
+        <li><a href="school-options.html">School Options</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<h2>Core Philosophy: Students as Their Own Primary Teachers</h2>
-<p>Central to Lifespace Education is the understanding that <strong>students are their own primary teachers</strong>. Adults don't "give" students knowledge or skills - they create conditions where students develop capacities through active engagement.</p>
-
-<p>This shifts the adult role from controller and deliverer of content to guide, facilitator, and resource. It manifests through:</p>
-<ul>
-<li><strong>Student Agency:</strong> Meaningful decisions about learning through Learning Maps, project topics, and resource selection</li>
-<li><strong>Collaborative Relationships:</strong> Built on respect and trust, not rewards and punishments</li>
-<li><strong>Questions Over Answers:</strong> Adults pose thought-provoking questions that launch investigations</li>
-<li><strong>Process Over Products:</strong> Focus on learning process and reflection, not just final outputs</li>
-<li><strong>Scaffolded Independence:</strong> Support appropriate to capability, gradually releasing responsibility</li>
-</ul>
-
-<h2>The Six Pillars in Depth</h2>
-
-<h3>1. Critical Thinking</h3>
-<p>Critical thinking encompasses analysis (breaking down information), synthesis (combining diverse information into coherent understanding), inference (making informed predictions), and evaluation (making reasoned judgments).</p>
-
-<p><strong>Information literacy sits at the heart</strong> of critical thinking. Students explicitly learn to evaluate source credibility, distinguish fact from opinion, navigate digital information safely, recognize misinformation and manipulation, and use information responsibly.</p>
-
-<p>Developed through academic discussions, project-based investigations, real-world contexts, and explicit instruction in critical thinking strategies.</p>
-
-<h3>2. Problem Solving</h3>
-<p>Problem solving is the process of identifying challenges, generating potential solutions, implementing strategies, and iterating based on results. While critical thinking focuses on analysis, problem solving emphasizes action.</p>
-
-<p>Students develop capacity to tackle novel problems independently - creativity, resourcefulness, resilience, and confidence to try, fail, learn, and try again.</p>
-
-<p>Developed through project-based learning, design challenges, investigations and experiments, real-world application, and explicit instruction in problem-solving frameworks.</p>
-
-<h3>3. Core Competencies</h3>
-<p>Foundational academic skills in reading, writing, mathematics, science, and social studies that enable all other learning.</p>
-
-<p><strong>The Two-Hour Approach:</strong> Approximately two hours per day of dedicated, high-quality instruction and practice builds strong foundations efficiently without consuming the entire learning day. Research supports that concentrated instruction combined with real-world application produces better outcomes than extended periods of isolated skill practice.</p>
-
-<p><strong>Components include:</strong></p>
-<ul>
-<li><strong>Reading:</strong> Explicit phonics instruction, independent reading practice, comprehension strategy instruction</li>
-<li><strong>Writing:</strong> Skills and strategies instruction, authentic writing purposes, revision and feedback</li>
-<li><strong>Mathematics:</strong> Skills practice and automaticity (15-20 min, 3-5x weekly), conceptual understanding through real application</li>
-<li><strong>Science:</strong> Inquiry and investigation, hands-on exploration, concepts in context</li>
-<li><strong>Social Studies:</strong> Historical thinking with primary sources, civic engagement, geographic understanding, economic and cultural literacy</li>
-</ul>
-
-<h3>4. Expression</h3>
-<p>Expression is the ability to take a powerful idea from your mind and make it real for others to perceive. It encompasses synthesis (bringing complex concepts together into coherent vision) and transmission (communicating that vision clearly).</p>
-
-<p>Expression is measured by two criteria: the clarity and quality of the idea itself, and the effectiveness of its transmission to others. The modality doesn't matter - written, spoken, visual, performed, built, coded, or any other form. What matters is whether the idea successfully moved from one person's understanding into another's.</p>
-
-<p>Developed through project presentations, multi-modal expression opportunities, synthesis practice, iterative refinement, and tool fluency.</p>
-
-<h3>5. Social-Emotional Learning</h3>
-<p>Social-Emotional Learning (SEL) is the foundation upon which all other learning rests. Students cannot engage in challenging academic work without emotional regulation, cannot learn from failure without resilience and growth mindset, cannot collaborate without relationship skills.</p>
-
-<p><strong>The five core SEL competencies:</strong></p>
-<ul>
-<li><strong>Self-Awareness:</strong> Recognizing emotions, values, strengths, and limitations</li>
-<li><strong>Self-Management:</strong> Regulating emotions and behaviors, managing stress, setting and working toward goals</li>
-<li><strong>Social Awareness:</strong> Perspective-taking, empathy, understanding diverse backgrounds</li>
-<li><strong>Relationship Skills:</strong> Establishing healthy relationships, communicating clearly, cooperating, resolving conflict</li>
-<li><strong>Responsible Decision-Making:</strong> Making constructive choices based on ethical standards and wellbeing</li>
-</ul>
-
-<p>Developed through explicit SEL lessons, relationship-based culture, restorative practices, growth mindset integration, mindfulness practices, collaborative work, and emotional processing through challenges.</p>
-
-<h3>6. Project Work</h3>
-<p>Project Work occupies a unique position: it is both a competency students develop AND the primary vehicle through which all other learning happens.</p>
-
-<p><strong>As a competency,</strong> students learn to initiate and plan, conduct sustained inquiry, integrate multiple disciplines, manage setbacks and iterate, collaborate effectively, document and reflect, and bring work to completion.</p>
-
-<p><strong>As a vehicle,</strong> project work provides authentic contexts where critical thinking, problem solving, core competencies, expression, and SEL all come together in meaningful application.</p>
-
-<p>Students receive 1-2+ hours daily dedicated to project work - extended investigations that integrate multiple disciplines through authentic questions and real challenges.</p>
-
-<h2>Key Principles & Methods</h2>
-
-<h3>Student Agency Through Learning Maps</h3>
-<p>Learning Maps are the primary tool for operationalizing student agency. Adults identify core responsibilities for the day (reading practice, math skills, project work, specific lessons). Students then create their own path through the map, deciding the sequence in which they'll tackle responsibilities.</p>
-
-<p>The map visually distinguishes screen-based from hands-on activities, with brain breaks (outdoor play, art, physical activity) required between any screen-time activities.</p>
-
-<p>As students mature, Learning Maps evolve into more sophisticated planning tools - written planners, digital calendars, adult-style time management. The goal is developing lifelong self-direction capacity.</p>
-
-<h3>Real-World Relevance</h3>
-<p>Learning connects to authentic contexts, real problems, and genuine communities through:</p>
-<ul>
-<li>Community engagement with local resources and experts</li>
-<li>Service learning that applies knowledge to benefit others</li>
-<li>Apprenticeships and mentorships with community practitioners</li>
-<li>Authentic audiences for presentations and communication</li>
-<li>Real problems without predetermined answers</li>
-</ul>
-
-<h3>Integration Across Disciplines</h3>
-<p>Knowledge and skills don't exist in separate subject silos. Lifespace intentionally integrates disciplines through project work, allowing students to see connections, apply knowledge purposefully, and develop holistic understanding.</p>
-
-<h3>Play and Exploration</h3>
-<p>Free play is not supplemental - it is essential for development, wellbeing, and cognitive growth. Lifespace dedicates 1-2+ hours daily to unstructured activity where students pursue their own interests without adult direction.</p>
-
-<p>Research documents that decline in free play correlates with increased anxiety, depression, and decreased sense of control. Play develops internal locus of control, emotional self-regulation, social skills, creativity, problem-solving, and intrinsic motivation.</p>
-
-<h3>Relationship-Based Learning</h3>
-<p>Learning happens in the context of relationships. Lifespace builds positive relationships between students, adults, peers, and community members as the foundation for all learning - rejecting traditional classroom management based on rewards and punishments.</p>
-
-<p>When conflicts arise, restorative practices repair relationships rather than impose consequences. The focus is accountability, empathy development, relationship repair, and learning better ways forward.</p>
-
-<h2>Daily Structure</h2>
-<p>A typical Lifespace day includes:</p>
-<ul>
-<li><strong>Core Competencies (2 hours):</strong> Focused instruction and practice in reading, writing, math, science</li>
-<li><strong>Project Work (1-2+ hours):</strong> Extended investigations integrating all pillars</li>
-<li><strong>Free Play (1-2+ hours):</strong> Non-negotiable unstructured time</li>
-<li><strong>Artistic Expression:</strong> Integrated throughout as mode of thinking and learning</li>
-<li><strong>Brain Breaks:</strong> Required between screen activities; outdoor play, art, movement</li>
-</ul>
-
-<h2>Assessment</h2>
-<p>Assessment serves learning - not sorting, ranking, or gatekeeping. Methods include:</p>
-<ul>
-<li>Academic discussions revealing depth of understanding</li>
-<li>Project presentations to authentic audiences</li>
-<li>Portfolios showing growth over time</li>
-<li>Student self-assessment and reflection</li>
-</ul>
-
-<p>Standardized testing is optional - families may choose to use it as one data point among many, but it's not required or treated as definitive measure of learning.</p>
-
-<h2>Benefits of Lifespace Education</h2>
-<ul>
-<li><strong>Empowered Learners:</strong> Self-directed, critical thinkers with information literacy skills</li>
-<li><strong>Positive Learning Environment:</strong> Relationship-based culture, growth mindset, psychological safety, joy and engagement</li>
-<li><strong>Lifelong Learners:</strong> Intrinsically motivated with skills to learn anything</li>
-<li><strong>Prepared for Uncertain Futures:</strong> Adaptable, creative, resilient, able to navigate change</li>
-<li><strong>Whole Child Development:</strong> Intellectual, social, emotional, physical, creative, and ethical growth</li>
-</ul>
-
-<div class="highlight-box">
-<h3 style="color: #d4743c;">Research Foundation</h3>
-<p>Every component of Lifespace Education is grounded in decades of educational research. The complete framework includes over 200 scholarly citations validating project-based learning, social-emotional development, student agency, authentic assessment, restorative practices, play-based learning, differentiation, and relationship-centered approaches.</p>
-<p style="margin-top: 1rem;"><strong>We're not testing whether these approaches work - we're demonstrating that this integrated model can operate as a viable, scalable school design.</strong></p>
+<!-- Hero -->
+<div class="hero hero-blue text-white py-12">
+  <div class="hero-content text-center">
+    <div class="max-w-2xl">
+      <h1 class="text-3xl font-normal mb-4">The Lifespace Education Framework</h1>
+      <p class="opacity-90">A Comprehensive Approach to Personalized Learning</p>
+    </div>
+  </div>
 </div>
 
-<div style="text-align: center; margin-top: 3rem;">
-<a href="web_small_lifespace framework document.pdf" class="cta-button">Download the Complete 71-Page Framework</a>
-<br>
-<a href="index.html#contact" class="cta-button" style="background: #2a7b7b; margin-top: 1rem;">Join Our Interest List</a>
-</div>
-</div>
-</main>
+<!-- Main Content -->
+<div class="container mx-auto px-4 py-12 max-w-4xl">
 
-<footer>
-<div class="container">
-<p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+  <h2 class="text-2xl font-normal text-primary mb-4">What is Lifespace Education?</h2>
+  <p class="text-base-content/80 mb-4">Lifespace Education is a personalized learning approach designed to prepare students for thriving in an uncertain future. It can be implemented in homeschools, micro-schools, and traditional classroom settings, adapting to the constraints and opportunities of each context.</p>
+  <p class="text-base-content/80 mb-6">In a world characterized by constant change and innovation, equipping children with adaptable skills matters more than transmitting fixed knowledge. Lifespace prioritizes the development of critical thinking, problem-solving, information literacy, and the capacity for self-directed, lifelong learning.</p>
+
+  <div class="card bg-base-200 border-l-4 border-primary mb-8">
+    <div class="card-body">
+      <p class="text-base-content/80"><strong>The Lifespace Concept:</strong> The term "lifespace" refers to the entirety of an individual's lived experience - all the environments, activities, and interactions that shape learning. This encompasses formal education, but also everyday activities, hobbies, social interactions, community engagement, play, chores, and exploration.</p>
+      <p class="text-base-content/80 mt-3"><strong>Key insight:</strong> Learning doesn't happen solely within classrooms or textbooks but rather occurs throughout all aspects of a student's life. Every experience offers opportunities for growth and understanding.</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-normal text-primary mb-4 mt-12">Core Philosophy: Students as Their Own Primary Teachers</h2>
+  <p class="text-base-content/80 mb-4">Central to Lifespace Education is the understanding that <strong>students are their own primary teachers</strong>. Adults don't "give" students knowledge or skills - they create conditions where students develop capacities through active engagement.</p>
+  <p class="text-base-content/80 mb-4">This shifts the adult role from controller and deliverer of content to guide, facilitator, and resource. It manifests through:</p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-8 ml-4">
+    <li><strong>Student Agency:</strong> Meaningful decisions about learning through Learning Maps, project topics, and resource selection</li>
+    <li><strong>Collaborative Relationships:</strong> Built on respect and trust, not rewards and punishments</li>
+    <li><strong>Questions Over Answers:</strong> Adults pose thought-provoking questions that launch investigations</li>
+    <li><strong>Process Over Products:</strong> Focus on learning process and reflection, not just final outputs</li>
+    <li><strong>Scaffolded Independence:</strong> Support appropriate to capability, gradually releasing responsibility</li>
+  </ul>
+
+  <h2 class="text-2xl font-normal text-primary mb-6 mt-12">The Six Pillars in Depth</h2>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">1. Critical Thinking</h3>
+  <p class="text-base-content/80 mb-4">Critical thinking encompasses analysis (breaking down information), synthesis (combining diverse information into coherent understanding), inference (making informed predictions), and evaluation (making reasoned judgments).</p>
+  <p class="text-base-content/80 mb-4"><strong>Information literacy sits at the heart</strong> of critical thinking. Students explicitly learn to evaluate source credibility, distinguish fact from opinion, navigate digital information safely, recognize misinformation and manipulation, and use information responsibly.</p>
+  <p class="text-base-content/80 mb-6">Developed through academic discussions, project-based investigations, real-world contexts, and explicit instruction in critical thinking strategies.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">2. Problem Solving</h3>
+  <p class="text-base-content/80 mb-4">Problem solving is the process of identifying challenges, generating potential solutions, implementing strategies, and iterating based on results. While critical thinking focuses on analysis, problem solving emphasizes action.</p>
+  <p class="text-base-content/80 mb-4">Students develop capacity to tackle novel problems independently - creativity, resourcefulness, resilience, and confidence to try, fail, learn, and try again.</p>
+  <p class="text-base-content/80 mb-6">Developed through project-based learning, design challenges, investigations and experiments, real-world application, and explicit instruction in problem-solving frameworks.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">3. Core Competencies</h3>
+  <p class="text-base-content/80 mb-4">Foundational academic skills in reading, writing, mathematics, science, and social studies that enable all other learning.</p>
+  <p class="text-base-content/80 mb-4"><strong>The Two-Hour Approach:</strong> Approximately two hours per day of dedicated, high-quality instruction and practice builds strong foundations efficiently without consuming the entire learning day. Research supports that concentrated instruction combined with real-world application produces better outcomes than extended periods of isolated skill practice.</p>
+  <p class="text-base-content/80 mb-2"><strong>Components include:</strong></p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-6 ml-4">
+    <li><strong>Reading:</strong> Explicit phonics instruction, independent reading practice, comprehension strategy instruction</li>
+    <li><strong>Writing:</strong> Skills and strategies instruction, authentic writing purposes, revision and feedback</li>
+    <li><strong>Mathematics:</strong> Skills practice and automaticity (15-20 min, 3-5x weekly), conceptual understanding through real application</li>
+    <li><strong>Science:</strong> Inquiry and investigation, hands-on exploration, concepts in context</li>
+    <li><strong>Social Studies:</strong> Historical thinking with primary sources, civic engagement, geographic understanding, economic and cultural literacy</li>
+  </ul>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">4. Expression</h3>
+  <p class="text-base-content/80 mb-4">Expression is the ability to take a powerful idea from your mind and make it real for others to perceive. It encompasses synthesis (bringing complex concepts together into coherent vision) and transmission (communicating that vision clearly).</p>
+  <p class="text-base-content/80 mb-4">Expression is measured by two criteria: the clarity and quality of the idea itself, and the effectiveness of its transmission to others. The modality doesn't matter - written, spoken, visual, performed, built, coded, or any other form. What matters is whether the idea successfully moved from one person's understanding into another's.</p>
+  <p class="text-base-content/80 mb-6">Developed through project presentations, multi-modal expression opportunities, synthesis practice, iterative refinement, and tool fluency.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">5. Social-Emotional Learning</h3>
+  <p class="text-base-content/80 mb-4">Social-Emotional Learning (SEL) is the foundation upon which all other learning rests. Students cannot engage in challenging academic work without emotional regulation, cannot learn from failure without resilience and growth mindset, cannot collaborate without relationship skills.</p>
+  <p class="text-base-content/80 mb-2"><strong>The five core SEL competencies:</strong></p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-4 ml-4">
+    <li><strong>Self-Awareness:</strong> Recognizing emotions, values, strengths, and limitations</li>
+    <li><strong>Self-Management:</strong> Regulating emotions and behaviors, managing stress, setting and working toward goals</li>
+    <li><strong>Social Awareness:</strong> Perspective-taking, empathy, understanding diverse backgrounds</li>
+    <li><strong>Relationship Skills:</strong> Establishing healthy relationships, communicating clearly, cooperating, resolving conflict</li>
+    <li><strong>Responsible Decision-Making:</strong> Making constructive choices based on ethical standards and wellbeing</li>
+  </ul>
+  <p class="text-base-content/80 mb-6">Developed through explicit SEL lessons, relationship-based culture, restorative practices, growth mindset integration, mindfulness practices, collaborative work, and emotional processing through challenges.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">6. Project Work</h3>
+  <p class="text-base-content/80 mb-4">Project Work occupies a unique position: it is both a competency students develop AND the primary vehicle through which all other learning happens.</p>
+  <p class="text-base-content/80 mb-4"><strong>As a competency,</strong> students learn to initiate and plan, conduct sustained inquiry, integrate multiple disciplines, manage setbacks and iterate, collaborate effectively, document and reflect, and bring work to completion.</p>
+  <p class="text-base-content/80 mb-4"><strong>As a vehicle,</strong> project work provides authentic contexts where critical thinking, problem solving, core competencies, expression, and SEL all come together in meaningful application.</p>
+  <p class="text-base-content/80 mb-6">Students receive 1-2+ hours daily dedicated to project work - extended investigations that integrate multiple disciplines through authentic questions and real challenges.</p>
+
+  <h2 class="text-2xl font-normal text-primary mb-6 mt-12">Key Principles & Methods</h2>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">Student Agency Through Learning Maps</h3>
+  <p class="text-base-content/80 mb-4">Learning Maps are the primary tool for operationalizing student agency. Adults identify core responsibilities for the day (reading practice, math skills, project work, specific lessons). Students then create their own path through the map, deciding the sequence in which they'll tackle responsibilities.</p>
+  <p class="text-base-content/80 mb-4">The map visually distinguishes screen-based from hands-on activities, with brain breaks (outdoor play, art, physical activity) required between any screen-time activities.</p>
+  <p class="text-base-content/80 mb-6">As students mature, Learning Maps evolve into more sophisticated planning tools - written planners, digital calendars, adult-style time management. The goal is developing lifelong self-direction capacity.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">Real-World Relevance</h3>
+  <p class="text-base-content/80 mb-2">Learning connects to authentic contexts, real problems, and genuine communities through:</p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-6 ml-4">
+    <li>Community engagement with local resources and experts</li>
+    <li>Service learning that applies knowledge to benefit others</li>
+    <li>Apprenticeships and mentorships with community practitioners</li>
+    <li>Authentic audiences for presentations and communication</li>
+    <li>Real problems without predetermined answers</li>
+  </ul>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">Integration Across Disciplines</h3>
+  <p class="text-base-content/80 mb-6">Knowledge and skills don't exist in separate subject silos. Lifespace intentionally integrates disciplines through project work, allowing students to see connections, apply knowledge purposefully, and develop holistic understanding.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">Play and Exploration</h3>
+  <p class="text-base-content/80 mb-4">Free play is not supplemental - it is essential for development, wellbeing, and cognitive growth. Lifespace dedicates 1-2+ hours daily to unstructured activity where students pursue their own interests without adult direction.</p>
+  <p class="text-base-content/80 mb-6">Research documents that decline in free play correlates with increased anxiety, depression, and decreased sense of control. Play develops internal locus of control, emotional self-regulation, social skills, creativity, problem-solving, and intrinsic motivation.</p>
+
+  <h3 class="text-xl font-normal text-base-content mb-3 mt-8">Relationship-Based Learning</h3>
+  <p class="text-base-content/80 mb-4">Learning happens in the context of relationships. Lifespace builds positive relationships between students, adults, peers, and community members as the foundation for all learning - rejecting traditional classroom management based on rewards and punishments.</p>
+  <p class="text-base-content/80 mb-6">When conflicts arise, restorative practices repair relationships rather than impose consequences. The focus is accountability, empathy development, relationship repair, and learning better ways forward.</p>
+
+  <h2 class="text-2xl font-normal text-primary mb-4 mt-12">Daily Structure</h2>
+  <p class="text-base-content/80 mb-2">A typical Lifespace day includes:</p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-8 ml-4">
+    <li><strong>Core Competencies (2 hours):</strong> Focused instruction and practice in reading, writing, math, science</li>
+    <li><strong>Project Work (1-2+ hours):</strong> Extended investigations integrating all pillars</li>
+    <li><strong>Free Play (1-2+ hours):</strong> Non-negotiable unstructured time</li>
+    <li><strong>Artistic Expression:</strong> Integrated throughout as mode of thinking and learning</li>
+    <li><strong>Brain Breaks:</strong> Required between screen activities; outdoor play, art, movement</li>
+  </ul>
+
+  <h2 class="text-2xl font-normal text-primary mb-4 mt-12">Assessment</h2>
+  <p class="text-base-content/80 mb-2">Assessment serves learning - not sorting, ranking, or gatekeeping. Methods include:</p>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-4 ml-4">
+    <li>Academic discussions revealing depth of understanding</li>
+    <li>Project presentations to authentic audiences</li>
+    <li>Portfolios showing growth over time</li>
+    <li>Student self-assessment and reflection</li>
+  </ul>
+  <p class="text-base-content/80 mb-8">Standardized testing is optional - families may choose to use it as one data point among many, but it's not required or treated as definitive measure of learning.</p>
+
+  <h2 class="text-2xl font-normal text-primary mb-4 mt-12">Benefits of Lifespace Education</h2>
+  <ul class="list-disc list-inside text-base-content/80 space-y-2 mb-8 ml-4">
+    <li><strong>Empowered Learners:</strong> Self-directed, critical thinkers with information literacy skills</li>
+    <li><strong>Positive Learning Environment:</strong> Relationship-based culture, growth mindset, psychological safety, joy and engagement</li>
+    <li><strong>Lifelong Learners:</strong> Intrinsically motivated with skills to learn anything</li>
+    <li><strong>Prepared for Uncertain Futures:</strong> Adaptable, creative, resilient, able to navigate change</li>
+    <li><strong>Whole Child Development:</strong> Intellectual, social, emotional, physical, creative, and ethical growth</li>
+  </ul>
+
+  <div class="card bg-base-200 border-l-4 border-primary mb-8">
+    <div class="card-body">
+      <h3 class="text-xl font-normal text-primary mb-3">Research Foundation</h3>
+      <p class="text-base-content/80">Every component of Lifespace Education is grounded in decades of educational research. The complete framework includes over 200 scholarly citations validating project-based learning, social-emotional development, student agency, authentic assessment, restorative practices, play-based learning, differentiation, and relationship-centered approaches.</p>
+      <p class="text-base-content/80 mt-3"><strong>We're not testing whether these approaches work - we're demonstrating that this integrated model can operate as a viable, scalable school design.</strong></p>
+    </div>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="web_small_lifespace framework document.pdf" class="btn btn-primary btn-lg">Download the Complete 71-Page Framework</a>
+    <br>
+    <a href="contact.html" class="btn btn-outline btn-primary mt-4">Join Our Interest List</a>
+  </div>
+
 </div>
+
+<!-- Footer -->
+<footer class="footer footer-center p-6 bg-base-300 text-base-content mt-12">
+  <p>© 2026 Lifespace Education. All rights reserved.</p>
 </footer>
 
 </body>
