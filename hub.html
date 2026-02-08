@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="night">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,12 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-:root {
-  --p: 169 50% 22%;  /* #1a5555 teal */
-  --pc: 0 0% 100%;   /* white text on primary */
-}
 .hub-content { display: none; }
 .hub-content.visible { display: block; }
 .modal-overlay { display: none; }
 .modal-overlay.visible { display: flex; }
 .tag::before { content: '#'; }
+.hero-teal { background: #1a5555; }
 </style>
 </head>
 <body class="min-h-screen">
@@ -55,7 +52,7 @@
   </div>
 
   <!-- Hero -->
-  <div class="hero bg-primary text-primary-content py-12">
+  <div class="hero hero-teal text-white py-12">
     <div class="hero-content text-center">
       <div class="max-w-2xl">
         <h1 class="text-3xl font-normal mb-4">Community Hub</h1>
