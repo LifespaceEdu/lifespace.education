@@ -11,6 +11,8 @@
 .hero-gradient { background: linear-gradient(135deg, #1a5555 0%, #1e3a5f 25%, #4a3f55 50%, #5f4a1e 75%, #5f3a4a 100%); }
 .text-primary, a.link-primary { color: #ffffff !important; }
 a.link-primary:hover { color: #cccccc !important; }
+.modal-overlay { display: none; }
+.modal-overlay.visible { display: flex; }
 </style>
 </head>
 <body class="min-h-screen">
@@ -60,231 +62,83 @@ a.link-primary:hover { color: #cccccc !important; }
   </div>
 </div>
 
-<!-- Custom Curriculum Section -->
-<div class="container mx-auto px-4 py-16 max-w-5xl">
-  <h2 class="text-2xl font-normal text-primary mb-4">Custom Curriculum & Consultation for Homeschooling Families</h2>
-  <p class="text-base-content/80 mb-8 max-w-4xl">Lifespace Education creates research-based curriculum for learning needs traditional publishers won't serve—and delivers it fast. From critical thinking frameworks to justice education to controversial topics, we translate complex pedagogy into something any parent can facilitate.</p>
+<!-- Services Section -->
+<div class="container mx-auto px-4 py-12 max-w-5xl">
+  <h2 class="text-2xl font-normal text-primary mb-6">What We Offer</h2>
 
-  <h3 class="text-xl font-normal text-primary mb-4">What We Offer:</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Custom Learning Plans</h3>
+        <p class="text-base-content/80 text-sm">Individual instructional profiles coordinating goals, rhythms, subjects, and resources for specific learners in homeschools, microschools, or small schools.</p>
+      </div>
+    </div>
 
-  <div class="space-y-4 max-w-4xl">
-    <p class="text-base-content/80"><strong>Custom curriculum design</strong> — Interactive web apps, lesson plans, printables, teacher guides (typical turnaround: under 24 hours)</p>
-    <p class="text-base-content/80"><strong>Educational consultation</strong> — Learning assessments, individualized learning plans, curriculum recommendations</p>
-    <p class="text-base-content/80"><strong>Custom class design & instruction</strong> — Tailored classes for homeschool co-ops or individual learners</p>
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Custom Curriculum & Materials</h3>
+        <p class="text-base-content/80 text-sm">Complete curriculum design, workbooks, printables, and leveled reading materials built for your specific context and learners. Typical turnaround: under 24 hours.</p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">AI-Powered Learning Tools</h3>
+        <p class="text-base-content/80 text-sm">Interactive curriculum with embedded Socratic AI tutors that guide students to discover answers through questions - 24/7 support that builds understanding.</p>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal">Custom Classes & Instruction</h3>
+        <p class="text-base-content/80 text-sm">Tailored class design and direct instruction for children, teens, or adult learners - including training for founders and educators.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card bg-base-200 mt-8 max-w-4xl">
+  <div class="card bg-base-200">
     <div class="card-body">
-      <h4 class="text-lg font-normal text-primary mb-2">Pricing & Scheduling:</h4>
-      <p class="text-base-content/80">Consultations and custom projects available evenings and weekends. Contact us for rates and availability: <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a></p>
+      <h4 class="text-lg font-normal text-primary mb-2">Pricing & Scheduling</h4>
+      <p class="text-base-content/80 text-sm">Consultations and custom projects available evenings and weekends. Contact us for rates and availability: <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a></p>
     </div>
   </div>
 </div>
 
-<!-- Making Complex Pedagogy Accessible -->
-<div class="bg-base-200 py-16">
-  <div class="container mx-auto px-4 max-w-5xl">
-    <h2 class="text-2xl font-normal text-primary mb-4">Making Complex Pedagogy Accessible</h2>
-    <p class="text-base-content/80 mb-8 max-w-4xl">We respond to the "no gatekeepers" model—when families need research-based curriculum that traditional publishers won't touch, we design it. Fast turnaround, mobile-accessible, and built so any parent can facilitate it.</p>
+<!-- Portfolio Section -->
+<div class="bg-base-200 py-12">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <h2 class="text-2xl font-normal text-primary mb-4">Portfolio - Recent Work</h2>
+    <p class="text-base-content/80 mb-6">Examples of custom curriculum and learning tools. Click any card for details.</p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="card bg-base-100 shadow-lg">
-        <div class="card-body">
-          <h3 class="card-title text-primary font-normal">Custom Learning Plans</h3>
-          <p class="text-base-content/80">Individual instructional profiles coordinating goals, rhythms, subjects, and resources for specific learners in homeschools, microschools, or small schools.</p>
-        </div>
-      </div>
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-2 mb-8" role="tablist">
+      <button class="btn btn-sm btn-primary filter-btn" data-filter="all">All</button>
+      <button class="btn btn-sm btn-ghost filter-btn" data-filter="ai-tools">AI Tools</button>
+      <button class="btn btn-sm btn-ghost filter-btn" data-filter="curriculum">Curriculum</button>
+      <button class="btn btn-sm btn-ghost filter-btn" data-filter="training">Training</button>
+    </div>
 
-      <div class="card bg-base-100 shadow-lg">
-        <div class="card-body">
-          <h3 class="card-title text-primary font-normal">Custom Curriculum & Materials</h3>
-          <p class="text-base-content/80">Complete curriculum design, workbooks, printables, and leveled reading materials built for your specific context and learners.</p>
-        </div>
-      </div>
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid"></div>
 
-      <div class="card bg-base-100 shadow-lg">
-        <div class="card-body">
-          <h3 class="card-title text-primary font-normal">AI-Powered Learning Tools</h3>
-          <p class="text-base-content/80">Interactive curriculum with embedded Socratic AI tutors that guide students to discover answers through questions—24/7 support that builds understanding without giving direct answers.</p>
-        </div>
-      </div>
-
-      <div class="card bg-base-100 shadow-lg">
-        <div class="card-body">
-          <h3 class="card-title text-primary font-normal">Custom Classes & Instruction</h3>
-          <p class="text-base-content/80">Tailored class design and direct instruction for children, teens, or adult learners—including training for founders and educators.</p>
-        </div>
+    <div class="card bg-base-100 mt-8">
+      <div class="card-body">
+        <p class="text-base-content/80 text-sm"><strong>Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. No software to buy, no downloads, no barriers.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Portfolio -->
-<div class="container mx-auto px-4 py-16 max-w-6xl">
-  <h2 class="text-2xl font-normal text-primary mb-4">Portfolio - Recent Work</h2>
-  <p class="text-base-content/80 mb-8">Examples of custom curriculum and learning tools designed for specific clients and contexts. These represent our approach to responsive curriculum development—taking sophisticated pedagogy and making it accessible, typically delivered in under 24 hours.</p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <div class="flex justify-between items-start">
-          <h3 class="card-title text-primary font-normal">Vada Socratic AI Tutor System</h3>
-          <span class="text-xl">✨</span>
-        </div>
-        <p class="text-base-content/80"><strong>The Need:</strong> Students need help understanding their assignments, but teachers can't be available 24/7. Direct answers don't build learning.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Vada is a Socratic AI tutor that guides students to discover answers themselves through questions. Teachers upload any assignment, and Vada becomes an expert in that content.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Socratic AI</span>
-          <span class="badge badge-outline">Teacher & Student Tools</span>
-          <span class="badge badge-outline">Adaptive Learning</span>
-        </div>
-        <div class="card-actions mt-4 flex-wrap gap-2">
-          <a href="https://vada-ai-tutor.vercel.app" target="_blank" class="btn btn-primary btn-sm">Student App →</a>
-          <a href="https://vada-dashboard-vert.vercel.app" target="_blank" class="btn btn-primary btn-sm">Teacher Dashboard →</a>
-        </div>
-      </div>
+<!-- About Section (Collapsible) -->
+<div class="container mx-auto px-4 py-12 max-w-4xl">
+  <div class="collapse collapse-arrow bg-base-200">
+    <input type="checkbox" />
+    <div class="collapse-title text-xl font-normal text-primary">About Our Design Practice</div>
+    <div class="collapse-content">
+      <p class="text-base-content/80 mb-4">Lifespace Education is a small educational design practice working with homeschools, microschools, and early-stage schools. We start from the actual learners in front of you - not generic templates or off-the-shelf solutions.</p>
+      <p class="text-base-content/80 mb-4">We design for real schedules, families, and constraints. Our work blends print materials, conversation, and digital tools as needed to support learning that feels human-scale and manageable.</p>
+      <p class="text-base-content/60 text-sm">We work with families, founders, and educators who are oriented toward equity and humane learning environments, and who want their educational design to reflect those values in practice.</p>
     </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <div class="flex justify-between items-start">
-          <h3 class="card-title text-primary font-normal">US History - Enslaved Africans in America</h3>
-          <span class="text-xl">✨</span>
-        </div>
-        <p class="text-base-content/80"><strong>The Need:</strong> History textbooks often center white perspectives. Students need content that centers marginalized experiences.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Interactive web textbook with embedded Vada AI tutor. Content centered on enslaved Africans' agency and resistance.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">US History</span>
-          <span class="badge badge-outline">Socratic AI</span>
-          <span class="badge badge-outline">Justice-Oriented</span>
-        </div>
-        <div class="card-actions mt-4">
-          <a href="https://ushist-textbook-lifespace.vercel.app/" target="_blank" class="btn btn-primary btn-sm">View Textbook →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <div class="flex justify-between items-start">
-          <h3 class="card-title text-primary font-normal">Ahupuaʻa Learning Journey</h3>
-          <span class="text-xl">✨</span>
-        </div>
-        <p class="text-base-content/80"><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional Indigenous land management to environmental justice.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Interactive webquest with embedded Socratic AI tutor exploring ahupuaʻa systems, Indigenous ecological knowledge, and sovereignty movements.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Hawaii-Specific</span>
-          <span class="badge badge-outline">Indigenous Knowledge</span>
-          <span class="badge badge-outline">Socratic AI</span>
-        </div>
-        <div class="card-actions mt-4">
-          <a href="https://ai-ahupua-a-learning-app.vercel.app" target="_blank" class="btn btn-primary btn-sm">View App →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <div class="flex justify-between items-start">
-          <h3 class="card-title text-primary font-normal">Lifespace Framework AI Training</h3>
-          <span class="text-xl">✨</span>
-        </div>
-        <p class="text-base-content/80"><strong>The Need:</strong> Educators want to understand and implement the Lifespace Framework but need expert guidance.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Interactive training platform with AI expert. Teachers explore the framework through Socratic dialogue, accessible 24/7.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Teacher Training</span>
-          <span class="badge badge-outline">Framework Expert</span>
-          <span class="badge badge-outline">Professional Development</span>
-        </div>
-        <div class="card-actions mt-4">
-          <a href="https://lifespace-framework-training.vercel.app" target="_blank" class="btn btn-primary btn-sm">View Training →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <h3 class="card-title text-primary font-normal">Lifespace Logic (All Bands)</h3>
-        <p class="text-base-content/80"><strong>The Need:</strong> Complete reasoning curriculum spanning ages 6-14, building critical thinking through everyday moments.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Teacher guide covering four developmental bands teaching five core reasoning moves. Research-based (Philosophy for Children, effect size 0.65+).</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Ages 6-14</span>
-          <span class="badge badge-outline">Critical Thinking</span>
-          <span class="badge badge-outline">Research-Based</span>
-        </div>
-        <div class="card-actions mt-4">
-          <a href="https://lifespace-logic4-kids.vercel.app/" target="_blank" class="btn btn-primary btn-sm">View App →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <h3 class="card-title text-primary font-normal">Ancestral Futures</h3>
-        <p class="text-base-content/80"><strong>The Need:</strong> Decolonial education framework connecting Indigenous knowledge with future visioning.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Curriculum where students research cultural practices, study resistance movements, create characters with "ancestral tech," and write Freedom Dream stories.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Grades 5-12</span>
-          <span class="badge badge-outline">Decolonial</span>
-          <span class="badge badge-outline">Afrofuturism</span>
-        </div>
-        <div class="card-actions mt-4 flex-wrap gap-2">
-          <a href="https://ms-ancestral-futures-teachers-guide.vercel.app/" target="_blank" class="btn btn-primary btn-sm">MS (Teacher Guide) →</a>
-          <a href="https://hs-ancestral-futures-student.vercel.app/" target="_blank" class="btn btn-primary btn-sm">HS (Student App) →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <h3 class="card-title text-primary font-normal">Freedom Dreaming (Ages 5-7)</h3>
-        <p class="text-base-content/80"><strong>The Need:</strong> Dr. Bettina Love's Freedom Dreaming framework adapted for young children through play.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Teacher guides where kids use toys to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">Ages 5-7</span>
-          <span class="badge badge-outline">Social Justice</span>
-          <span class="badge badge-outline">Play-Based</span>
-        </div>
-        <div class="card-actions mt-4 flex-wrap gap-2">
-          <a href="https://barbie-freedom-dream.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Barbie Version →</a>
-          <a href="https://hot-wheels-freedom-dream.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Hot Wheels Version →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-base-200 shadow-lg border-t-4 border-primary">
-      <div class="card-body">
-        <h3 class="card-title text-primary font-normal">Seeds and Parts SEL Curriculum</h3>
-        <p class="text-base-content/80"><strong>The Need:</strong> SEL curriculum teaching kids what to do with emotions they've named, not just identification.</p>
-        <p class="text-base-content/80 mt-2"><strong>The Solution:</strong> Teacher guide with three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh's seeds metaphor.</p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="badge badge-outline">SEL</span>
-          <span class="badge badge-outline">Ages 6-9</span>
-          <span class="badge badge-outline">Printables</span>
-        </div>
-        <div class="card-actions mt-4">
-          <a href="https://seeds-parts4-kids.vercel.app/" target="_blank" class="btn btn-primary btn-sm">View App →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="card bg-base-200 mt-12">
-    <div class="card-body">
-      <p class="text-base-content/80"><strong>Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. Teachers and parents can reference lessons on their phones during class or learning time. No software to buy, no downloads, no barriers.</p>
-    </div>
-  </div>
-</div>
-
-<!-- About Our Design Practice -->
-<div class="bg-base-200 py-16">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-2xl font-normal text-primary mb-6">About Our Design Practice</h2>
-    <p class="text-base-content/80 mb-4">Lifespace Education is a small educational design practice working with homeschools, microschools, and early-stage schools. We start from the actual learners in front of you—not generic templates or off-the-shelf solutions.</p>
-    <p class="text-base-content/80 mb-4">We design for real schedules, families, and constraints. Our work blends print materials, conversation, and digital tools as needed to support learning that feels human-scale and manageable.</p>
-    <p class="text-base-content/60 text-sm">We work with families, founders, and educators who are oriented toward equity and humane learning environments, and who want their educational design to reflect those values in practice.</p>
   </div>
 </div>
 
@@ -303,10 +157,176 @@ a.link-primary:hover { color: #cccccc !important; }
   </div>
 </div>
 
+<!-- Portfolio Modal -->
+<div class="modal-overlay fixed inset-0 bg-black/80 z-50 items-center justify-center p-4" id="portfolioModal" onclick="if(event.target === this) closeModal()">
+  <div class="card bg-base-200 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="card-body">
+      <div class="flex justify-between items-start">
+        <h3 class="card-title text-primary font-normal" id="modalTitle"></h3>
+        <button class="btn btn-ghost btn-sm" onclick="closeModal()">✕</button>
+      </div>
+      <div id="modalContent"></div>
+      <div class="flex flex-wrap gap-2 mt-4" id="modalBadges"></div>
+      <div class="card-actions mt-4" id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="footer footer-center p-6 bg-base-300 text-base-content">
   <p>© 2026 Lifespace Education. All rights reserved.</p>
 </footer>
+
+<script>
+// Portfolio data
+const portfolioItems = [
+  {
+    title: 'Vada Socratic AI Tutor System',
+    category: 'ai-tools',
+    summary: 'AI tutor that guides students to discover answers through Socratic questioning.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Students need help understanding their assignments, but teachers can\'t be available 24/7. Direct answers don\'t build learning.</p><p class="text-base-content/80"><strong>The Solution:</strong> Vada is a Socratic AI tutor that guides students to discover answers themselves through questions. Teachers upload any assignment, and Vada becomes an expert in that content.</p>',
+    badges: ['Socratic AI', 'Teacher & Student Tools', 'Adaptive Learning'],
+    links: [
+      { label: 'Student App', url: 'https://vada-ai-tutor.vercel.app' },
+      { label: 'Teacher Dashboard', url: 'https://vada-dashboard-vert.vercel.app' }
+    ]
+  },
+  {
+    title: 'US History - Enslaved Africans in America',
+    category: 'curriculum',
+    summary: 'Interactive textbook centering marginalized experiences with embedded AI tutor.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> History textbooks often center white perspectives. Students need content that centers marginalized experiences.</p><p class="text-base-content/80"><strong>The Solution:</strong> Interactive web textbook with embedded Vada AI tutor. Content centered on enslaved Africans\' agency and resistance.</p>',
+    badges: ['US History', 'Socratic AI', 'Justice-Oriented'],
+    links: [
+      { label: 'View Textbook', url: 'https://ushist-textbook-lifespace.vercel.app/' }
+    ]
+  },
+  {
+    title: 'Ahupuaʻa Learning Journey',
+    category: 'curriculum',
+    summary: 'Hawaii-specific curriculum connecting traditional Indigenous land management to environmental justice.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Hawaii-specific curriculum connecting traditional Indigenous land management to environmental justice.</p><p class="text-base-content/80"><strong>The Solution:</strong> Interactive webquest with embedded Socratic AI tutor exploring ahupuaʻa systems, Indigenous ecological knowledge, and sovereignty movements.</p>',
+    badges: ['Hawaii-Specific', 'Indigenous Knowledge', 'Socratic AI'],
+    links: [
+      { label: 'View App', url: 'https://ai-ahupua-a-learning-app.vercel.app' }
+    ]
+  },
+  {
+    title: 'Lifespace Framework AI Training',
+    category: 'training',
+    summary: 'Interactive training platform for educators to learn the Lifespace Framework.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Educators want to understand and implement the Lifespace Framework but need expert guidance.</p><p class="text-base-content/80"><strong>The Solution:</strong> Interactive training platform with AI expert. Teachers explore the framework through Socratic dialogue, accessible 24/7.</p>',
+    badges: ['Teacher Training', 'Framework Expert', 'Professional Development'],
+    links: [
+      { label: 'View Training', url: 'https://lifespace-framework-training.vercel.app' }
+    ]
+  },
+  {
+    title: 'Lifespace Logic (All Bands)',
+    category: 'curriculum',
+    summary: 'Complete reasoning curriculum spanning ages 6-14.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Complete reasoning curriculum spanning ages 6-14, building critical thinking through everyday moments.</p><p class="text-base-content/80"><strong>The Solution:</strong> Teacher guide covering four developmental bands teaching five core reasoning moves. Research-based (Philosophy for Children, effect size 0.65+).</p>',
+    badges: ['Ages 6-14', 'Critical Thinking', 'Research-Based'],
+    links: [
+      { label: 'View App', url: 'https://lifespace-logic4-kids.vercel.app/' }
+    ]
+  },
+  {
+    title: 'Ancestral Futures',
+    category: 'curriculum',
+    summary: 'Decolonial education framework connecting Indigenous knowledge with future visioning.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Decolonial education framework connecting Indigenous knowledge with future visioning.</p><p class="text-base-content/80"><strong>The Solution:</strong> Curriculum where students research cultural practices, study resistance movements, create characters with "ancestral tech," and write Freedom Dream stories.</p>',
+    badges: ['Grades 5-12', 'Decolonial', 'Afrofuturism'],
+    links: [
+      { label: 'MS (Teacher Guide)', url: 'https://ms-ancestral-futures-teachers-guide.vercel.app/' },
+      { label: 'HS (Student App)', url: 'https://hs-ancestral-futures-student.vercel.app/' }
+    ]
+  },
+  {
+    title: 'Freedom Dreaming (Ages 5-7)',
+    category: 'curriculum',
+    summary: 'Dr. Bettina Love\'s Freedom Dreaming framework adapted for young children through play.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> Dr. Bettina Love\'s Freedom Dreaming framework adapted for young children through play.</p><p class="text-base-content/80"><strong>The Solution:</strong> Teacher guides where kids use toys to imagine futures where injustice has been fixed. Addresses 63 different conflicts across gender, race, class, disability, immigration.</p>',
+    badges: ['Ages 5-7', 'Social Justice', 'Play-Based'],
+    links: [
+      { label: 'Barbie Version', url: 'https://barbie-freedom-dream.vercel.app/' },
+      { label: 'Hot Wheels Version', url: 'https://hot-wheels-freedom-dream.vercel.app/' }
+    ]
+  },
+  {
+    title: 'Seeds and Parts SEL Curriculum',
+    category: 'curriculum',
+    summary: 'SEL curriculum teaching kids what to do with emotions, not just identification.',
+    description: '<p class="text-base-content/80 mb-3"><strong>The Need:</strong> SEL curriculum teaching kids what to do with emotions they\'ve named, not just identification.</p><p class="text-base-content/80"><strong>The Solution:</strong> Teacher guide with three-lesson curriculum combining IFS (Internal Family Systems) and Thich Nhat Hanh\'s seeds metaphor.</p>',
+    badges: ['SEL', 'Ages 6-9', 'Printables'],
+    links: [
+      { label: 'View App', url: 'https://seeds-parts4-kids.vercel.app/' }
+    ]
+  }
+];
+
+let currentFilter = 'all';
+
+function renderPortfolio() {
+  const grid = document.getElementById('portfolioGrid');
+  const filtered = currentFilter === 'all'
+    ? portfolioItems
+    : portfolioItems.filter(item => item.category === currentFilter);
+
+  grid.innerHTML = filtered.map((item, index) => `
+    <div class="card bg-base-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openModal(${portfolioItems.indexOf(item)})">
+      <div class="card-body">
+        <h3 class="card-title text-primary font-normal text-base">${item.title}</h3>
+        <p class="text-base-content/80 text-sm">${item.summary}</p>
+        <div class="flex flex-wrap gap-1 mt-2">
+          ${item.badges.slice(0, 2).map(badge => `<span class="badge badge-outline badge-sm">${badge}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openModal(index) {
+  const item = portfolioItems[index];
+  document.getElementById('modalTitle').textContent = item.title;
+  document.getElementById('modalContent').innerHTML = item.description;
+  document.getElementById('modalBadges').innerHTML = item.badges.map(badge =>
+    `<span class="badge badge-outline">${badge}</span>`
+  ).join('');
+  document.getElementById('modalLinks').innerHTML = item.links.map(link =>
+    `<a href="${link.url}" target="_blank" class="btn btn-primary btn-sm">${link.label} →</a>`
+  ).join('');
+  document.getElementById('portfolioModal').classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('portfolioModal').classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+// Filter handling
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('btn-primary');
+      b.classList.add('btn-ghost');
+    });
+    this.classList.remove('btn-ghost');
+    this.classList.add('btn-primary');
+    currentFilter = this.dataset.filter;
+    renderPortfolio();
+  });
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Initial render
+renderPortfolio();
+</script>
 
 </body>
 </html>
