@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="black">
+<html lang="en" data-theme="lifespace">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +7,115 @@
 <meta name="description" content="Detailed overview of the Lifespace Education framework - research-based approach to personalized learning.">
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
-.hero-gradient { background: linear-gradient(135deg, #1a5555 0%, #1e3a5f 25%, #4a3f55 50%, #5f4a1e 75%, #5f3a4a 100%); }
-.text-primary, a.link-primary { color: #ffffff !important; }
-a.link-primary:hover { color: #cccccc !important; }
+[data-theme="lifespace"] {
+  --p: 141 37% 27%;
+  --pf: 141 37% 20%;
+  --pc: 0 0% 100%;
+  --s: 40 73% 31%;
+  --sf: 40 73% 24%;
+  --sc: 0 0% 100%;
+  --a: 40 58% 55%;
+  --af: 40 58% 45%;
+  --ac: 0 0% 10%;
+  --n: 0 0% 16%;
+  --nf: 0 0% 12%;
+  --nc: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 40 20% 97%;
+  --b3: 35 18% 93%;
+  --bc: 0 0% 10%;
+  --in: 217 91% 60%;
+  --su: 142 71% 45%;
+  --wa: 48 96% 53%;
+  --er: 0 84% 60%;
+  --rounded-box: 0.75rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: none;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
 </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen bg-base-100">
 
 <!-- Navbar -->
-<div class="navbar bg-base-300 sticky top-0 z-50 px-4">
+<div class="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-4 lg:px-8">
   <div class="flex-1">
-    <a href="index.html" class="text-xl font-normal text-base-content">Lifespace Education</a>
+    <a href="index.html" class="flex items-center gap-2">
+      <i data-lucide="tree-pine" class="w-7 h-7 text-primary"></i>
+      <div>
+        <span class="text-lg font-semibold text-primary">Lifespace Education</span>
+        <span class="hidden sm:block text-xs text-base-content/60">Education that fits every child</span>
+      </div>
+    </a>
   </div>
-  <div class="flex-none hidden md:block">
-    <ul class="menu menu-horizontal px-1">
+  <div class="flex-none hidden lg:flex items-center gap-2">
+    <ul class="menu menu-horizontal px-1 text-base-content">
       <li><a href="index.html">Home</a></li>
-      <li><a href="framework.html">Framework</a></li>
+      <li><a href="framework.html" class="font-medium">Framework</a></li>
       <li><a href="portfolio.html">Design Services</a></li>
       <li><a href="school-options.html">School Options</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="hub.html">Hub</a></li>
       <li><a href="trainer.html">Trainer</a></li>
     </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-secondary btn-sm ml-2">Join Interest List</a>
   </div>
-  <div class="flex-none md:hidden">
+  <div class="flex-none lg:hidden">
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 border border-base-300 rounded-box w-56">
         <li><a href="index.html">Home</a></li>
-        <li><a href="framework.html">Framework</a></li>
+        <li><a href="framework.html" class="font-medium">Framework</a></li>
         <li><a href="portfolio.html">Design Services</a></li>
         <li><a href="school-options.html">School Options</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="hub.html">Hub</a></li>
         <li><a href="trainer.html">Trainer</a></li>
+        <li class="mt-2">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-secondary btn-sm justify-center">Join Interest List</a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
 <!-- Hero -->
-<div class="hero hero-gradient text-white py-12">
-  <div class="hero-content text-center">
-    <div class="max-w-2xl">
-      <h1 class="text-3xl font-normal mb-4">The Lifespace Education Framework</h1>
-      <p class="opacity-90">A Comprehensive Approach to Personalized Learning</p>
-    </div>
+<section class="bg-primary text-white py-16">
+  <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">The Lifespace Education Framework</h1>
+    <p class="text-white/80 text-lg">A Comprehensive Approach to Personalized Learning</p>
   </div>
-</div>
+</section>
 
 <!-- Main Content -->
 <div class="container mx-auto px-4 py-12 max-w-5xl">
 
   <!-- What is Lifespace + Core Philosophy Cards -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-    <div class="card bg-base-200 shadow-lg">
+    <div class="card bg-base-100 border border-base-300 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title text-primary font-normal">What is Lifespace Education?</h2>
+        <h2 class="card-title text-primary font-semibold">What is Lifespace Education?</h2>
         <p class="text-base-content/80 text-sm">Lifespace Education is a personalized learning approach designed to prepare students for thriving in an uncertain future. It can be implemented in homeschools, micro-schools, and traditional classroom settings.</p>
         <p class="text-base-content/80 text-sm mt-2">In a world characterized by constant change, equipping children with adaptable skills matters more than transmitting fixed knowledge.</p>
-        <div class="mt-4 p-3 bg-base-300 rounded-lg">
+        <div class="mt-4 p-3 bg-base-200 rounded-lg">
           <p class="text-base-content/80 text-sm"><strong>The Lifespace Concept:</strong> The term "lifespace" refers to the entirety of an individual's lived experience. Learning doesn't happen solely within classrooms but throughout all aspects of a student's life.</p>
         </div>
       </div>
     </div>
 
-    <div class="card bg-base-200 shadow-lg">
+    <div class="card bg-base-100 border border-base-300 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title text-primary font-normal">Core Philosophy</h2>
+        <h2 class="card-title text-primary font-semibold">Core Philosophy</h2>
         <p class="text-base-content/80 text-sm"><strong>Students are their own primary teachers.</strong> Adults don't "give" students knowledge - they create conditions where students develop capacities through active engagement.</p>
         <ul class="text-base-content/80 text-sm mt-3 space-y-1">
           <li><strong>Student Agency:</strong> Meaningful decisions about learning</li>
@@ -91,28 +129,28 @@ a.link-primary:hover { color: #cccccc !important; }
   </div>
 
   <!-- Six Pillars - Tabs -->
-  <h2 class="text-2xl font-normal text-primary mb-6">The Six Pillars</h2>
+  <h2 class="text-2xl font-bold text-primary mb-6">The Six Pillars</h2>
 
   <div role="tablist" class="tabs tabs-boxed bg-base-200 mb-6">
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="Critical Thinking" checked />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">1. Critical Thinking</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">1. Critical Thinking</h3>
       <p class="text-base-content/80 mb-3">Critical thinking encompasses analysis (breaking down information), synthesis (combining diverse information into coherent understanding), inference (making informed predictions), and evaluation (making reasoned judgments).</p>
       <p class="text-base-content/80 mb-3"><strong>Information literacy sits at the heart</strong> of critical thinking. Students explicitly learn to evaluate source credibility, distinguish fact from opinion, navigate digital information safely, recognize misinformation and manipulation, and use information responsibly.</p>
       <p class="text-base-content/80">Developed through academic discussions, project-based investigations, real-world contexts, and explicit instruction in critical thinking strategies.</p>
     </div>
 
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="Problem Solving" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">2. Problem Solving</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">2. Problem Solving</h3>
       <p class="text-base-content/80 mb-3">Problem solving is the process of identifying challenges, generating potential solutions, implementing strategies, and iterating based on results. While critical thinking focuses on analysis, problem solving emphasizes action.</p>
       <p class="text-base-content/80 mb-3">Students develop capacity to tackle novel problems independently - creativity, resourcefulness, resilience, and confidence to try, fail, learn, and try again.</p>
       <p class="text-base-content/80">Developed through project-based learning, design challenges, investigations and experiments, real-world application, and explicit instruction in problem-solving frameworks.</p>
     </div>
 
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="Core Competencies" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">3. Core Competencies</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">3. Core Competencies</h3>
       <p class="text-base-content/80 mb-3">Foundational academic skills in reading, writing, mathematics, science, and social studies that enable all other learning.</p>
       <p class="text-base-content/80 mb-3"><strong>The Two-Hour Approach:</strong> Approximately two hours per day of dedicated, high-quality instruction and practice builds strong foundations efficiently without consuming the entire learning day.</p>
       <ul class="text-base-content/80 text-sm space-y-2 ml-4">
@@ -125,16 +163,16 @@ a.link-primary:hover { color: #cccccc !important; }
     </div>
 
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="Expression" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">4. Expression</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">4. Expression</h3>
       <p class="text-base-content/80 mb-3">Expression is the ability to take a powerful idea from your mind and make it real for others to perceive. It encompasses synthesis (bringing complex concepts together into coherent vision) and transmission (communicating that vision clearly).</p>
       <p class="text-base-content/80 mb-3">Expression is measured by two criteria: the clarity and quality of the idea itself, and the effectiveness of its transmission to others. The modality doesn't matter - written, spoken, visual, performed, built, coded, or any other form.</p>
       <p class="text-base-content/80">Developed through project presentations, multi-modal expression opportunities, synthesis practice, iterative refinement, and tool fluency.</p>
     </div>
 
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="SEL" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">5. Social-Emotional Learning</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">5. Social-Emotional Learning</h3>
       <p class="text-base-content/80 mb-3">Social-Emotional Learning (SEL) is the foundation upon which all other learning rests. Students cannot engage in challenging academic work without emotional regulation, cannot learn from failure without resilience and growth mindset.</p>
       <p class="text-base-content/80 mb-2"><strong>The five core SEL competencies:</strong></p>
       <ul class="text-base-content/80 text-sm space-y-1 ml-4 mb-3">
@@ -148,8 +186,8 @@ a.link-primary:hover { color: #cccccc !important; }
     </div>
 
     <input type="radio" name="pillars" role="tab" class="tab" aria-label="Project Work" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
-      <h3 class="text-xl font-normal text-primary mb-3">6. Project Work</h3>
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
+      <h3 class="text-xl font-semibold text-primary mb-3">6. Project Work</h3>
       <p class="text-base-content/80 mb-3">Project Work occupies a unique position: it is both a competency students develop AND the primary vehicle through which all other learning happens.</p>
       <p class="text-base-content/80 mb-3"><strong>As a competency,</strong> students learn to initiate and plan, conduct sustained inquiry, integrate multiple disciplines, manage setbacks and iterate, collaborate effectively, document and reflect, and bring work to completion.</p>
       <p class="text-base-content/80 mb-3"><strong>As a vehicle,</strong> project work provides authentic contexts where critical thinking, problem solving, core competencies, expression, and SEL all come together in meaningful application.</p>
@@ -158,12 +196,12 @@ a.link-primary:hover { color: #cccccc !important; }
   </div>
 
   <!-- Key Principles - Accordion -->
-  <h2 class="text-2xl font-normal text-primary mb-6 mt-12">Key Principles & Methods</h2>
+  <h2 class="text-2xl font-bold text-primary mb-6 mt-12">Key Principles & Methods</h2>
 
   <div class="join join-vertical w-full">
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
       <input type="radio" name="principles" checked />
-      <div class="collapse-title text-lg font-normal text-primary">Student Agency Through Learning Maps</div>
+      <div class="collapse-title text-lg font-semibold text-primary">Student Agency Through Learning Maps</div>
       <div class="collapse-content">
         <p class="text-base-content/80 mb-3">Learning Maps are the primary tool for operationalizing student agency. Adults identify core responsibilities for the day (reading practice, math skills, project work, specific lessons). Students then create their own path through the map, deciding the sequence in which they'll tackle responsibilities.</p>
         <p class="text-base-content/80 mb-3">The map visually distinguishes screen-based from hands-on activities, with brain breaks (outdoor play, art, physical activity) required between any screen-time activities.</p>
@@ -171,9 +209,9 @@ a.link-primary:hover { color: #cccccc !important; }
       </div>
     </div>
 
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
       <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-normal text-primary">Real-World Relevance</div>
+      <div class="collapse-title text-lg font-semibold text-primary">Real-World Relevance</div>
       <div class="collapse-content">
         <p class="text-base-content/80 mb-2">Learning connects to authentic contexts, real problems, and genuine communities through:</p>
         <ul class="text-base-content/80 text-sm space-y-1 ml-4">
@@ -186,26 +224,26 @@ a.link-primary:hover { color: #cccccc !important; }
       </div>
     </div>
 
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
       <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-normal text-primary">Integration Across Disciplines</div>
+      <div class="collapse-title text-lg font-semibold text-primary">Integration Across Disciplines</div>
       <div class="collapse-content">
         <p class="text-base-content/80">Knowledge and skills don't exist in separate subject silos. Lifespace intentionally integrates disciplines through project work, allowing students to see connections, apply knowledge purposefully, and develop holistic understanding.</p>
       </div>
     </div>
 
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
       <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-normal text-primary">Play and Exploration</div>
+      <div class="collapse-title text-lg font-semibold text-primary">Play and Exploration</div>
       <div class="collapse-content">
         <p class="text-base-content/80 mb-3">Free play is not supplemental - it is essential for development, wellbeing, and cognitive growth. Lifespace dedicates 1-2+ hours daily to unstructured activity where students pursue their own interests without adult direction.</p>
         <p class="text-base-content/80">Research documents that decline in free play correlates with increased anxiety, depression, and decreased sense of control. Play develops internal locus of control, emotional self-regulation, social skills, creativity, problem-solving, and intrinsic motivation.</p>
       </div>
     </div>
 
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
       <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-normal text-primary">Relationship-Based Learning</div>
+      <div class="collapse-title text-lg font-semibold text-primary">Relationship-Based Learning</div>
       <div class="collapse-content">
         <p class="text-base-content/80 mb-3">Learning happens in the context of relationships. Lifespace builds positive relationships between students, adults, peers, and community members as the foundation for all learning - rejecting traditional classroom management based on rewards and punishments.</p>
         <p class="text-base-content/80">When conflicts arise, restorative practices repair relationships rather than impose consequences. The focus is accountability, empathy development, relationship repair, and learning better ways forward.</p>
@@ -215,9 +253,9 @@ a.link-primary:hover { color: #cccccc !important; }
 
   <!-- Daily Structure + Assessment - Side by Side Cards -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-    <div class="card bg-base-200 shadow-lg">
+    <div class="card bg-base-100 border border-base-300 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title text-primary font-normal">Daily Structure</h2>
+        <h2 class="card-title text-primary font-semibold">Daily Structure</h2>
         <p class="text-base-content/80 text-sm mb-2">A typical Lifespace day includes:</p>
         <ul class="text-base-content/80 text-sm space-y-2">
           <li><strong>Core Competencies (2 hours):</strong> Focused instruction and practice in reading, writing, math, science</li>
@@ -229,9 +267,9 @@ a.link-primary:hover { color: #cccccc !important; }
       </div>
     </div>
 
-    <div class="card bg-base-200 shadow-lg">
+    <div class="card bg-base-100 border border-base-300 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title text-primary font-normal">Assessment</h2>
+        <h2 class="card-title text-primary font-semibold">Assessment</h2>
         <p class="text-base-content/80 text-sm mb-2">Assessment serves learning - not sorting, ranking, or gatekeeping:</p>
         <ul class="text-base-content/80 text-sm space-y-2">
           <li>Academic discussions revealing depth of understanding</li>
@@ -245,9 +283,9 @@ a.link-primary:hover { color: #cccccc !important; }
   </div>
 
   <!-- Benefits -->
-  <div class="card bg-base-200 shadow-lg mt-12">
+  <div class="card bg-base-100 border border-base-300 shadow-sm mt-12">
     <div class="card-body">
-      <h2 class="card-title text-primary font-normal">Benefits of Lifespace Education</h2>
+      <h2 class="card-title text-primary font-semibold">Benefits of Lifespace Education</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
         <div class="text-base-content/80 text-sm"><strong>Empowered Learners:</strong> Self-directed, critical thinkers with information literacy skills</div>
         <div class="text-base-content/80 text-sm"><strong>Positive Learning Environment:</strong> Relationship-based culture, growth mindset, psychological safety</div>
@@ -261,7 +299,7 @@ a.link-primary:hover { color: #cccccc !important; }
   <!-- Research Foundation -->
   <div class="card bg-base-200 border-l-4 border-primary mt-8">
     <div class="card-body">
-      <h3 class="text-xl font-normal text-primary mb-3">Research Foundation</h3>
+      <h3 class="text-xl font-semibold text-primary mb-3">Research Foundation</h3>
       <p class="text-base-content/80">Every component of Lifespace Education is grounded in decades of educational research. The complete framework includes over 200 scholarly citations validating project-based learning, social-emotional development, student agency, authentic assessment, restorative practices, play-based learning, differentiation, and relationship-centered approaches.</p>
       <p class="text-base-content/80 mt-3"><strong>We're not testing whether these approaches work - we're demonstrating that this integrated model can operate as a viable, scalable school design.</strong></p>
     </div>
@@ -277,9 +315,55 @@ a.link-primary:hover { color: #cccccc !important; }
 </div>
 
 <!-- Footer -->
-<footer class="footer footer-center p-6 bg-base-300 text-base-content mt-12">
-  <p>© 2026 Lifespace Education. All rights reserved.</p>
+<footer class="bg-neutral text-neutral-content mt-12">
+  <div class="container mx-auto px-4 lg:px-8 max-w-6xl py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="tree-pine" class="w-5 h-5 text-accent"></i>
+          <span class="text-lg font-semibold">Lifespace Education</span>
+        </div>
+        <p class="text-neutral-content/60 text-sm">
+          Education that fits every child. Research-based learning for Big Island families.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Explore</h4>
+        <ul class="space-y-2 text-sm text-neutral-content/70">
+          <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+          <li><a href="school-options.html" class="hover:text-accent transition-colors">Our Models</a></li>
+          <li><a href="framework.html" class="hover:text-accent transition-colors">Framework</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+          <li><a href="portfolio.html" class="hover:text-accent transition-colors">Design Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Connect</h4>
+        <p class="text-sm text-neutral-content/70 mb-4">
+          <a href="mailto:info@lifespace.education" class="hover:text-accent transition-colors">info@lifespace.education</a>
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="Facebook">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marcussigh" target="_blank" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="LinkedIn">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a href="#" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="YouTube">
+            <i data-lucide="youtube" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-neutral-content/20 mt-8 pt-6 text-center text-sm text-neutral-content/50">
+      <p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
