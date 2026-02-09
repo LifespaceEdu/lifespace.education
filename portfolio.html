@@ -160,25 +160,25 @@
 </section>
 
 <!-- Portfolio Section -->
-<section class="bg-base-200 py-12">
+<section class="bg-neutral py-12">
   <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
-    <h2 class="text-2xl font-bold text-primary mb-4">Portfolio - Recent Work</h2>
-    <p class="text-base-content/80 mb-6">Examples of custom curriculum and learning tools. Click any card for details.</p>
+    <h2 class="text-2xl font-bold text-white mb-4">Portfolio - Recent Work</h2>
+    <p class="text-neutral-content/70 mb-6">Examples of custom curriculum and learning tools. Click any card for details.</p>
 
     <!-- Filter Tabs -->
     <div class="flex flex-wrap gap-2 mb-8" role="tablist">
-      <button class="btn btn-sm btn-primary filter-btn" data-filter="all">All</button>
-      <button class="btn btn-sm btn-ghost filter-btn" data-filter="ai-tools">AI Tools</button>
-      <button class="btn btn-sm btn-ghost filter-btn" data-filter="curriculum">Curriculum</button>
-      <button class="btn btn-sm btn-ghost filter-btn" data-filter="training">Training</button>
+      <button class="btn btn-sm btn-accent filter-btn" data-filter="all">All</button>
+      <button class="btn btn-sm btn-ghost text-neutral-content filter-btn" data-filter="ai-tools">AI Tools</button>
+      <button class="btn btn-sm btn-ghost text-neutral-content filter-btn" data-filter="curriculum">Curriculum</button>
+      <button class="btn btn-sm btn-ghost text-neutral-content filter-btn" data-filter="training">Training</button>
     </div>
 
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid"></div>
 
-    <div class="card bg-base-100 border border-base-300 shadow-sm mt-8">
+    <div class="card bg-neutral-focus border border-neutral-content/20 shadow-sm mt-8">
       <div class="card-body">
-        <p class="text-base-content/80 text-sm"><strong>Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. No software to buy, no downloads, no barriers.</p>
+        <p class="text-neutral-content/70 text-sm"><strong class="text-white">Why Web Apps?</strong> Every tool is accessible from any device, requires no installation, updates automatically, and includes printable resources. No software to buy, no downloads, no barriers.</p>
       </div>
     </div>
   </div>
@@ -365,7 +365,7 @@ function renderPortfolio() {
     : portfolioItems.filter(item => item.category === currentFilter);
 
   grid.innerHTML = filtered.map((item, index) => `
-    <div class="card bg-neutral text-neutral-content shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openModal(${portfolioItems.indexOf(item)})">
+    <div class="card bg-neutral-focus text-neutral-content border border-neutral-content/10 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openModal(${portfolioItems.indexOf(item)})">
       <div class="card-body">
         <h3 class="card-title text-white font-semibold text-base">${item.title}</h3>
         <p class="text-neutral-content/70 text-sm">${item.summary}</p>
@@ -400,11 +400,11 @@ function closeModal() {
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.remove('btn-primary');
-      b.classList.add('btn-ghost');
+      b.classList.remove('btn-accent');
+      b.classList.add('btn-ghost', 'text-neutral-content');
     });
-    this.classList.remove('btn-ghost');
-    this.classList.add('btn-primary');
+    this.classList.remove('btn-ghost', 'text-neutral-content');
+    this.classList.add('btn-accent');
     currentFilter = this.dataset.filter;
     renderPortfolio();
   });
