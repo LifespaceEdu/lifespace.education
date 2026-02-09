@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="black">
+<html lang="en" data-theme="lifespace">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,78 +7,113 @@
 <meta name="description" content="Tuition-sliding microschool or co-op hub launching Fall 2026 on Hawaii Island. Research-based education for grades 1-12.">
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
-.hero-gradient { background: linear-gradient(135deg, #1a5555 0%, #1e3a5f 25%, #4a3f55 50%, #5f4a1e 75%, #5f3a4a 100%); }
-.text-primary, a.link-primary { color: #ffffff !important; }
-a.link-primary:hover { color: #cccccc !important; }
+[data-theme="lifespace"] {
+  --p: 141 37% 27%;
+  --pf: 141 37% 20%;
+  --pc: 0 0% 100%;
+  --s: 40 73% 31%;
+  --sf: 40 73% 24%;
+  --sc: 0 0% 100%;
+  --a: 40 58% 55%;
+  --af: 40 58% 45%;
+  --ac: 0 0% 10%;
+  --n: 0 0% 16%;
+  --nf: 0 0% 12%;
+  --nc: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 40 20% 97%;
+  --b3: 35 18% 93%;
+  --bc: 0 0% 10%;
+  --in: 217 91% 60%;
+  --su: 142 71% 45%;
+  --wa: 48 96% 53%;
+  --er: 0 84% 60%;
+  --rounded-box: 0.75rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: none;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
 </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen bg-base-100">
 
 <!-- Navbar -->
-<div class="navbar bg-base-300 sticky top-0 z-50 px-4">
+<div class="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-4 lg:px-8">
   <div class="flex-1">
-    <a href="index.html" class="text-xl font-normal text-base-content">Lifespace Education</a>
+    <a href="index.html" class="flex items-center gap-2">
+      <i data-lucide="tree-deciduous" class="w-7 h-7 text-primary"></i>
+      <div>
+        <span class="text-lg font-semibold text-primary">Lifespace Education</span>
+        <span class="hidden sm:block text-xs text-base-content/60">Education that fits every child</span>
+      </div>
+    </a>
   </div>
-  <div class="flex-none hidden md:block">
-    <ul class="menu menu-horizontal px-1">
+  <div class="flex-none hidden lg:flex items-center gap-2">
+    <ul class="menu menu-horizontal px-1 text-base-content">
       <li><a href="index.html">Home</a></li>
       <li><a href="framework.html">Framework</a></li>
       <li><a href="portfolio.html">Design Services</a></li>
-      <li><a href="school-options.html">School Options</a></li>
+      <li><a href="school-options.html" class="font-medium">School Options</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="hub.html">Hub</a></li>
       <li><a href="trainer.html">Trainer</a></li>
     </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-secondary btn-sm ml-2">Join Interest List</a>
   </div>
-  <div class="flex-none md:hidden">
+  <div class="flex-none lg:hidden">
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 border border-base-300 rounded-box w-56">
         <li><a href="index.html">Home</a></li>
         <li><a href="framework.html">Framework</a></li>
         <li><a href="portfolio.html">Design Services</a></li>
-        <li><a href="school-options.html">School Options</a></li>
+        <li><a href="school-options.html" class="font-medium">School Options</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="hub.html">Hub</a></li>
         <li><a href="trainer.html">Trainer</a></li>
+        <li class="mt-2">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-secondary btn-sm justify-center">Join Interest List</a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
 <!-- Hero -->
-<div class="hero hero-gradient text-white py-16">
-  <div class="hero-content text-center">
-    <div class="max-w-3xl">
-      <h1 class="text-3xl md:text-4xl font-normal mb-6">School Options: Fall 2026 Launch</h1>
-      <p class="text-lg opacity-90 mb-8">Lifespace Education is launching research-based schooling for Big Island families in Fall 2026. We're building one of two models depending on seed funding secured by summer 2026.</p>
-      <a href="contact.html" class="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-base-content">Join Our Interest List</a>
-    </div>
+<section class="bg-primary text-white py-16">
+  <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6">School Options: Fall 2026 Launch</h1>
+    <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">Lifespace Education is launching research-based schooling for Big Island families in Fall 2026. We're building one of two models depending on seed funding secured by summer 2026.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-secondary btn-lg">Join Our Interest List</a>
   </div>
-</div>
+</section>
 
 <!-- Main Content with Tabs -->
 <div class="container mx-auto px-4 py-12 max-w-5xl">
 
-  <!-- Tab Navigation -->
   <div role="tablist" class="tabs tabs-boxed bg-base-200 mb-8">
     <input type="radio" name="school_tabs" role="tab" class="tab" aria-label="Models" checked />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
 
-      <!-- The Two Pathways -->
-      <h2 class="text-2xl font-normal text-primary mb-4">The Two Pathways</h2>
+      <h2 class="text-2xl font-bold text-primary mb-4">The Two Pathways</h2>
       <p class="text-base-content/80 mb-8">We're committed to launching Fall 2026. The specific model depends on whether we secure seed funding by summer 2026. Either way, you get research-based education implementing the full Lifespace framework.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="card bg-base-100 shadow-lg">
+        <div class="card bg-base-100 border border-base-300 shadow-sm">
           <div class="card-body">
-            <h3 class="card-title text-primary font-normal">Option 1: Tuition-Sliding Microschool</h3>
+            <h3 class="card-title text-primary font-semibold">Option 1: Tuition-Sliding Microschool</h3>
             <p class="text-base-content/60 italic text-sm mb-3">(Launching with seed funding)</p>
             <p class="text-base-content/80 text-sm mb-4">A demonstration school proving research-based education can operate sustainably at scale.</p>
-
             <p class="font-semibold text-sm">The Model:</p>
             <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2 mb-3">
               <li>16 students, grades 1-12 (mixed-age learning)</li>
@@ -87,7 +122,6 @@ a.link-primary:hover { color: #cccccc !important; }
               <li>Full six-pillar Lifespace framework</li>
               <li>$0-$12,000 sliding-scale tuition</li>
             </ul>
-
             <p class="font-semibold text-sm">What This Funds:</p>
             <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2 mb-3">
               <li>Competitive educator compensation</li>
@@ -95,17 +129,15 @@ a.link-primary:hover { color: #cccccc !important; }
               <li>Space lease and operational costs</li>
               <li>Independent outcomes study</li>
             </ul>
-
             <p class="text-base-content/60 text-xs italic">We're not testing whether research-based approaches work - we're proving this model can scale.</p>
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-lg">
+        <div class="card bg-base-100 border border-base-300 shadow-sm">
           <div class="card-body">
-            <h3 class="card-title text-primary font-normal">Option 2: Co-op Hub Model</h3>
+            <h3 class="card-title text-primary font-semibold">Option 2: Co-op Hub Model</h3>
             <p class="text-base-content/60 italic text-sm mb-3">(Launching without full seed funding)</p>
             <p class="text-base-content/80 text-sm mb-4">A collaborative homeschool community with pooled expertise and shared resources.</p>
-
             <p class="font-semibold text-sm">The Model:</p>
             <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2 mb-3">
               <li>Homeschooling families working together</li>
@@ -114,7 +146,6 @@ a.link-primary:hover { color: #cccccc !important; }
               <li>Lifespace framework guides learning</li>
               <li>Serving grades 1-12 across Big Island</li>
             </ul>
-
             <p class="font-semibold text-sm">What Families Gain:</p>
             <ul class="list-disc list-inside text-base-content/80 text-sm space-y-1 ml-2 mb-3">
               <li>Educational expertise you shouldn't need to develop alone</li>
@@ -122,34 +153,30 @@ a.link-primary:hover { color: #cccccc !important; }
               <li>Access to specialist instruction</li>
               <li>Community committed to research-based education</li>
             </ul>
-
             <p class="text-base-content/60 text-xs italic">Even without full funding, Big Island families deserve access to research-based education.</p>
           </div>
         </div>
       </div>
 
-      <!-- Framework Link -->
-      <div class="card bg-base-100 mt-8">
+      <div class="card bg-base-200 mt-8">
         <div class="card-body flex-row items-center justify-between">
           <div>
-            <h4 class="font-normal text-primary">Both models implement the full Lifespace Framework</h4>
+            <h4 class="font-semibold text-primary">Both models implement the full Lifespace Framework</h4>
             <p class="text-base-content/80 text-sm">Six research-validated pillars: Critical Thinking, Problem Solving, Core Competencies, Expression, SEL, and Project Work.</p>
           </div>
           <a href="framework.html" class="btn btn-primary btn-sm">Learn More</a>
         </div>
       </div>
-
     </div>
 
     <input type="radio" name="school_tabs" role="tab" class="tab" aria-label="Enrollment" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
 
-      <!-- Timeline -->
-      <h2 class="text-2xl font-normal text-primary mb-8">Enrollment Timeline</h2>
+      <h2 class="text-2xl font-bold text-primary mb-8">Enrollment Timeline</h2>
 
       <ul class="timeline timeline-vertical">
         <li>
-          <div class="timeline-start timeline-box bg-base-100">Now through July 2026</div>
+          <div class="timeline-start timeline-box bg-base-200">Now through July 2026</div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
           </div>
@@ -158,7 +185,7 @@ a.link-primary:hover { color: #cccccc !important; }
         </li>
         <li>
           <hr class="bg-primary"/>
-          <div class="timeline-start timeline-box bg-base-100">July 2026</div>
+          <div class="timeline-start timeline-box bg-base-200">July 2026</div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
           </div>
@@ -167,7 +194,7 @@ a.link-primary:hover { color: #cccccc !important; }
         </li>
         <li>
           <hr class="bg-primary"/>
-          <div class="timeline-start timeline-box bg-base-100">August 2026</div>
+          <div class="timeline-start timeline-box bg-base-200">August 2026</div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
           </div>
@@ -176,7 +203,7 @@ a.link-primary:hover { color: #cccccc !important; }
         </li>
         <li>
           <hr class="bg-primary"/>
-          <div class="timeline-start timeline-box bg-base-100">September 2026</div>
+          <div class="timeline-start timeline-box bg-base-200">September 2026</div>
           <div class="timeline-middle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><circle cx="10" cy="10" r="8"/></svg>
           </div>
@@ -184,17 +211,15 @@ a.link-primary:hover { color: #cccccc !important; }
         </li>
       </ul>
 
-      <!-- Interest CTA -->
-      <div class="card bg-base-100 mt-12 text-center">
+      <div class="card bg-base-100 border border-base-300 mt-12 text-center">
         <div class="card-body">
-          <h3 class="text-xl font-normal text-primary mb-2">Interest forms are open now</h3>
+          <h3 class="text-xl font-semibold text-primary mb-2">Interest forms are open now</h3>
           <p class="text-base-content/80 mb-4">We'll confirm the model (microschool or co-op) and begin formal enrollment by July 2026.</p>
-          <a href="contact.html" class="btn btn-primary">Join the Interest List</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzGBFseIrV5ijzupHsbWvUB5elhupXXAPMnr-aUJSacEHs1A/viewform?usp=dialog" target="_blank" class="btn btn-primary">Join the Interest List</a>
         </div>
       </div>
 
-      <!-- What we ask -->
-      <div class="card bg-base-100 mt-6">
+      <div class="card bg-base-100 border border-base-300 mt-6">
         <div class="card-body">
           <p class="text-sm font-semibold mb-2">Questions we'll ask:</p>
           <ul class="list-disc list-inside text-base-content/60 text-sm space-y-1 ml-2">
@@ -206,19 +231,17 @@ a.link-primary:hover { color: #cccccc !important; }
           <p class="text-xs text-base-content/50 mt-4 italic">Limited spots available in either model. Interest form does not guarantee enrollment but ensures you're contacted first when enrollment opens.</p>
         </div>
       </div>
-
     </div>
 
     <input type="radio" name="school_tabs" role="tab" class="tab" aria-label="Tuition" />
-    <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box p-6 mt-4">
+    <div role="tabpanel" class="tab-content bg-base-100 border border-base-300 rounded-box p-6 mt-4">
 
-      <!-- Tuition Structure -->
-      <h2 class="text-2xl font-normal text-primary mb-4">Tuition Structure (Microschool Model)</h2>
+      <h2 class="text-2xl font-bold text-primary mb-4">Tuition Structure (Microschool Model)</h2>
       <p class="text-base-content/80 mb-2">True $0 tuition available for families who need it. Sliding scale calculated using detailed income worksheet - no family turned away for inability to pay.</p>
       <p class="text-base-content/60 text-sm italic mb-6">(Subject to change based on final funding and operational costs)</p>
 
       <div class="overflow-x-auto">
-        <table class="table table-zebra bg-base-100">
+        <table class="table table-zebra bg-base-100 border border-base-300">
           <thead>
             <tr class="bg-primary text-primary-content">
               <th>Household Income</th>
@@ -236,22 +259,20 @@ a.link-primary:hover { color: #cccccc !important; }
         </table>
       </div>
 
-      <div class="card bg-base-100 mt-8">
+      <div class="card bg-base-100 border border-base-300 mt-8">
         <div class="card-body">
-          <h4 class="font-normal text-primary mb-2">Co-op Hub Pricing</h4>
+          <h4 class="font-semibold text-primary mb-2">Co-op Hub Pricing</h4>
           <p class="text-base-content/80 text-sm">If the co-op model launches instead, costs will be determined collaboratively based on pooled resources, specialist instruction fees, and shared materials. Expect significantly lower costs than the microschool model since families contribute their own time and space.</p>
         </div>
       </div>
-
     </div>
   </div>
 
   <!-- Who This Serves -->
-  <div class="card bg-base-200 shadow-lg mt-8">
+  <div class="card bg-base-100 border border-base-300 shadow-sm mt-8">
     <div class="card-body">
-      <h2 class="card-title text-primary font-normal">Who This Serves</h2>
+      <h2 class="card-title text-primary font-semibold">Who This Serves</h2>
       <p class="text-base-content/80 mb-4">Lifespace Education is for families seeking:</p>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div class="text-base-content/80 text-sm"><strong>Research-based education</strong> that implements what decades of studies already validate</div>
         <div class="text-base-content/80 text-sm"><strong>Student agency</strong> within supportive structure - not complete autonomy, but genuine decision-making</div>
@@ -263,22 +284,57 @@ a.link-primary:hover { color: #cccccc !important; }
     </div>
   </div>
 
-  <!-- For Funders (Collapsible) -->
-  <div class="collapse collapse-arrow bg-base-200 mt-8">
+  <!-- For Funders -->
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300 mt-8">
     <input type="checkbox" />
-    <div class="collapse-title text-xl font-normal text-primary">For Potential Funders</div>
+    <div class="collapse-title text-xl font-semibold text-primary">For Potential Funders</div>
     <div class="collapse-content">
       <p class="text-base-content/80 mb-4">If you're interested in funding the microschool demonstration model, we have a detailed funding proposal outlining Year 1 budget, 5-year growth plan, outcomes measurement, and scalability framework.</p>
-      <p class="text-base-content/80">Contact us at <a href="mailto:info@lifespace.education" class="link link-primary">info@lifespace.education</a> for more information.</p>
+      <p class="text-base-content/80">Contact us at <a href="mailto:info@lifespace.education" class="text-primary hover:text-accent transition-colors">info@lifespace.education</a> for more information.</p>
     </div>
   </div>
 
 </div>
 
 <!-- Footer -->
-<footer class="footer footer-center p-6 bg-base-300 text-base-content">
-  <p>© 2026 Lifespace Education. All rights reserved.</p>
+<footer class="bg-neutral text-neutral-content">
+  <div class="container mx-auto px-4 lg:px-8 max-w-6xl py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="tree-deciduous" class="w-5 h-5 text-accent"></i>
+          <span class="text-lg font-semibold">Lifespace Education</span>
+        </div>
+        <p class="text-neutral-content/60 text-sm">Education that fits every child. Research-based learning for Big Island families.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Explore</h4>
+        <ul class="space-y-2 text-sm text-neutral-content/70">
+          <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+          <li><a href="school-options.html" class="hover:text-accent transition-colors">Our Models</a></li>
+          <li><a href="framework.html" class="hover:text-accent transition-colors">Framework</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+          <li><a href="portfolio.html" class="hover:text-accent transition-colors">Design Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Connect</h4>
+        <p class="text-sm text-neutral-content/70 mb-4">
+          <a href="mailto:info@lifespace.education" class="hover:text-accent transition-colors">info@lifespace.education</a>
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+          <a href="https://www.linkedin.com/in/marcussigh" target="_blank" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="#" class="text-neutral-content/60 hover:text-accent transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-neutral-content/20 mt-8 pt-6 text-center text-sm text-neutral-content/50">
+      <p>&copy; 2026 Lifespace Education. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
+<script>lucide.createIcons();</script>
 </body>
 </html>
