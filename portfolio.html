@@ -365,12 +365,12 @@ function renderPortfolio() {
     : portfolioItems.filter(item => item.category === currentFilter);
 
   grid.innerHTML = filtered.map((item, index) => `
-    <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openModal(${portfolioItems.indexOf(item)})">
+    <div class="card bg-neutral text-neutral-content shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openModal(${portfolioItems.indexOf(item)})">
       <div class="card-body">
-        <h3 class="card-title text-primary font-semibold text-base">${item.title}</h3>
-        <p class="text-base-content/80 text-sm">${item.summary}</p>
+        <h3 class="card-title text-white font-semibold text-base">${item.title}</h3>
+        <p class="text-neutral-content/70 text-sm">${item.summary}</p>
         <div class="flex flex-wrap gap-1 mt-2">
-          ${item.badges.slice(0, 2).map(badge => `<span class="badge badge-outline badge-sm">${badge}</span>`).join('')}
+          ${item.badges.slice(0, 2).map(badge => `<span class="badge badge-outline badge-sm text-accent border-accent/40">${badge}</span>`).join('')}
         </div>
       </div>
     </div>
