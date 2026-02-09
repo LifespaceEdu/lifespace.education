@@ -171,7 +171,8 @@
   </div><!-- close main content container for full-width section -->
 
   <section class="relative bg-neutral overflow-hidden my-12">
-    <div class="absolute inset-0 bg-gradient-to-br from-neutral via-[#1a2e1a] to-neutral"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('sixpillars.jpg'); opacity: 0.15;"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-neutral via-[#1a2e1a] to-neutral opacity-90"></div>
     <div class="relative z-10 container mx-auto px-4 lg:px-8 max-w-4xl py-16 lg:py-20 text-center">
       <p class="text-neutral-content/60 uppercase tracking-widest text-sm font-semibold mb-6">The Six Pillars</p>
       <p class="text-lg md:text-xl text-neutral-content/80 mb-4">
@@ -259,161 +260,315 @@
     </div>
   </div>
 
-  <!-- Tour Guide: Pillars → Principles transition -->
-  <div class="mt-16 mb-6">
-    <h2 class="text-2xl font-bold text-primary mb-3">Key Principles & Methods</h2>
-    <p class="text-base-content/70 max-w-3xl text-base leading-relaxed">
-      Those are the six things kids need. But how do you actually build them?
-      We didn't choose methods because they're trendy or traditional — we looked at
-      what the research says develops these capacities. Five principles kept showing up.
-    </p>
-  </div>
+  </div><!-- close container for full-width principles section -->
 
-  <div class="join join-vertical w-full">
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
-      <input type="radio" name="principles" checked />
-      <div class="collapse-title text-lg font-semibold text-primary">Student Agency Through Learning Maps</div>
-      <div class="collapse-content">
-        <p class="text-base-content/80 mb-3">Learning Maps are the primary tool for operationalizing student agency. Adults identify core responsibilities for the day (reading practice, math skills, project work, specific lessons). Students then create their own path through the map, deciding the sequence in which they'll tackle responsibilities.</p>
-        <p class="text-base-content/80 mb-3">The map visually distinguishes screen-based from hands-on activities, with brain breaks (outdoor play, art, physical activity) required between any screen-time activities.</p>
-        <p class="text-base-content/80">As students mature, Learning Maps evolve into more sophisticated planning tools - written planners, digital calendars, adult-style time management.</p>
+  <!-- Key Principles & Methods — Hero Header -->
+  <section class="relative overflow-hidden bg-cover bg-center mt-12" style="background-image: url('outdoorclass.jpg')">
+    <div class="absolute inset-0 bg-[#3a4a3a]/80"></div>
+    <div class="relative z-10 container mx-auto px-4 lg:px-8 max-w-4xl py-12 lg:py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Key Principles & Methods</h2>
+      <p class="text-white/80 text-lg leading-relaxed max-w-3xl">
+        Those are the six things kids need. But how do you actually build them? We didn't
+        choose methods because they're trendy or traditional — we looked at what the research says
+        develops these capacities. Five principles kept showing up.
+      </p>
+      <p class="text-white font-semibold text-lg mt-2 underline decoration-2 underline-offset-4 decoration-[#c4a44a]">Five principles kept showing up.</p>
+    </div>
+  </section>
+
+  <!-- Principles Card Grid -->
+  <section class="bg-[#eceff3] py-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- 1. Student Agency -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-2 border-[#7a9a6a]/30">
+          <div class="w-12 h-12 rounded-lg bg-[#7a9a6a]/15 flex items-center justify-center mb-4">
+            <i data-lucide="map" class="w-6 h-6" style="color: #6b8f5e;"></i>
+          </div>
+          <h3 class="text-lg font-bold text-base-content mb-2">Student Agency Through Learning Maps</h3>
+          <p class="text-base-content/70 text-sm leading-relaxed">Learning maps empower students to chart their own path through daily responsibilities. Adults set the destinations; students choose the route. This builds self-direction, time management, and goal-setting skills.</p>
+        </div>
+
+        <!-- 2. Real-World Relevance -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-2 border-[#c4873a]/30">
+          <div class="w-12 h-12 rounded-lg bg-[#c4873a]/15 flex items-center justify-center mb-4">
+            <i data-lucide="globe" class="w-6 h-6" style="color: #c4873a;"></i>
+          </div>
+          <h3 class="text-lg font-bold text-base-content mb-2">Real-World Relevance</h3>
+          <p class="text-base-content/70 text-sm leading-relaxed">Connecting classroom lessons to real-world contexts makes learning tangible and engaging. Community partnerships, service learning, and authentic problems give students the "why" behind what they're learning.</p>
+        </div>
+
+        <!-- 3. Integration Across Disciplines -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-2 border-[#5b7fa5]/30">
+          <div class="w-12 h-12 rounded-lg bg-[#5b7fa5]/15 flex items-center justify-center mb-4">
+            <i data-lucide="git-merge" class="w-6 h-6" style="color: #5b7fa5;"></i>
+          </div>
+          <h3 class="text-lg font-bold text-base-content mb-2">Integration Across Disciplines</h3>
+          <p class="text-base-content/70 text-sm leading-relaxed">Breaking down traditional subject silos, this principle unites science, math, and humanities into unified projects. This reflects the real-world nature of challenges and builds holistic understanding.</p>
+        </div>
+
+        <!-- 4. Play and Exploration -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-2 border-[#4a8b7f]/30">
+          <div class="w-12 h-12 rounded-lg bg-[#4a8b7f]/15 flex items-center justify-center mb-4">
+            <i data-lucide="wind" class="w-6 h-6" style="color: #4a8b7f;"></i>
+          </div>
+          <h3 class="text-lg font-bold text-base-content mb-2">Play and Exploration</h3>
+          <p class="text-base-content/70 text-sm leading-relaxed">Unstructured play and guided exploration are crucial for developing innovation, problem-solving, and resilience. 1-2+ hours daily of free play builds emotional regulation, creativity, and intrinsic motivation.</p>
+        </div>
+
+        <!-- 5. Relationship-Based Learning -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border-2 border-[#c46b5e]/30">
+          <div class="w-12 h-12 rounded-lg bg-[#c46b5e]/15 flex items-center justify-center mb-4">
+            <i data-lucide="heart-handshake" class="w-6 h-6" style="color: #c46b5e;"></i>
+          </div>
+          <h3 class="text-lg font-bold text-base-content mb-2">Relationship-Based Learning</h3>
+          <p class="text-base-content/70 text-sm leading-relaxed">Strong, supportive relationships between students, educators, and peers create a nurturing environment for long-term development. Restorative practices replace punishment with accountability and empathy.</p>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
-      <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-semibold text-primary">Real-World Relevance</div>
-      <div class="collapse-content">
-        <p class="text-base-content/80 mb-2">Learning connects to authentic contexts, real problems, and genuine communities through:</p>
-        <ul class="text-base-content/80 text-sm space-y-1 ml-4">
-          <li>Community engagement with local resources and experts</li>
-          <li>Service learning that applies knowledge to benefit others</li>
-          <li>Apprenticeships and mentorships with community practitioners</li>
-          <li>Authentic audiences for presentations and communication</li>
-          <li>Real problems without predetermined answers</li>
-        </ul>
+  <!-- ================================================================== -->
+  <!-- A DAY IN LIFESPACE — Dark Mode Section                            -->
+  <!-- ================================================================== -->
+  <section style="background: #0A140F; position: relative; overflow: hidden;">
+
+    <!-- Subtle radial glow behind the learning map -->
+    <div style="position: absolute; top: 50%; left: 25%; width: 500px; height: 500px; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(122,154,106,0.08) 0%, transparent 70%); pointer-events: none;"></div>
+
+    <!-- Tour Guide Intro -->
+    <div class="container mx-auto px-4 lg:px-8 max-w-5xl" style="position: relative; z-index: 1;">
+      <div style="padding: 4rem 0 1rem;">
+        <p style="color: #c4a44a; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem;">From Framework to Practice</p>
+        <h2 style="color: #f0f4f0; font-size: 2rem; font-weight: 700; margin-bottom: 0.75rem;">A Day in Lifespace</h2>
+        <p style="color: rgba(240,244,240,0.6); font-size: 1rem; max-width: 36rem; line-height: 1.7;">
+          Six pillars. Five principles. But what does it actually look like on a Tuesday?
+          Here's how the pieces fit into a real day — and how we know it's working.
+        </p>
+      </div>
+
+      <!-- Two-Column: Learning Map + Timeline -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; padding: 2rem 0 3rem; align-items: start;" class="md:!grid-cols-2">
+        <style>
+          @media (min-width: 768px) {
+            .md\:\!grid-cols-2 { grid-template-columns: 1fr 1fr !important; }
+          }
+        </style>
+
+        <!-- LEFT: 6-Node Learning Map SVG -->
+        <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
+          <svg viewBox="0 0 400 400" style="width: 100%; max-width: 360px; height: auto;" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connection lines -->
+            <line x1="200" y1="200" x2="200" y2="60" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="200" y1="200" x2="321" y2="130" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="200" y1="200" x2="321" y2="270" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="200" y1="200" x2="200" y2="340" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="200" y1="200" x2="79" y2="270" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+            <line x1="200" y1="200" x2="79" y2="130" stroke="#7a9a6a" stroke-width="1.5" opacity="0.4"/>
+
+            <!-- Central hub glow -->
+            <circle cx="200" cy="200" r="38" fill="#7a9a6a" opacity="0.08"/>
+            <circle cx="200" cy="200" r="28" fill="#0A140F" stroke="#7a9a6a" stroke-width="2"/>
+            <text x="200" y="196" text-anchor="middle" fill="#8fb87a" font-size="8" font-weight="600" letter-spacing="0.1em">LEARNING</text>
+            <text x="200" y="210" text-anchor="middle" fill="#8fb87a" font-size="8" font-weight="600" letter-spacing="0.1em">MAP</text>
+
+            <!-- Node 1: Critical Thinking (top) -->
+            <circle cx="200" cy="60" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="200" cy="60" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="200" y="56" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Critical</text>
+            <text x="200" y="67" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Thinking</text>
+
+            <!-- Node 2: Problem Solving (top-right) -->
+            <circle cx="321" cy="130" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="321" cy="130" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="321" y="126" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Problem</text>
+            <text x="321" y="137" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Solving</text>
+
+            <!-- Node 3: Core Competencies (bottom-right) -->
+            <circle cx="321" cy="270" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="321" cy="270" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="321" y="266" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Core</text>
+            <text x="321" y="277" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Competencies</text>
+
+            <!-- Node 4: Expression (bottom) -->
+            <circle cx="200" cy="340" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="200" cy="340" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="200" y="344" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Expression</text>
+
+            <!-- Node 5: SEL (bottom-left) -->
+            <circle cx="79" cy="270" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="79" cy="270" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="79" y="266" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Social-</text>
+            <text x="79" y="277" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Emotional</text>
+
+            <!-- Node 6: Project Work (top-left) -->
+            <circle cx="79" cy="130" r="22" fill="#0A140F" stroke="#7a9a6a" stroke-width="1.5"/>
+            <circle cx="79" cy="130" r="22" fill="#7a9a6a" opacity="0.06"/>
+            <text x="79" y="126" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Project</text>
+            <text x="79" y="137" text-anchor="middle" fill="#c4d4b8" font-size="7" font-weight="500">Work</text>
+          </svg>
+        </div>
+
+        <!-- RIGHT: Daily Structure Timeline -->
+        <div style="position: relative; padding-left: 2.5rem;">
+          <h3 style="color: #f0f4f0; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Daily Structure</h3>
+
+          <!-- Dotted connector line -->
+          <div style="position: absolute; left: 0.6875rem; top: 4rem; bottom: 1rem; width: 1px; border-left: 2px dotted rgba(196,164,74,0.3);"></div>
+
+          <!-- Timeline items -->
+          <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+            <!-- Core Competencies -->
+            <div style="position: relative;">
+              <div style="position: absolute; left: -2.5rem; top: 0.15rem; width: 1.125rem; height: 1.125rem; border-radius: 50%; background: #c4a44a; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0.375rem; height: 0.375rem; border-radius: 50%; background: #0A140F;"></div>
+              </div>
+              <div>
+                <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+                  <span style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem;">Core Competencies</span>
+                  <span style="color: #c4a44a; font-size: 0.75rem; font-weight: 500;">2 hours</span>
+                </div>
+                <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; margin-top: 0.25rem; line-height: 1.5;">Focused instruction and practice in reading, writing, math, and science.</p>
+              </div>
+            </div>
+
+            <!-- Project Work -->
+            <div style="position: relative;">
+              <div style="position: absolute; left: -2.5rem; top: 0.15rem; width: 1.125rem; height: 1.125rem; border-radius: 50%; background: #c4a44a; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0.375rem; height: 0.375rem; border-radius: 50%; background: #0A140F;"></div>
+              </div>
+              <div>
+                <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+                  <span style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem;">Project Work</span>
+                  <span style="color: #c4a44a; font-size: 0.75rem; font-weight: 500;">1-2+ hours</span>
+                </div>
+                <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; margin-top: 0.25rem; line-height: 1.5;">Extended investigations integrating multiple disciplines through authentic questions.</p>
+              </div>
+            </div>
+
+            <!-- Free Play -->
+            <div style="position: relative;">
+              <div style="position: absolute; left: -2.5rem; top: 0.15rem; width: 1.125rem; height: 1.125rem; border-radius: 50%; background: #c4a44a; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0.375rem; height: 0.375rem; border-radius: 50%; background: #0A140F;"></div>
+              </div>
+              <div>
+                <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+                  <span style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem;">Free Play</span>
+                  <span style="color: #c4a44a; font-size: 0.75rem; font-weight: 500;">1-2+ hours</span>
+                </div>
+                <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; margin-top: 0.25rem; line-height: 1.5;">Non-negotiable unstructured time for self-directed exploration and play.</p>
+              </div>
+            </div>
+
+            <!-- Artistic Expression -->
+            <div style="position: relative;">
+              <div style="position: absolute; left: -2.5rem; top: 0.15rem; width: 1.125rem; height: 1.125rem; border-radius: 50%; background: #c4a44a; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0.375rem; height: 0.375rem; border-radius: 50%; background: #0A140F;"></div>
+              </div>
+              <div>
+                <span style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem;">Artistic Expression</span>
+                <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; margin-top: 0.25rem; line-height: 1.5;">Integrated throughout as a mode of thinking, not an add-on.</p>
+              </div>
+            </div>
+
+            <!-- Brain Breaks -->
+            <div style="position: relative;">
+              <div style="position: absolute; left: -2.5rem; top: 0.15rem; width: 1.125rem; height: 1.125rem; border-radius: 50%; background: #c4a44a; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 0.375rem; height: 0.375rem; border-radius: 50%; background: #0A140F;"></div>
+              </div>
+              <div>
+                <span style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem;">Brain Breaks</span>
+                <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; margin-top: 0.25rem; line-height: 1.5;">Required between screen-based activities — outdoor play, art, or physical activity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assessment — Glassmorphism Card -->
+      <div style="padding: 0 0 3rem;">
+        <div style="background: rgba(240,244,240,0.04); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(122,154,106,0.15); border-radius: 1rem; padding: 2rem; max-width: 42rem;">
+          <h3 style="color: #f0f4f0; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Assessment</h3>
+          <p style="color: rgba(240,244,240,0.5); font-size: 0.875rem; margin-bottom: 1.25rem;">Assessment serves learning — not sorting, ranking, or gatekeeping.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #8fb87a; flex-shrink: 0;"></div>
+              <span style="color: rgba(240,244,240,0.7); font-size: 0.8125rem;">Academic discussions revealing depth of understanding</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #8fb87a; flex-shrink: 0;"></div>
+              <span style="color: rgba(240,244,240,0.7); font-size: 0.8125rem;">Project presentations to authentic audiences</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #8fb87a; flex-shrink: 0;"></div>
+              <span style="color: rgba(240,244,240,0.7); font-size: 0.8125rem;">Portfolios showing growth over time</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #8fb87a; flex-shrink: 0;"></div>
+              <span style="color: rgba(240,244,240,0.7); font-size: 0.8125rem;">Student self-assessment and reflection</span>
+            </div>
+          </div>
+          <p style="color: rgba(240,244,240,0.4); font-size: 0.75rem; margin-top: 1rem; font-style: italic;">Standardized testing is optional — families may choose to use it as one data point among many.</p>
+        </div>
+      </div>
+
+      <!-- What This Makes Possible — Outcome Bar -->
+      <div style="border-top: 1px solid rgba(122,154,106,0.15); padding: 3rem 0;">
+        <p style="color: #c4a44a; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem;">What This Makes Possible</p>
+        <h3 style="color: #f0f4f0; font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">When the pillars, principles, and daily structure come together.</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;" class="outcome-grid">
+          <style>
+            @media (max-width: 767px) {
+              .outcome-grid { grid-template-columns: 1fr !important; }
+            }
+          </style>
+
+          <div style="border-left: 3px solid #7a9a6a; padding-left: 1.25rem;">
+            <h4 style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.375rem;">Empowered Learners</h4>
+            <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; line-height: 1.5;">Self-directed, critical thinkers with information literacy skills and intrinsic motivation to learn anything.</p>
+          </div>
+
+          <div style="border-left: 3px solid #c4a44a; padding-left: 1.25rem;">
+            <h4 style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.375rem;">Prepared for Uncertainty</h4>
+            <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; line-height: 1.5;">Adaptable, creative, and resilient — equipped to navigate a world we can't predict.</p>
+          </div>
+
+          <div style="border-left: 3px solid #5b7fa5; padding-left: 1.25rem;">
+            <h4 style="color: #f0f4f0; font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.375rem;">Whole Child Development</h4>
+            <p style="color: rgba(240,244,240,0.5); font-size: 0.8125rem; line-height: 1.5;">Intellectual, social, emotional, physical, creative, and ethical growth in every dimension.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Built on Evidence -->
+      <div style="border-top: 1px solid rgba(122,154,106,0.15); padding: 3rem 0;">
+        <p style="color: #c4a44a; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem;">Built on Evidence</p>
+        <h3 style="color: #f0f4f0; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Every piece of this framework is backed by research.</h3>
+        <p style="color: rgba(240,244,240,0.5); font-size: 0.9375rem; line-height: 1.7; max-width: 42rem;">
+          The complete framework includes over 200 scholarly citations validating project-based learning, social-emotional development, student agency, authentic assessment, restorative practices, play-based learning, and relationship-centered approaches.
+        </p>
+        <p style="color: rgba(240,244,240,0.7); font-size: 0.9375rem; line-height: 1.7; max-width: 42rem; margin-top: 1rem; font-weight: 500;">
+          We're not testing whether these approaches work — we're demonstrating that this integrated model can operate as a viable, scalable school design.
+        </p>
+      </div>
+
+      <!-- Go Deeper CTA -->
+      <div style="border-top: 1px solid rgba(122,154,106,0.15); padding: 3rem 0 4rem; text-align: center;">
+        <h3 style="color: #f0f4f0; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Go Deeper</h3>
+        <p style="color: rgba(240,244,240,0.5); font-size: 0.9375rem; margin-bottom: 2rem; max-width: 30rem; margin-left: auto; margin-right: auto;">
+          This page is the overview. The full framework document goes into all of it —
+          research citations, implementation details, assessment rubrics, and more.
+        </p>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <a href="web_small_lifespace framework document.pdf" class="btn btn-lg" style="background: #7a9a6a; border: none; color: #0A140F; font-weight: 600;">Download the Complete 71-Page Framework</a>
+          <a href="contact.html" style="color: #c4a44a; font-size: 0.875rem; text-decoration: underline; text-underline-offset: 4px;">Join Our Interest List</a>
+        </div>
       </div>
     </div>
-
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
-      <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-semibold text-primary">Integration Across Disciplines</div>
-      <div class="collapse-content">
-        <p class="text-base-content/80">Knowledge and skills don't exist in separate subject silos. Lifespace intentionally integrates disciplines through project work, allowing students to see connections, apply knowledge purposefully, and develop holistic understanding.</p>
-      </div>
-    </div>
-
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
-      <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-semibold text-primary">Play and Exploration</div>
-      <div class="collapse-content">
-        <p class="text-base-content/80 mb-3">Free play is not supplemental - it is essential for development, wellbeing, and cognitive growth. Lifespace dedicates 1-2+ hours daily to unstructured activity where students pursue their own interests without adult direction.</p>
-        <p class="text-base-content/80">Research documents that decline in free play correlates with increased anxiety, depression, and decreased sense of control. Play develops internal locus of control, emotional self-regulation, social skills, creativity, problem-solving, and intrinsic motivation.</p>
-      </div>
-    </div>
-
-    <div class="collapse collapse-arrow join-item border border-base-300 bg-base-100">
-      <input type="radio" name="principles" />
-      <div class="collapse-title text-lg font-semibold text-primary">Relationship-Based Learning</div>
-      <div class="collapse-content">
-        <p class="text-base-content/80 mb-3">Learning happens in the context of relationships. Lifespace builds positive relationships between students, adults, peers, and community members as the foundation for all learning - rejecting traditional classroom management based on rewards and punishments.</p>
-        <p class="text-base-content/80">When conflicts arise, restorative practices repair relationships rather than impose consequences. The focus is accountability, empathy development, relationship repair, and learning better ways forward.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tour Guide: Principles → Daily Structure transition -->
-  <div class="mt-16 mb-6">
-    <h2 class="text-2xl font-bold text-primary mb-3">A Day in Lifespace</h2>
-    <p class="text-base-content/70 max-w-3xl text-base leading-relaxed">
-      Six pillars. Five principles. But what does it actually look like on a Tuesday?
-      Here's how the pieces fit into a real day — and how we know it's working.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="card bg-base-100 border border-base-300 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-primary font-semibold">Daily Structure</h2>
-        <p class="text-base-content/80 text-sm mb-2">A typical Lifespace day includes:</p>
-        <ul class="text-base-content/80 text-sm space-y-2">
-          <li><strong>Core Competencies (2 hours):</strong> Focused instruction and practice in reading, writing, math, science</li>
-          <li><strong>Project Work (1-2+ hours):</strong> Extended investigations integrating all pillars</li>
-          <li><strong>Free Play (1-2+ hours):</strong> Non-negotiable unstructured time</li>
-          <li><strong>Artistic Expression:</strong> Integrated throughout as mode of thinking</li>
-          <li><strong>Brain Breaks:</strong> Required between screen activities</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card bg-base-100 border border-base-300 shadow-sm">
-      <div class="card-body">
-        <h2 class="card-title text-primary font-semibold">Assessment</h2>
-        <p class="text-base-content/80 text-sm mb-2">Assessment serves learning - not sorting, ranking, or gatekeeping:</p>
-        <ul class="text-base-content/80 text-sm space-y-2">
-          <li>Academic discussions revealing depth of understanding</li>
-          <li>Project presentations to authentic audiences</li>
-          <li>Portfolios showing growth over time</li>
-          <li>Student self-assessment and reflection</li>
-        </ul>
-        <p class="text-base-content/80 text-sm mt-3">Standardized testing is optional - families may choose to use it as one data point among many.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tour Guide: Structure → Benefits transition -->
-  <div class="mt-16 mb-6">
-    <h2 class="text-2xl font-bold text-primary mb-3">What This Makes Possible</h2>
-    <p class="text-base-content/70 max-w-3xl text-base leading-relaxed">
-      When the pillars, principles, and daily structure come together,
-      here's what it produces.
-    </p>
-  </div>
-
-  <div class="card bg-base-100 border border-base-300 shadow-sm">
-    <div class="card-body">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="text-base-content/80 text-sm"><strong>Empowered Learners:</strong> Self-directed, critical thinkers with information literacy skills</div>
-        <div class="text-base-content/80 text-sm"><strong>Positive Learning Environment:</strong> Relationship-based culture, growth mindset, psychological safety</div>
-        <div class="text-base-content/80 text-sm"><strong>Lifelong Learners:</strong> Intrinsically motivated with skills to learn anything</div>
-        <div class="text-base-content/80 text-sm"><strong>Prepared for Uncertain Futures:</strong> Adaptable, creative, resilient, able to navigate change</div>
-        <div class="text-base-content/80 text-sm md:col-span-2"><strong>Whole Child Development:</strong> Intellectual, social, emotional, physical, creative, and ethical growth</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tour Guide: Benefits → Research transition -->
-  <div class="mt-16 mb-6">
-    <h2 class="text-2xl font-bold text-primary mb-3">Built on Evidence</h2>
-    <p class="text-base-content/70 max-w-3xl text-base leading-relaxed">
-      Every piece of this framework is backed by research — not a single component
-      was included because "it felt right."
-    </p>
-  </div>
-
-  <div class="card bg-base-200 border-l-4 border-primary">
-    <div class="card-body">
-      <p class="text-base-content/80">Every component of Lifespace Education is grounded in decades of educational research. The complete framework includes over 200 scholarly citations validating project-based learning, social-emotional development, student agency, authentic assessment, restorative practices, play-based learning, differentiation, and relationship-centered approaches.</p>
-      <p class="text-base-content/80 mt-3"><strong>We're not testing whether these approaches work - we're demonstrating that this integrated model can operate as a viable, scalable school design.</strong></p>
-    </div>
-  </div>
-
-  <!-- Tour Guide: Research → CTA transition -->
-  <div class="mt-16 mb-6 text-center">
-    <h2 class="text-2xl font-bold text-primary mb-3">Go Deeper</h2>
-    <p class="text-base-content/70 max-w-2xl mx-auto text-base leading-relaxed">
-      This page is the overview. The full framework document goes into all of it —
-      research citations, implementation details, assessment rubrics, and more.
-    </p>
-  </div>
-
-  <div class="text-center">
-    <a href="web_small_lifespace framework document.pdf" class="btn btn-primary btn-lg">Download the Complete 71-Page Framework</a>
-    <br>
-    <a href="contact.html" class="btn btn-outline btn-primary mt-4">Join Our Interest List</a>
-  </div>
-
-</div>
+  </section>
 
 <!-- Footer -->
 <footer class="bg-neutral text-neutral-content mt-12">
