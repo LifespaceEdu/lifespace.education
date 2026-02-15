@@ -84,6 +84,27 @@ ul li::before {
   left: 0;
 }
 
+/* Pivot punch sequence — motivated text entrances */
+[id^="pivot-"] p {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+[id^="pivot-"].active p {
+  transform: translateY(0);
+  opacity: 1;
+}
+[id^="pivot-"].active p:nth-child(2) {
+  transition-delay: 0.3s;
+}
+/* Final punch: scale-in instead of slide-up */
+#pivot-4 p {
+  transform: scale(0.85);
+}
+#pivot-4.active p {
+  transform: scale(1);
+}
+
 /* Accent colors */
 .gold { color: hsl(40, 58%, 55%); }
 .green { color: hsl(141, 37%, 38%); }
