@@ -20,7 +20,7 @@ body {
 }
 
 /* Title — just there, no animation */
-.impress-enabled #title {
+body.impress-on-title #title {
   opacity: 1;
 }
 /* During intro, hide the entire landscape — no Prezi leaking through */
