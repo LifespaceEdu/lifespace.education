@@ -7,6 +7,11 @@
 <title>Partner Deck | Lifespace Education</title>
 <link rel="icon" type="image/png" href="../../treeoflife.png">
 <link rel="stylesheet" href="../css/deck.css">
+<script>
+if (localStorage.getItem('ls-deck-auth') !== 'true') {
+  window.location.href = '../../deck.html';
+}
+</script>
 </head>
 <body>
 

@@ -9,17 +9,6 @@
 <link rel="stylesheet" href="deck/css/deck.css">
 <style>
   body { overflow: auto; }
-  .deck-frame {
-    display: none;
-    position: fixed;
-    inset: 0;
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
-  .deck-frame.visible {
-    display: block;
-  }
 </style>
 </head>
 <body>
@@ -41,9 +30,6 @@
   </div>
 </div>
 
-<!-- Deck loads here after auth -->
-<iframe id="deckFrame" class="deck-frame" title="Presentation"></iframe>
-
 <script>
 const DECK_PASSWORD = 'mutualaid!';
 const AUTH_KEY = 'ls-deck-auth';
@@ -54,10 +40,7 @@ const deckName = params.get('d') || 'partners-v1';
 const deckSrc = 'deck/decks/' + deckName + '.html';
 
 function showDeck() {
-  document.getElementById('passwordGate').style.display = 'none';
-  const frame = document.getElementById('deckFrame');
-  frame.src = deckSrc;
-  frame.classList.add('visible');
+  window.location.href = deckSrc;
 }
 
 // Check auth on load
