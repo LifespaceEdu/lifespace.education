@@ -27,6 +27,11 @@ body {
 .impress-enabled #title.active {
   opacity: 1;
 }
+/* During intro, hide the entire landscape — no Prezi leaking through */
+body.impress-on-title .step:not(.active),
+body[class*="impress-on-pivot-"] .step:not(.active) {
+  opacity: 0;
+}
 
 /* Slide containers */
 .step {
