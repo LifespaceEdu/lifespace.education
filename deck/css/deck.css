@@ -141,6 +141,40 @@ ul li::before {
   text-align: center;
 }
 
+/* Tool grid — clickable card layout */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  max-width: 840px;
+  margin: 0 auto;
+}
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4em 1em;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #2a3a2e;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+.tool-card:hover {
+  border-color: hsl(40, 58%, 55%);
+  background: rgba(196, 164, 74, 0.08);
+}
+.tool-card strong {
+  color: hsl(40, 58%, 55%);
+  font-size: 1.15rem;
+  margin-bottom: 0.3em;
+}
+.tool-card span {
+  color: #888;
+  font-size: 0.85rem;
+}
+
 /* Branding */
 .logo-mark {
   width: 80px;
