@@ -253,8 +253,10 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   function startDeck() {
     if (started) return;
     started = true;
-    overlay.style.display = 'none';
     impress().init();
+    requestAnimationFrame(function() {
+      overlay.style.display = 'none';
+    });
   }
 
   // Skip instructions if user opted out
