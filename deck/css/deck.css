@@ -41,6 +41,10 @@ body.impress-on-title #title {
 .impress-enabled #title:not(.active) {
   opacity: 0 !important;
 }
+/* Close is only visible when active — scale 22 covers entire canvas */
+.impress-enabled #close:not(.active) {
+  opacity: 0 !important;
+}
 /* During intro, hide the entire landscape — no Prezi leaking through */
 body.impress-on-title .step:not(.active),
 body[class*="impress-on-pivot-"] .step:not(.active) {
