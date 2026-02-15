@@ -19,12 +19,8 @@ body {
   opacity: 1;
 }
 
-/* INTRO ZONE — hidden when not active (classical dissolves) */
+/* Title — just there, no animation */
 .impress-enabled #title {
-  opacity: 0;
-  transition: opacity 1.8s ease;
-}
-.impress-enabled #title.active {
   opacity: 1;
 }
 /* During intro, hide the entire landscape — no Prezi leaking through */
