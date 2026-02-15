@@ -10,12 +10,21 @@ body {
   overflow: hidden;
 }
 
-/* impress.js overrides */
+/* LANDSCAPE ZONE — non-active slides visible (Prezi style) */
 .impress-enabled .step {
-  opacity: 0.15;
-  transition: opacity 0.8s ease;
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
 }
 .impress-enabled .step.active {
+  opacity: 1;
+}
+
+/* INTRO ZONE — hidden when not active (classical dissolves) */
+.impress-enabled #title {
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+.impress-enabled #title.active {
   opacity: 1;
 }
 
