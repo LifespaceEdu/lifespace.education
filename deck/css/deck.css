@@ -2,6 +2,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Kill all transitions during impress.js init — prevents title fly-in */
+.no-init-anim, .no-init-anim * {
+  transition: none !important;
+}
+
 body {
   background: #0A140F;
   color: #e8e8e8;

@@ -59,14 +59,14 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   <div id="pivot-dip-4" class="step" data-x="0" data-y="0" data-scale="3">
   </div>
 
-  <div id="pivot-4" class="step" data-x="3400" data-y="500" data-scale="1.3" data-transition-duration="800">
+  <div id="pivot-4" class="step" data-x="0" data-y="0" data-scale="3">
     <p class="gold" style="font-size: 2.4rem; font-weight: 600;">The solution: Design a system that does it right.</p>
   </div>
 
   <!-- 3a. FRAMEWORK OVERVIEW — see the landscape, then zoom in -->
-  <div id="pillars-overview" class="step" data-x="16000" data-y="0" data-scale="5"
-       data-rotate="3" data-rotate-x="2" data-z="150"
-       data-transition-duration="1400">
+  <div id="pillars-overview" class="step" data-x="16000" data-y="3000" data-scale="12"
+       data-rotate-x="2"
+       data-transition-duration="2500">
   </div>
 
   <!-- 3b. THE FRAMEWORK -->
@@ -86,7 +86,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 4. A DAY IN THE LIFE -->
-  <div id="daily" class="step" data-x="9000" data-y="1500" data-scale="2">
+  <div id="daily" class="step" data-x="9000" data-y="1500" data-scale="2"
+       data-rotate="4" data-rotate-y="-3" data-z="-200">
     <h2>A Rhythm, Not a Bell Schedule</h2>
     <p>Every day is different. The learning map sets the path.</p>
     <div class="highlight-box" style="margin-top: 1em;">
@@ -98,7 +99,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 5. THE MODEL -->
-  <div id="model" class="step wide" data-x="16000" data-y="2500" data-scale="2">
+  <div id="model" class="step wide" data-x="16000" data-y="2500" data-scale="2"
+       data-rotate="-2" data-rotate-x="-2" data-z="300">
     <h2>Two Pathways</h2>
     <div class="columns">
       <div class="column">
@@ -113,7 +115,9 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 6. LEARNING MAPS -->
-  <div id="maps" class="step" data-x="23000" data-y="2000" data-scale="2" data-rotate="5" data-transition-duration="1600">
+  <div id="maps" class="step" data-x="23000" data-y="2000" data-scale="2"
+       data-rotate="5" data-rotate-x="3" data-z="-100"
+       data-transition-duration="1600">
     <h2>Education as a Landscape</h2>
     <ul>
       <li>A map of destinations, not a list of grades</li>
@@ -124,7 +128,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 7. WHAT WE'VE BUILT -->
-  <div id="portfolio" class="step wide" data-x="9000" data-y="3500" data-scale="2">
+  <div id="portfolio" class="step wide" data-x="9000" data-y="3500" data-scale="2"
+       data-rotate="6" data-rotate-y="4" data-z="200">
     <div class="tool-grid">
       <a href="https://vada-ai-tutor.vercel.app" target="_blank" class="tool-card">
         <strong>Vada</strong>
@@ -155,7 +160,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 8. THE TEAM -->
-  <div id="team" class="step" data-x="16000" data-y="5000" data-scale="2">
+  <div id="team" class="step" data-x="16000" data-y="5000" data-scale="2"
+       data-rotate="-4" data-rotate-x="-3" data-z="-300">
     <h2>Educators. Designers. Builders.</h2>
     <div class="columns">
       <div class="column" style="text-align: center;">
@@ -172,7 +178,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 9. THE ASK (customize before each meeting) -->
-  <div id="ask" class="step" data-x="23000" data-y="4500" data-scale="2.2">
+  <div id="ask" class="step" data-x="23000" data-y="4500" data-scale="2.2"
+       data-rotate="3" data-rotate-y="-2" data-z="150">
     <h2>Build With Us</h2>
     <div class="highlight-box">
       <p>We have the framework, the tools, and the team.</p>
@@ -182,7 +189,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 10. NEXT STEPS -->
-  <div id="next" class="step" data-x="16000" data-y="7500" data-scale="2">
+  <div id="next" class="step" data-x="16000" data-y="7500" data-scale="2"
+       data-rotate="-5" data-rotate-x="2" data-z="-150">
     <h2>Next Steps</h2>
     <ul>
       <li>Schedule a follow-up conversation</li>
@@ -261,9 +269,13 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   function startDeck() {
     if (started) return;
     started = true;
+    document.body.classList.add('no-init-anim');
     impress().init();
     requestAnimationFrame(function() {
-      overlay.style.display = 'none';
+      requestAnimationFrame(function() {
+        document.body.classList.remove('no-init-anim');
+        overlay.style.display = 'none';
+      });
     });
   }
 
