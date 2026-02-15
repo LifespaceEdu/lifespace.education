@@ -197,31 +197,37 @@
 
 <script src="https://cdn.jsdelivr.net/gh/impress/impress.js@2.0.0/js/impress.js"></script>
 <script>
-// Instructions popup
 (function() {
   var overlay = document.getElementById('instructionsOverlay');
   var PREF_KEY = 'ls-deck-hide-instructions';
+  var started = false;
 
-  if (localStorage.getItem(PREF_KEY) === 'true') {
+  function startDeck() {
+    if (started) return;
+    started = true;
     overlay.style.display = 'none';
+    impress().init();
+  }
+
+  // Skip instructions if user opted out
+  if (localStorage.getItem(PREF_KEY) === 'true') {
+    startDeck();
   }
 
   document.getElementById('dismissInstructions').addEventListener('click', function() {
     if (document.getElementById('dontShowAgain').checked) {
       localStorage.setItem(PREF_KEY, 'true');
     }
-    overlay.style.display = 'none';
+    startDeck();
   });
 
   document.addEventListener('keydown', function(e) {
-    if (overlay.style.display !== 'none') {
-      overlay.style.display = 'none';
-      e.stopPropagation();
+    if (!started) {
+      e.preventDefault();
+      startDeck();
     }
   });
 })();
-
-impress().init();
 </script>
 </body>
 </html>
