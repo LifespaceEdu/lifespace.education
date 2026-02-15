@@ -22,7 +22,7 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
 
 <div id="impress" data-transition-duration="1200" data-width="1024" data-height="768">
 
-  <!-- 1. TITLE — Origin, scaled up for cinematic entrance -->
+  <!-- 1. TITLE -->
   <div id="title" class="step" data-x="0" data-y="0" data-scale="3">
     <img src="../../treeoflife.png" alt="Lifespace Education" class="logo-mark">
     <h1>Lifespace Education</h1>
@@ -30,118 +30,127 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
     <p class="tagline">lifespace.education</p>
   </div>
 
-  <!-- 2. THE PROBLEM — Pan right -->
-  <div id="problem" class="step" data-x="2400" data-y="0">
-    <h2>The Problem</h2>
-    <!-- REPLACE: Describe what's broken in current education -->
-    <p>Placeholder — what's wrong with how schools work today, and why families are looking for something different.</p>
+  <!-- 2. THE PIVOT (Problem → Vision) -->
+  <!-- NEEDS REWRITE: Marcus wants 4 punches in quick succession:
+       1. We all know schools aren't working.
+       2. We can even see why.
+       3. The problem: we know how to do it right — but we don't.
+       4. The solution: so do it right.
+       Current text is too soft. Needs that rhythm and directness. -->
+  <div id="pivot" class="step" data-x="2400" data-y="0">
+    <h2>Schools Aren't Working</h2>
+    <p>You already know this. The research has been clear for decades — and schools still haven't caught up.</p>
+    <div class="highlight-box" style="margin-top: 1.5em;">
+      <p>We're not waiting for the system to fix itself.<br>We're building from scratch on what the research actually says.</p>
+    </div>
   </div>
 
-  <!-- 3. THE VISION — Continue right, slight rise -->
-  <div id="vision" class="step" data-x="4800" data-y="-200">
-    <h2>The Vision</h2>
-    <!-- REPLACE: What Lifespace does differently -->
-    <p>Placeholder — what Lifespace Education does differently. The research-backed, human-centered approach.</p>
-  </div>
-
-  <!-- 4. SIX PILLARS — Zoom in -->
-  <div id="pillars" class="step" data-x="7200" data-y="0" data-scale="0.8">
-    <h2>Six Pillars</h2>
-    <!-- REPLACE: Overview of the framework pillars -->
+  <!-- 3. THE FRAMEWORK -->
+  <div id="pillars" class="step wide" data-x="4800" data-y="0" data-scale="0.8">
+    <h2>The Lifespace Framework</h2>
     <ul>
-      <li>Pillar 1 — placeholder</li>
-      <li>Pillar 2 — placeholder</li>
-      <li>Pillar 3 — placeholder</li>
-      <li>Pillar 4 — placeholder</li>
-      <li>Pillar 5 — placeholder</li>
-      <li>Pillar 6 — placeholder</li>
+      <li><strong class="gold">Critical Thinking</strong> — How to analyze, question, and sort signal from noise</li>
+      <li><strong class="gold">Problem Solving</strong> — Real challenges with real stakes, not worksheets</li>
+      <li><strong class="gold">Core Competencies</strong> — Reading, writing, math, research — the tools for everything else</li>
+      <li><strong class="gold">Expression</strong> — Communicate ideas through any medium, to any audience</li>
+      <li><strong class="gold">Social-Emotional</strong> — Self-regulation, empathy, and accountability to your community</li>
+      <li><strong class="gold">Project-Based Work</strong> — Where all five pillars come together in something that matters</li>
     </ul>
-    <p class="muted" style="font-size: 0.95rem; margin-top: 1em;">Full framework: lifespace.education/framework</p>
+    <p class="muted" style="font-size: 0.95rem; margin-top: 1em;"><a href="../../framework.html" style="color: #888;" target="_blank">Full framework &rarr;</a></p>
   </div>
 
-  <!-- 5. DAILY STRUCTURE — Drop down into new row -->
+  <!-- 4. A DAY IN THE LIFE -->
   <div id="daily" class="step" data-x="2400" data-y="2000">
-    <h2>A Day in the Life</h2>
-    <!-- REPLACE: What a typical day looks like for a student -->
-    <p>Placeholder — walk through a student's day. Morning meeting, project blocks, outdoor time, reflection.</p>
+    <h2>A Rhythm, Not a Bell Schedule</h2>
+    <p>Every day is different. The learning map sets the path.</p>
+    <div class="highlight-box" style="margin-top: 1em;">
+      <p style="font-size: 1.1rem; line-height: 2;">
+        <span class="gold">Math</span> &rarr; Brain Break &rarr; <span class="gold">Educational Media</span> &rarr; Project Work &rarr; <span class="gold">Reading</span> &rarr; Yoga &rarr; <span class="gold">Writing</span> &rarr; Free Time
+      </p>
+    </div>
+    <p class="muted" style="font-size: 0.95rem; margin-top: 1em;">Tomorrow looks completely different. That's the point.</p>
   </div>
 
-  <!-- 6. THE MODEL — Pan right along second row -->
+  <!-- 5. THE MODEL -->
   <div id="model" class="step wide" data-x="4800" data-y="2000">
-    <h2>The Model</h2>
-    <!-- REPLACE: Two pathways — microschool and co-op -->
+    <h2>Two Pathways</h2>
     <div class="columns">
       <div class="column">
         <h3>Microschool</h3>
-        <p>Placeholder — describe the microschool option, class size, structure.</p>
+        <p>16 students. 2 lead educators. Full-time immersion in the framework. A working proof of concept.</p>
       </div>
       <div class="column">
         <h3>Co-op</h3>
-        <p>Placeholder — describe the cooperative model, family involvement, scheduling.</p>
+        <p>A collaborative homeschool hub. Pooled expertise, shared resources, professional infrastructure — so you don't have to build alone.</p>
       </div>
     </div>
   </div>
 
-  <!-- 7. LEARNING MAPS — Zoom out and rotate slightly -->
+  <!-- 6. LEARNING MAPS -->
   <div id="maps" class="step" data-x="7200" data-y="2000" data-rotate="5">
-    <h2>Learning Maps</h2>
-    <!-- REPLACE: Student agency tool — screenshot or description -->
-    <p>Placeholder — our custom tool that gives students ownership of their learning journey. Visual, topological, personal.</p>
-  </div>
-
-  <!-- 8. PORTFOLIO — Drop to third row -->
-  <div id="portfolio" class="step" data-x="2400" data-y="4000">
-    <h2>What We've Built</h2>
-    <!-- REPLACE: Highlight 3-4 of the 8 portfolio projects -->
+    <h2>Education as a Landscape</h2>
     <ul>
-      <li>Framework Trainer — AI-powered professional development</li>
-      <li>Learning Map Manager — student learning visualization</li>
-      <li>Vada — AI tutor aligned to the framework</li>
-      <li>And 5 more tools in active development</li>
+      <li>A map of destinations, not a list of grades</li>
+      <li>Tactile paper maps <em>and</em> a web app with real-time tracking</li>
+      <li>Students see what they've mastered and choose what to unlock next</li>
     </ul>
-    <p class="muted" style="font-size: 0.95rem; margin-top: 1em;">Full portfolio: lifespace.education/portfolio</p>
+    <p class="muted" style="font-size: 0.95rem; margin-top: 1em;"><!-- TODO: embed demo link or screenshot of Learning Map Manager --></p>
   </div>
 
-  <!-- 9. THE TEAM — Pan right -->
+  <!-- 7. WHAT WE'VE BUILT -->
+  <div id="portfolio" class="step wide" data-x="2400" data-y="4000">
+    <h2>The Toolkit</h2>
+    <p style="margin-bottom: 1em;">Interactive textbooks with Socratic AI tutors that know the content. Try them:</p>
+    <ul>
+      <li><a href="https://vada-ai-tutor.vercel.app" target="_blank" style="color: hsl(40,58%,55%);">Vada</a> — Socratic AI tutor that guides, never gives answers</li>
+      <li><a href="https://lifespace-framework-training.vercel.app" target="_blank" style="color: hsl(40,58%,55%);">Framework Trainer</a> — Professional development for educators</li>
+      <li><a href="https://lifespace-logic4-kids.vercel.app/" target="_blank" style="color: hsl(40,58%,55%);">Lifespace Logic</a> — Reasoning curriculum, ages 6-14</li>
+      <li><a href="https://seeds-parts4-kids.vercel.app/" target="_blank" style="color: hsl(40,58%,55%);">Seeds &amp; Parts</a> — SEL: teaching kids what to do with emotions</li>
+      <li><a href="https://barbie-freedom-dream.vercel.app/" target="_blank" style="color: hsl(40,58%,55%);">Freedom Dreaming</a> — Social justice through play</li>
+      <li><a href="https://ai-ahupua-a-learning-app.vercel.app" target="_blank" style="color: hsl(40,58%,55%);">Ahupua&#699;a</a> — Environmental justice, Hawai&#699;i-rooted</li>
+    </ul>
+    <p class="muted" style="font-size: 0.95rem; margin-top: 0.8em;"><a href="../../portfolio.html" style="color: #888;" target="_blank">Full portfolio &rarr;</a></p>
+  </div>
+
+  <!-- 8. THE TEAM -->
   <div id="team" class="step" data-x="4800" data-y="4000">
-    <h2>The Team</h2>
-    <!-- REPLACE: Bios, photos, roles -->
+    <h2>Educators. Designers. Builders.</h2>
     <div class="columns">
       <div class="column" style="text-align: center;">
         <h3>Marcus Sigh</h3>
-        <p>Founder</p>
-        <!-- REPLACE: Short bio -->
+        <p style="color: hsl(40,58%,55%); margin-bottom: 0.5em;">Founder</p>
+        <p>16 years in elementary, special education, and youth facilities. Decolonial pedagogy. Educational justice. Built every tool in the portfolio.</p>
       </div>
       <div class="column" style="text-align: center;">
         <h3>Kate Werner</h3>
-        <p>Founding Partner</p>
-        <!-- REPLACE: Short bio -->
+        <p style="color: hsl(40,58%,55%); margin-bottom: 0.5em;">Founding Partner</p>
+        <p>Certified teacher and reading specialist. Literacy development, collaborative instruction, and the person who keeps the framework honest.</p>
       </div>
     </div>
   </div>
 
-  <!-- 10. THE ASK — Continue right, slight emphasis -->
+  <!-- 9. THE ASK (customize before each meeting) -->
   <div id="ask" class="step" data-x="7200" data-y="4000" data-scale="1.2">
-    <h2>The Ask</h2>
-    <!-- REPLACE: What you need from this specific partner -->
+    <h2>Build With Us</h2>
     <div class="highlight-box">
-      <p>Placeholder — what we're looking for from this partnership. Space, funding, students, expertise, community connection.</p>
+      <p>We have the framework, the tools, and the team.</p>
+      <p style="margin-top: 0.8em;">We're looking for partners who bring <strong class="gold">space</strong>, <strong class="gold">community</strong>, and <strong class="gold">shared conviction</strong> that schools can be better.</p>
+      <!-- CUSTOMIZE per meeting: swap the above for what this specific partner brings -->
     </div>
   </div>
 
-  <!-- 11. NEXT STEPS — Drop to fourth row, centered -->
+  <!-- 10. NEXT STEPS -->
   <div id="next" class="step" data-x="4800" data-y="5800">
     <h2>Next Steps</h2>
-    <!-- REPLACE: Timeline, action items, contact info -->
     <ul>
       <li>Schedule a follow-up conversation</li>
       <li>Visit a prototype session</li>
       <li>Join the interest list</li>
     </ul>
-    <p style="margin-top: 1.5em;">info@lifespace.education</p>
+    <p style="margin-top: 1.5em;"><a href="mailto:info@lifespace.education" style="color: hsl(40,58%,55%);">info@lifespace.education</a></p>
   </div>
 
-  <!-- 12. CLOSE — Zoom way out to show the full canvas -->
+  <!-- 11. CLOSE -->
   <div id="close" class="step" data-x="4800" data-y="2400" data-scale="6">
     <img src="../../treeoflife.png" alt="Lifespace Education" class="logo-mark">
     <h1>Lifespace Education</h1>
