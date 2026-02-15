@@ -11,12 +11,21 @@ body {
 }
 
 /* LANDSCAPE ZONE — non-active slides visible (Prezi style) */
-.impress-enabled .step {
-  opacity: 0.3;
-  transition: opacity 0.6s ease;
+:root {
+  --step-dim-opacity: 0.25;       /* Dim enough to feel like a background landmark */
+  --step-dim-duration: 0.3s;      /* Quick detach from current slide */
+  --step-brighten-duration: 0.8s; /* Smooth focus on arrival */
+  --step-brighten-delay: 1.4s;    /* Wait 70% of the 2000ms journey */
 }
+
+.impress-enabled .step {
+  opacity: var(--step-dim-opacity);
+  transition: opacity var(--step-dim-duration) ease-out;
+}
+
 .impress-enabled .step.active {
   opacity: 1;
+  transition: opacity var(--step-brighten-duration) ease-in var(--step-brighten-delay);
 }
 
 /* Title — just there, no animation */
@@ -28,9 +37,9 @@ body.impress-on-title .step:not(.active),
 body[class*="impress-on-pivot-"] .step:not(.active) {
   opacity: 0;
 }
-/* Pivot-4 is the reveal — landscape appears at 0.3 before the big pan */
+/* Pivot-4 is the reveal — landscape appears as landmarks before the big pan */
 body.impress-on-pivot-4 .step:not(.active) {
-  opacity: 0.3;
+  opacity: var(--step-dim-opacity);
 }
 
 /* Slide containers */
