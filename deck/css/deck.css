@@ -18,9 +18,9 @@ body {
 /* LANDSCAPE ZONE — non-active slides visible (Prezi style) */
 :root {
   --step-dim-opacity: 0.45;       /* Visible landmarks during pan */
-  --step-dim-duration: 0.3s;      /* Quick detach from current slide */
-  --step-brighten-duration: 0.8s; /* Smooth focus on arrival */
-  --step-brighten-delay: 1.4s;    /* Wait 70% of the 2000ms journey */
+  --step-dim-duration: 1.0s;      /* Gradual fade as camera departs */
+  --step-brighten-duration: 1.0s; /* Brighten during camera flight */
+  --step-brighten-delay: 0.4s;    /* Start early — content visible before camera arrives */
 }
 
 .impress-enabled .step {
@@ -50,15 +50,6 @@ body.impress-on-title .step:not(.active),
 body[class*="impress-on-pivot-"] .step:not(.active) {
   opacity: 0;
 }
-/* Pillars overview — landscape stays visible during the overview moment */
-body.impress-on-pillars-overview .step:not(.active) {
-  opacity: var(--step-dim-opacity);
-}
-/* Keep intro zone hidden during landscape reveals */
-body.impress-on-pillars-overview [id^="pivot-"]:not(.active) {
-  opacity: 0;
-}
-
 /* Slide containers */
 .step {
   width: 900px;
@@ -149,17 +140,17 @@ ul li::before {
   transition: opacity 1.2s ease;
 }
 
-/* Pillars — the big reveal from pivot zone to landscape.
-   Two-step sequence: overview (wide) then zoom-in (detail).
+/* Pillars — the big reveal flying from intro zone to landscape.
+   Single sweep: camera flies + zooms in one 2500ms move.
    Shot list #13: "ffb, rising + growing, heavy landing." */
 .impress-enabled #pillars.active {
   opacity: 1;
-  transition: opacity 0.8s ease-in 0.1s;
-  animation: pillars-land 0.45s ease-out 0.95s both;
+  transition: opacity 1.2s ease-in 0.4s;
+  animation: pillars-land 0.45s ease-out 2.1s both;
 }
 #pillars > * {
   transform: translateY(25px) scale(0.96);
-  transition: transform 1.0s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.0s cubic-bezier(0.22, 1, 0.36, 1) 1.5s;
 }
 #pillars.active > * {
   transform: translateY(0) scale(1);
