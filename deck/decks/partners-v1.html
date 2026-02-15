@@ -64,14 +64,14 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 3a. FRAMEWORK OVERVIEW — see the landscape, then zoom in -->
-  <div id="pillars-overview" class="step" data-x="16000" data-y="3000" data-scale="12"
+  <div id="pillars-overview" class="step" data-x="16000" data-y="5000" data-scale="18"
        data-rotate-x="2"
        data-transition-duration="2500">
   </div>
 
   <!-- 3b. THE FRAMEWORK -->
   <div id="pillars" class="step wide" data-x="16000" data-y="0" data-scale="2"
-       data-rotate="3" data-rotate-x="2" data-z="150"
+       data-rotate="0" data-rotate-x="2" data-z="1500"
        data-transition-duration="1000">
     <h2>The Lifespace Framework</h2>
     <ul>
@@ -86,8 +86,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 4. A DAY IN THE LIFE -->
-  <div id="daily" class="step" data-x="9000" data-y="1500" data-scale="2"
-       data-rotate="4" data-rotate-y="-3" data-z="-200">
+  <div id="daily" class="step" data-x="7000" data-y="2000" data-scale="1.8"
+       data-rotate="90" data-rotate-y="-3" data-z="-3000">
     <h2>A Rhythm, Not a Bell Schedule</h2>
     <p>Every day is different. The learning map sets the path.</p>
     <div class="highlight-box" style="margin-top: 1em;">
@@ -99,8 +99,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 5. THE MODEL -->
-  <div id="model" class="step wide" data-x="16000" data-y="2500" data-scale="2"
-       data-rotate="-2" data-rotate-x="-2" data-z="300">
+  <div id="model" class="step wide" data-x="16000" data-y="3500" data-scale="2.2"
+       data-rotate="-45" data-rotate-x="-3" data-z="3500">
     <h2>Two Pathways</h2>
     <div class="columns">
       <div class="column">
@@ -115,8 +115,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 6. LEARNING MAPS -->
-  <div id="maps" class="step" data-x="23000" data-y="2000" data-scale="2"
-       data-rotate="5" data-rotate-x="3" data-z="-100"
+  <div id="maps" class="step" data-x="25000" data-y="2000" data-scale="1.5"
+       data-rotate="5" data-rotate-x="8" data-z="-2500"
        data-transition-duration="1600">
     <h2>Education as a Landscape</h2>
     <ul>
@@ -128,8 +128,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 7. WHAT WE'VE BUILT -->
-  <div id="portfolio" class="step wide" data-x="9000" data-y="3500" data-scale="2"
-       data-rotate="6" data-rotate-y="4" data-z="200">
+  <div id="portfolio" class="step wide" data-x="7000" data-y="5500" data-scale="2.5"
+       data-rotate="-90" data-rotate-y="5" data-z="2000">
     <div class="tool-grid">
       <a href="https://vada-ai-tutor.vercel.app" target="_blank" class="tool-card">
         <strong>Vada</strong>
@@ -160,8 +160,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 8. THE TEAM -->
-  <div id="team" class="step" data-x="16000" data-y="5000" data-scale="2"
-       data-rotate="-4" data-rotate-x="-3" data-z="-300">
+  <div id="team" class="step" data-x="16000" data-y="7000" data-scale="1.8"
+       data-rotate="135" data-rotate-x="0" data-z="-4000">
     <h2>Educators. Designers. Builders.</h2>
     <div class="columns">
       <div class="column" style="text-align: center;">
@@ -178,8 +178,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 9. THE ASK (customize before each meeting) -->
-  <div id="ask" class="step" data-x="23000" data-y="4500" data-scale="2.2"
-       data-rotate="3" data-rotate-y="-2" data-z="150">
+  <div id="ask" class="step" data-x="25000" data-y="5500" data-scale="2.2"
+       data-rotate="45" data-rotate-y="-4" data-z="3000">
     <h2>Build With Us</h2>
     <div class="highlight-box">
       <p>We have the framework, the tools, and the team.</p>
@@ -189,8 +189,8 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 10. NEXT STEPS -->
-  <div id="next" class="step" data-x="16000" data-y="7500" data-scale="2"
-       data-rotate="-5" data-rotate-x="2" data-z="-150">
+  <div id="next" class="step" data-x="16000" data-y="10000" data-scale="2"
+       data-rotate="-30" data-rotate-x="3" data-z="-2000">
     <h2>Next Steps</h2>
     <ul>
       <li>Schedule a follow-up conversation</li>
@@ -201,7 +201,7 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
   </div>
 
   <!-- 11. CLOSE -->
-  <div id="close" class="step" data-x="16000" data-y="3750" data-scale="14" data-transition-duration="1800">
+  <div id="close" class="step" data-x="16000" data-y="5000" data-scale="22" data-transition-duration="1800">
     <img src="../../treeoflife.png" alt="Lifespace Education" class="logo-mark">
     <h1>Lifespace Education</h1>
     <p class="subtitle">lifespace.education</p>
@@ -296,6 +296,67 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
       e.preventDefault();
       startDeck();
     }
+  });
+})();
+</script>
+
+<!-- Slide transport — press G to open, type # or name, Enter to jump -->
+<div id="slideTransport" style="
+  position: fixed; bottom: 20px; left: 30px; z-index: 200;
+  display: none;
+">
+  <input id="slideJump" type="text" placeholder="Slide # or name"
+    style="padding: 0.5em 0.8em; width: 180px; background: rgba(21,31,24,0.95);
+           border: 1px solid #2a3a2e; border-radius: 6px; color: #e8e8e8;
+           font-size: 0.85rem; outline: none; font-family: inherit;"
+  >
+</div>
+<script>
+(function() {
+  var transport = document.getElementById('slideTransport');
+  var input = document.getElementById('slideJump');
+  var steps = document.querySelectorAll('.step');
+  var stepIds = [];
+  steps.forEach(function(s) { stepIds.push(s.id); });
+
+  document.addEventListener('keydown', function(e) {
+    if (document.activeElement === input) return;
+    if (e.key === 'g' || e.key === 'G') {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      transport.style.display = 'block';
+      input.value = '';
+      input.focus();
+    }
+  });
+
+  input.addEventListener('keydown', function(e) {
+    e.stopImmediatePropagation();
+    if (e.key === 'Escape') {
+      transport.style.display = 'none';
+      input.blur();
+    }
+    if (e.key === 'Enter') {
+      var val = input.value.trim().toLowerCase();
+      var target = null;
+      var num = parseInt(val);
+      if (!isNaN(num) && num >= 1 && num <= stepIds.length) {
+        target = stepIds[num - 1];
+      } else {
+        for (var i = 0; i < stepIds.length; i++) {
+          if (stepIds[i].toLowerCase().indexOf(val) !== -1) {
+            target = stepIds[i]; break;
+          }
+        }
+      }
+      if (target) impress().goto(target);
+      transport.style.display = 'none';
+      input.blur();
+    }
+  });
+
+  input.addEventListener('blur', function() {
+    setTimeout(function() { transport.style.display = 'none'; }, 100);
   });
 })();
 </script>

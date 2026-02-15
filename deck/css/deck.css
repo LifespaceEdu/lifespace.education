@@ -37,23 +37,20 @@ body {
 body.impress-on-title #title {
   opacity: 1;
 }
+/* Title is ONLY visible when active — prevents flash during transitions */
+.impress-enabled #title:not(.active) {
+  opacity: 0 !important;
+}
 /* During intro, hide the entire landscape — no Prezi leaking through */
 body.impress-on-title .step:not(.active),
 body[class*="impress-on-pivot-"] .step:not(.active) {
   opacity: 0;
 }
-/* Pivot-4 is the reveal — landscape appears as landmarks before the big pan */
-body.impress-on-pivot-4 .step:not(.active) {
-  opacity: var(--step-dim-opacity);
-}
 /* Pillars overview — landscape stays visible during the overview moment */
 body.impress-on-pillars-overview .step:not(.active) {
   opacity: var(--step-dim-opacity);
 }
-/* Keep intro zone hidden during landscape reveals — no title/pivots leaking through */
-body.impress-on-pivot-4 #title,
-body.impress-on-pivot-4 [id^="pivot-dip"]:not(.active),
-body.impress-on-pillars-overview #title,
+/* Keep intro zone hidden during landscape reveals */
 body.impress-on-pillars-overview [id^="pivot-"]:not(.active) {
   opacity: 0;
 }
@@ -123,13 +120,14 @@ ul li::before {
   left: 0;
 }
 
-/* Pivot sequence — dissolve transitions */
+/* Pivot sequence — dissolve transitions (asymmetric: fast out, slow in) */
 .impress-enabled .step[id^="pivot-"] {
   opacity: 0;
-  transition: opacity 1.8s ease;
+  transition: opacity 0.3s ease;
 }
 .impress-enabled .step[id^="pivot-"].active {
   opacity: 1;
+  transition: opacity 1.8s ease;
 }
 /* Punch 3: second line arrives after a beat */
 #pivot-3 p:nth-child(2) {
@@ -141,6 +139,9 @@ ul li::before {
 }
 /* Punch 4: clean dissolve like other pivots */
 .impress-enabled .step#pivot-4 {
+  transition: opacity 0.3s ease;
+}
+.impress-enabled .step#pivot-4.active {
   transition: opacity 1.2s ease;
 }
 
