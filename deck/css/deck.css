@@ -12,7 +12,7 @@ body {
 
 /* LANDSCAPE ZONE — non-active slides visible (Prezi style) */
 :root {
-  --step-dim-opacity: 0.25;       /* Dim enough to feel like a background landmark */
+  --step-dim-opacity: 0.45;       /* Visible landmarks during pan */
   --step-dim-duration: 0.3s;      /* Quick detach from current slide */
   --step-brighten-duration: 0.8s; /* Smooth focus on arrival */
   --step-brighten-delay: 1.4s;    /* Wait 70% of the 2000ms journey */
