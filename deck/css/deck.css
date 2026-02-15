@@ -41,6 +41,17 @@ body[class*="impress-on-pivot-"] .step:not(.active) {
 body.impress-on-pivot-4 .step:not(.active) {
   opacity: var(--step-dim-opacity);
 }
+/* Pillars overview — landscape stays visible during the overview moment */
+body.impress-on-pillars-overview .step:not(.active) {
+  opacity: var(--step-dim-opacity);
+}
+/* Keep intro zone hidden during landscape reveals — no title/pivots leaking through */
+body.impress-on-pivot-4 #title,
+body.impress-on-pivot-4 [id^="pivot-dip"]:not(.active),
+body.impress-on-pillars-overview #title,
+body.impress-on-pillars-overview [id^="pivot-"]:not(.active) {
+  opacity: 0;
+}
 
 /* Slide containers */
 .step {
@@ -135,6 +146,28 @@ ul li::before {
 #pivot-4.active p {
   transform: scale(1);
   opacity: 1;
+}
+
+/* Pillars — the big reveal from pivot zone to landscape.
+   Two-step sequence: overview (wide) then zoom-in (detail).
+   Shot list #13: "ffb, rising + growing, heavy landing." */
+.impress-enabled #pillars.active {
+  opacity: 1;
+  transition: opacity 0.8s ease-in 0.1s;
+  animation: pillars-land 0.45s ease-out 0.95s both;
+}
+#pillars > * {
+  transform: translateY(25px) scale(0.96);
+  transition: transform 1.0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#pillars.active > * {
+  transform: translateY(0) scale(1);
+}
+@keyframes pillars-land {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.018); }
+  65%  { transform: scale(0.996); }
+  100% { transform: scale(1); }
 }
 
 /* Accent colors */
