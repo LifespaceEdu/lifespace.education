@@ -30,25 +30,28 @@ if (localStorage.getItem('ls-deck-auth') !== 'true') {
     <p class="tagline">lifespace.education</p>
   </div>
 
-  <!-- 2. THE PIVOT — cinematic 4-punch sequence
-       Camera: land → dolly in → dolly in tight + tilt → snap out wide
-       Pacing: steady → quicker → quickest → slow reveal -->
-  <div id="pivot-1" class="step" data-x="2000" data-y="0" data-transition-duration="1000">
+  <!-- 2. THE PIVOT — 4-punch sequence
+       1-3: same position, pure dissolves, no camera move
+       dip to black before punch 3
+       4: camera moves for the first time — earned energy -->
+  <div id="pivot-1" class="step" data-x="2000" data-y="500">
     <p style="font-size: 2.2rem; color: #e8e8e8; font-weight: 500;">We all know the current approach to running schools isn't working.</p>
   </div>
 
-  <div id="pivot-2" class="step" data-x="2000" data-y="600" data-scale="0.7" data-transition-duration="800">
+  <div id="pivot-2" class="step" data-x="2000" data-y="500">
     <p style="font-size: 1.5rem; color: #ccc;">Educators are giving their all &mdash; but the current system wasn't built for where we are or what's coming.</p>
   </div>
 
-  <div id="pivot-3" class="step" data-x="2000" data-y="1200" data-scale="0.35" data-rotate="3" data-transition-duration="600">
+  <div id="pivot-dip" class="step" data-x="2000" data-y="500">
+  </div>
+
+  <div id="pivot-3" class="step" data-x="2000" data-y="500">
     <p style="font-size: 2rem; color: #e8e8e8;">The research is clear on what works.</p>
     <p style="font-size: 2rem; color: #666; margin-top: 0.4em;">But the system isn't designed to do it.</p>
   </div>
 
-  <div id="pivot-4" class="step" data-x="3600" data-y="600" data-scale="2.2" data-transition-duration="1500">
+  <div id="pivot-4" class="step" data-x="3400" data-y="500" data-scale="1.3" data-transition-duration="800">
     <p class="gold" style="font-size: 2.4rem; font-weight: 600;">The solution: Design a system that does it right.</p>
-    <p class="gold" style="font-size: 2.4rem; font-weight: 600; margin-top: 0.3em;">From scratch.</p>
   </div>
 
   <!-- 3. THE FRAMEWORK -->
